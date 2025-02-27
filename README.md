@@ -51,7 +51,7 @@ npm run preview
 ```
 
 ## 📸 Screenshots
-*(Add some screenshots or a demo GIF here!)*
+![Preview](preview.png)
 
 ## 📜 License
 This project is licensed under the [MIT License](LICENSE).
