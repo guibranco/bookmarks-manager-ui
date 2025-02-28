@@ -51,7 +51,22 @@ npm run preview
 ```
 
 ## 📸 Screenshots
-![Preview](preview.png)
+
+### Dark Theme - Grid view
+
+![Preview Dark Theme - Grid](docs/preview-dark-grid.png)
+
+### Dark Theme - List view
+
+![Preview Dark Theme - List](docs/preview-dark-list.png)
+
+### Dark Theme - Add New Bookmark
+
+![Preview Dark Theme - Add New Bookmark](docs/preview-dark-add-new.png)
+
+### Light Theme - Tree Structure
+
+![Preview Light Theme - Tree Structure](docs/preview-light-tree-structure.png)
 
 ## 📜 License
 This project is licensed under the [MIT License](LICENSE).
