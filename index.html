@@ -1,0 +1,81 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarks Manager UI</title>
+    <style>
+        /* Basic layout styles */
+        body { margin: 0; font-family: Arial, sans-serif; }
+        header { background: #f4f4f4; padding: 10px; display: flex; align-items: center; justify-content: space-between; }
+        header .search-bar { flex: 1; margin-right: 10px; }
+        header button { margin-left: 5px; }
+        .container { display: flex; height: calc(100vh - 50px); }
+        .sidebar { width: 200px; background: #eee; padding: 10px; overflow-y: auto; }
+        .main-content { flex: 1; padding: 10px; overflow-y: auto; }
+        .right-panel { width: 250px; background: #f9f9f9; padding: 10px; }
+        @media (max-width: 768px) {
+            .container { flex-direction: column; }
+            .sidebar, .right-panel { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <input type="text" class="search-bar" placeholder="Search bookmarks...">
+        <button id="settings-btn">⚙️</button>
+        <button id="add-bookmark-btn">➕ Add Bookmark</button>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="folder-list">
+                <h3>Folders</h3>
+                <ul>
+                    <li>Folder 1</li>
+                    <li>Folder 2</li>
+                    <li>Folder 3</li>
+                </ul>
+            </div>
+            <div class="favorites">
+                <h3>Favorites</h3>
+                <ul>
+                    <li>Favorite 1</li>
+                    <li>Favorite 2</li>
+                </ul>
+            </div>
+            <div class="tags">
+                <h3>Tags</h3>
+                <ul>
+                    <li>tag1</li>
+                    <li>tag2</li>
+                </ul>
+            </div>
+        </aside>
+        <main class="main-content">
+            <h2>Folder/Topic Title</h2>
+            <div class="view-mode">
+                <button id="grid-view-btn">Grid View</button>
+                <button id="list-view-btn">List View</button>
+            </div>
+            <div class="bookmarks-view">
+                <!-- Bookmarks will be rendered here in grid or list -->
+                <div class="bookmark-card">Bookmark 1</div>
+                <div class="bookmark-card">Bookmark 2</div>
+                <div class="bookmark-card">Bookmark 3</div>
+            </div>
+        </main>
+        <aside class="right-panel">
+            <h3>Bookmark Details</h3>
+            <div class="details">
+                <p>Select a bookmark to see details.</p>
+            </div>
+            <div class="related-links">
+                <h4>Related Links</h4>
+                <ul>
+                    <li>Link 1</li>
+                    <li>Link 2</li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+</body>
+</html>
