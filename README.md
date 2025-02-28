@@ -1,4 +1,4 @@
-# 📑🔖 Bookmark Manager (UI)
+# 📑🔖 Bookmarks Manager (UI)
 
 A modern, web-based **bookmark manager** built with **Vite, React, and TypeScript**, allowing users to organize bookmarks into folders and topics with a clean and intuitive UI.
 
