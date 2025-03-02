@@ -7,9 +7,16 @@ interface SidebarProps {
   selectedFolder: string | null;
   onSelectFolder: (folderId: string | null) => void;
   bookmarks: BookmarkType[];
+  onAddFolder: (parentId: string | null) => void;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ folders, selectedFolder, onSelectFolder, bookmarks }) => {
+const Sidebar: React.FC<SidebarProps> = ({ 
+  folders, 
+  selectedFolder, 
+  onSelectFolder, 
+  bookmarks,
+  onAddFolder
+}) => {
   const [expandedSections, setExpandedSections] = useState({
     folders: true,
     favorites: true,
@@ -183,7 +190,7 @@ const Sidebar: React.FC<SidebarProps> = ({ folders, selectedFolder, onSelectFold
                 aria-label="Add folder"
                 onClick={(e) => {
                   e.stopPropagation();
-                  // Add folder functionality would go here
+                  onAddFolder(null);
                 }}
               >
                 <Plus className="h-4 w-4 text-gray-500" />

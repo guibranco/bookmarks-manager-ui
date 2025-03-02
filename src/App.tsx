@@ -1,34 +1,43 @@
-import React, { useState, useEffect } from 'react';
-import { Search, Settings, Plus, Bookmark, Folder, Star, Tag, Grid, List, Moon, Sun } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Search, Settings, Plus, Bookmark, Grid, List, Moon, Sun, Menu } from 'lucide-react';
 import BookmarkCard from './components/BookmarkCard';
 import BookmarkList from './components/BookmarkList';
 import Sidebar from './components/Sidebar';
 import BookmarkDetails from './components/BookmarkDetails';
-import { Bookmark as BookmarkType, Folder as FolderType } from './types';
+import ConfigModal from './components/ConfigModal';
+import FolderModal from './components/FolderModal';
+import { Bookmark as BookmarkType, Folder as FolderType, AppConfig } from './types';
 import { sampleBookmarks, sampleFolders } from './data/sampleData';
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  // App configuration
+  const [config, setConfig] = useState<AppConfig>({
+    darkMode: false,
+    showSidebar: true,
+    viewMode: 'grid'
+  });
+  
+  // App state
   const [bookmarks, setBookmarks] = useState<BookmarkType[]>(sampleBookmarks);
   const [folders, setFolders] = useState<FolderType[]>(sampleFolders);
   const [selectedFolder, setSelectedFolder] = useState<string | null>('all');
   const [selectedBookmark, setSelectedBookmark] = useState<BookmarkType | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [showRightPanel, setShowRightPanel] = useState(false);
-  const [showSidebar, setShowSidebar] = useState(true);
+  
+  // Modals
+  const [showConfigModal, setShowConfigModal] = useState(false);
+  const [showFolderModal, setShowFolderModal] = useState(false);
+  const [newFolderParentId, setNewFolderParentId] = useState<string | null>(null);
 
+  // Apply dark mode
   useEffect(() => {
-    if (darkMode) {
+    if (config.darkMode) {
       document.documentElement.classList.add('dark');
     } else {
       document.documentElement.classList.remove('dark');
     }
-  }, [darkMode]);
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
+  }, [config.darkMode]);
 
   // Get all child folder IDs recursively
   const getAllChildFolderIds = (folderId: string): string[] => {
@@ -114,6 +123,36 @@ function App() {
     }
   };
 
+  const handleAddFolder = (parentId: string | null) => {
+    setNewFolderParentId(parentId);
+    setShowFolderModal(true);
+  };
+
+  const createFolder = (name: string, parentId: string | null) => {
+    const newFolder: FolderType = {
+      id: `folder-${folders.length + 1}`,
+      name,
+      parentId
+    };
+    setFolders([...folders, newFolder]);
+    
+    // If this is a subfolder, make sure the parent folder is expanded
+    if (parentId) {
+      // This would be handled by the Sidebar component's state
+    }
+  };
+
+  const toggleSidebar = () => {
+    setConfig({
+      ...config,
+      showSidebar: !config.showSidebar
+    });
+  };
+
+  const updateConfig = (newConfig: AppConfig) => {
+    setConfig(newConfig);
+  };
+
   // Get folder name with full path
   const getFolderPathName = (folderId: string | null): string => {
     if (!folderId) return 'All Bookmarks';
@@ -139,6 +178,15 @@ function App() {
       <header className="bg-white dark:bg-gray-800 shadow-sm border-b border-gray-200 dark:border-gray-700">
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center space-x-2">
+            {!config.showSidebar && (
+              <button
+                onClick={toggleSidebar}
+                className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors mr-1"
+                aria-label="Show sidebar"
+              >
+                <Menu className="h-5 w-5" />
+              </button>
+            )}
             <Bookmark className="h-6 w-6 text-blue-600 dark:text-blue-400" />
             <h1 className="text-xl font-bold">Bookmark Manager</h1>
           </div>
@@ -160,11 +208,11 @@ function App() {
           
           <div className="flex items-center space-x-3">
             <button 
-              onClick={toggleDarkMode}
+              onClick={() => setConfig({...config, darkMode: !config.darkMode})}
               className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
               aria-label="Toggle dark mode"
             >
-              {darkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+              {config.darkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
             </button>
             <button 
               onClick={handleAddBookmark}
@@ -174,6 +222,7 @@ function App() {
               <Plus className="h-5 w-5" />
             </button>
             <button 
+              onClick={() => setShowConfigModal(true)}
               className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
               aria-label="Settings"
             >
@@ -186,12 +235,13 @@ function App() {
       {/* Main Content */}
       <div className="flex flex-1 overflow-hidden">
         {/* Sidebar */}
-        {showSidebar && (
+        {config.showSidebar && (
           <Sidebar 
             folders={folders}
             selectedFolder={selectedFolder}
             onSelectFolder={setSelectedFolder}
             bookmarks={bookmarks}
+            onAddFolder={handleAddFolder}
           />
         )}
 
@@ -204,15 +254,15 @@ function App() {
               </h2>
               <div className="flex items-center space-x-2">
                 <button 
-                  onClick={() => setViewMode('grid')}
-                  className={`p-2 rounded ${viewMode === 'grid' ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400' : 'hover:bg-gray-200 dark:hover:bg-gray-700'}`}
+                  onClick={() => setConfig({...config, viewMode: 'grid'})}
+                  className={`p-2 rounded ${config.viewMode === 'grid' ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400' : 'hover:bg-gray-200 dark:hover:bg-gray-700'}`}
                   aria-label="Grid view"
                 >
                   <Grid className="h-5 w-5" />
                 </button>
                 <button 
-                  onClick={() => setViewMode('list')}
-                  className={`p-2 rounded ${viewMode === 'list' ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400' : 'hover:bg-gray-200 dark:hover:bg-gray-700'}`}
+                  onClick={() => setConfig({...config, viewMode: 'list'})}
+                  className={`p-2 rounded ${config.viewMode === 'list' ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400' : 'hover:bg-gray-200 dark:hover:bg-gray-700'}`}
                   aria-label="List view"
                 >
                   <List className="h-5 w-5" />
@@ -232,7 +282,7 @@ function App() {
                   Add Bookmark
                 </button>
               </div>
-            ) : viewMode === 'grid' ? (
+            ) : config.viewMode === 'grid' ? (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                 {filteredBookmarks.map(bookmark => (
                   <BookmarkCard 
@@ -264,6 +314,24 @@ function App() {
           />
         )}
       </div>
+
+      {/* Modals */}
+      {showConfigModal && (
+        <ConfigModal 
+          config={config}
+          onClose={() => setShowConfigModal(false)}
+          onSave={updateConfig}
+        />
+      )}
+
+      {showFolderModal && (
+        <FolderModal 
+          folders={folders}
+          parentId={newFolderParentId}
+          onClose={() => setShowFolderModal(false)}
+          onSave={createFolder}
+        />
+      )}
     </div>
   );
 }

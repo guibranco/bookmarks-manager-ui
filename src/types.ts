@@ -16,3 +16,9 @@ export interface Folder {
   parentId: string | null;
   icon?: string;
 }
+
+export interface AppConfig {
+  showSidebar: boolean;
+  darkMode: boolean;
+  viewMode: 'grid' | 'list';
+}
