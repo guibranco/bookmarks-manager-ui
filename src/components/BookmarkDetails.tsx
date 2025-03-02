@@ -244,7 +244,6 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
               <Trash className="h-4 w-4 mr-1" />
               Delete
             </button>
-          </div>
             <button
               type="button"
               onClick={handleSave}

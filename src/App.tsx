@@ -55,14 +55,15 @@ function App() {
     
     // For specific folder, include bookmarks in this folder and all subfolders
     const folderIds = [selectedFolder, ...getAllChildFolderIds(selectedFolder!)];
-    return folderIds.includes(bookmark.folderId!);
-
+    const matchesFolder = folderIds.includes(bookmark.folderId!);
+    
+    return matchesFolder;
   }).filter(bookmark => {
     // Then apply search filter
-    return bookmark.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                              bookmark.url.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                              bookmark.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-
+    const matchesSearch = bookmark.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                          bookmark.url.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                          bookmark.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    return matchesSearch;
   });
 
   const handleBookmarkClick = (bookmark: BookmarkType) => {
@@ -115,17 +116,17 @@ function App() {
 
   // Get folder name with full path
   const getFolderPathName = (folderId: string | null): string => {
-    if (!folderId) {
-    if (folderId === 'all') {
-    if (folderId === 'favorites') {
+    if (!folderId) return 'All Bookmarks';
+    if (folderId === 'all') return 'All Bookmarks';
+    if (folderId === 'favorites') return 'Favorites';
     
     const folder = folders.find(f => f.id === folderId);
-    if (!folder) {
+    if (!folder) return 'Unknown Folder';
     
     const getParentPath = (folder: FolderType): string => {
-      if (!folder.parentId) {
+      if (!folder.parentId) return folder.name;
       const parent = folders.find(f => f.id === folder.parentId);
-      if (!parent) {
+      if (!parent) return folder.name;
       return `${getParentPath(parent)} > ${folder.name}`;
     };
     
