@@ -120,7 +120,7 @@ function App() {
     if (folderId === 'favorites') {
     
     const folder = folders.find(f => f.id === folderId);
-    if (!folder) return 'Unknown Folder';
+    if (!folder) {
     
     const getParentPath = (folder: FolderType): string => {
       if (!folder.parentId) {
