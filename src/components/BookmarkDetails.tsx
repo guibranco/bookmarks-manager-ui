@@ -10,6 +10,29 @@ interface BookmarkDetailsProps {
   onDelete: () => void;
 }
 
+/**
+ * A functional component that displays and manages the details of a bookmark.
+ * It allows users to edit bookmark properties, add/remove tags, select folders,
+ * and save or delete the bookmark.
+ *
+ * @param {Object} props - The properties for the component.
+ * @param {Bookmark} props.bookmark - The bookmark object to be edited.
+ * @param {Folder[]} props.folders - An array of folder objects for organizing bookmarks.
+ * @param {Function} props.onClose - Callback function to close the bookmark details.
+ * @param {Function} props.onUpdate - Callback function to update the bookmark with new details.
+ * @param {Function} props.onDelete - Callback function to delete the bookmark.
+ *
+ * @returns {JSX.Element} The rendered component.
+ *
+ * @example
+ * <BookmarkDetails
+ *   bookmark={bookmark}
+ *   folders={folders}
+ *   onClose={handleClose}
+ *   onUpdate={handleUpdate}
+ *   onDelete={handleDelete}
+ * />
+ */
 const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({ 
   bookmark, 
   folders,
@@ -24,6 +47,21 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
     setEditedBookmark({...bookmark});
   }, [bookmark]);
 
+  /**
+   * Handles the change event for input elements such as text fields, text areas, and select boxes.
+   * Updates the state of the edited bookmark based on the input's name and value.
+   *
+   * @param {React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>} e - The change event object
+   *        containing information about the target element that triggered the event.
+   *
+   * @returns {void} This function does not return a value.
+   *
+   * @example
+   * // Example usage within a React component
+   * <input type="text" name="title" onChange={handleChange} />
+   *
+   * @throws {Error} Throws an error if the event target is not a valid input element.
+   */
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setEditedBookmark({
@@ -32,6 +70,23 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
     });
   };
 
+  /**
+   * Handles the addition of a new tag to the edited bookmark.
+   * This function checks if the tag input is not empty and if the tag
+   * is not already included in the existing tags of the edited bookmark.
+   * If both conditions are met, it updates the edited bookmark by adding
+   * the new tag and resets the tag input field.
+   *
+   * @function handleTagAdd
+   * @returns {void} This function does not return a value.
+   *
+   * @example
+   * // Assuming tagInput is "newTag" and editedBookmark.tags is ["existingTag"]
+   * handleTagAdd();
+   * // editedBookmark.tags will now be ["existingTag", "newTag"]
+   *
+   * @throws {Error} Throws an error if there is an issue updating the bookmark.
+   */
   const handleTagAdd = () => {
     if (tagInput.trim() && !editedBookmark.tags.includes(tagInput.trim())) {
       setEditedBookmark({
@@ -42,6 +97,21 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
     }
   };
 
+  /**
+   * Removes a specified tag from the edited bookmark's tags.
+   *
+   * This function updates the state of the edited bookmark by filtering out
+   * the tag that is to be removed. It ensures that the tags array in the
+   * edited bookmark does not contain the specified tag.
+   *
+   * @param {string} tagToRemove - The tag that needs to be removed from the bookmark.
+   * @throws {Error} Throws an error if the tagToRemove is not a string.
+   *
+   * @example
+   * // Assuming editedBookmark has a tags array of ['tag1', 'tag2', 'tag3']
+   * handleTagRemove('tag2');
+   * // editedBookmark.tags will now be ['tag1', 'tag3']
+   */
   const handleTagRemove = (tagToRemove: string) => {
     setEditedBookmark({
       ...editedBookmark,
@@ -49,6 +119,17 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
     });
   };
 
+  /**
+   * Handles the key down event for tag input. Specifically, it listens for the 'Enter' key press
+   * and triggers the addition of a new tag when pressed.
+   *
+   * @param {React.KeyboardEvent} e - The keyboard event triggered by the user.
+   * @throws {Error} Throws an error if the event does not contain a valid key.
+   *
+   * @example
+   * // Example usage within a React component
+   * <input type="text" onKeyDown={handleTagKeyDown} />
+   */
   const handleTagKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter') {
       e.preventDefault();
@@ -56,14 +137,65 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
     }
   };
 
+  /**
+   * Handles the save operation for the edited bookmark.
+   * This function is called when the user initiates a save action.
+   * It triggers the onUpdate callback with the current state of the edited bookmark.
+   *
+   * @function handleSave
+   * @returns {void} This function does not return a value.
+   *
+   * @example
+   * // Example usage:
+   * handleSave();
+   *
+   * @throws {Error} Throws an error if the onUpdate function is not defined.
+   */
   const handleSave = () => {
     onUpdate(editedBookmark);
   };
 
   // Organize folders into a hierarchical structure for the dropdown
+  /**
+   * Retrieves a list of folder options for selection, rendering them in a hierarchical format.
+   * The function filters the root folders (those without a parent) and generates options
+   * for each folder, including its subfolders, with indentation to indicate depth.
+   *
+   * @returns {JSX.Element[]} An array of JSX elements representing folder options,
+   *                          each wrapped in an <option> tag with a unique key and value.
+   *
+   * @example
+   * const options = getFolderOptions();
+   * // options will contain <option> elements for each root folder and its subfolders.
+   */
   const getFolderOptions = () => {
     const rootFolders = folders.filter(folder => folder.parentId === null);
     
+    /**
+     * Recursively generates a list of option elements for a dropdown menu
+     * based on a hierarchical structure of folders.
+     *
+     * Each folder is represented as an option, and subfolders are indented
+     * according to their depth in the hierarchy.
+     *
+     * @param {Folder[]} folderList - An array of Folder objects representing
+     * the top-level folders to be rendered.
+     * @param {number} [depth=0] - The current depth in the folder hierarchy,
+     * used for indentation. Defaults to 0 for top-level folders.
+     *
+     * @returns {JSX.Element[]} An array of JSX option elements representing
+     * the folders and their subfolders.
+     *
+     * @example
+     * const folders = [
+     *   { id: 1, name: 'Folder 1', parentId: null },
+     *   { id: 2, name: 'Subfolder 1-1', parentId: 1 },
+     *   { id: 3, name: 'Subfolder 1-2', parentId: 1 },
+     * ];
+     * const options = renderOptions(folders);
+     *
+     * @throws {Error} Throws an error if folderList is not an array of Folder objects.
+     */
     const renderOptions = (folderList: Folder[], depth: number = 0) => {
       return folderList.flatMap(folder => {
         const subfolders = folders.filter(f => f.parentId === folder.id);
