@@ -7,6 +7,16 @@ import BookmarkDetails from './components/BookmarkDetails';
 import { Bookmark as BookmarkType, Folder as FolderType } from './types';
 import { sampleBookmarks, sampleFolders } from './data/sampleData';
 
+/**
+ * Main application component that manages bookmarks and folders.
+ * It provides functionalities such as adding, updating, deleting bookmarks,
+ * toggling dark mode, and filtering bookmarks based on selected folders and search queries.
+ *
+ * @component
+ * @example
+ * // Usage in a React application
+ * <App />
+ */
 function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [bookmarks, setBookmarks] = useState<BookmarkType[]>(sampleBookmarks);
@@ -26,11 +36,41 @@ function App() {
     }
   }, [darkMode]);
 
+  /**
+   * Toggles the dark mode setting for the application.
+   * This function switches the current state of dark mode from enabled to disabled or vice versa.
+   * It updates the darkMode state variable accordingly.
+   *
+   * @function toggleDarkMode
+   * @returns {void} This function does not return a value.
+   *
+   * @example
+   * // To toggle dark mode on or off
+   * toggleDarkMode();
+   *
+   * @throws {Error} Throws an error if the darkMode state cannot be updated.
+   */
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
   };
 
   // Get all child folder IDs recursively
+  /**
+   * Recursively retrieves all child folder IDs for a given folder.
+   *
+   * This function searches through a collection of folders to find all folders
+   * that are direct children of the specified folder and then recursively
+   * finds all descendants of those child folders.
+   *
+   * @param {string} folderId - The ID of the folder for which to retrieve child IDs.
+   * @returns {string[]} An array of strings representing the IDs of all child folders.
+   *
+   * @example
+   * const childFolderIds = getAllChildFolderIds('123');
+   * console.log(childFolderIds); // Outputs an array of child folder IDs.
+   *
+   * @throws {Error} Throws an error if the folderId is not found in the folders collection.
+   */
   const getAllChildFolderIds = (folderId: string): string[] => {
     const directChildren = folders.filter(f => f.parentId === folderId).map(f => f.id);
     const allChildren = [...directChildren];
@@ -65,11 +105,38 @@ function App() {
 
   });
 
+  /**
+   * Handles the click event on a bookmark.
+   *
+   * This function updates the selected bookmark and displays the right panel.
+   *
+   * @param {BookmarkType} bookmark - The bookmark object that was clicked.
+   * @throws {Error} Throws an error if the bookmark is invalid or undefined.
+   *
+   * @example
+   * // Example usage of handleBookmarkClick
+   * handleBookmarkClick({ id: 1, title: 'My Bookmark' });
+   */
   const handleBookmarkClick = (bookmark: BookmarkType) => {
     setSelectedBookmark(bookmark);
     setShowRightPanel(true);
   };
 
+  /**
+   * Handles the addition of a new bookmark to the bookmarks list.
+   * This function creates a new bookmark object with default values
+   * and updates the state to include the new bookmark.
+   * It also sets the selected bookmark and displays the right panel.
+   *
+   * @function handleAddBookmark
+   * @returns {void} This function does not return a value.
+   *
+   * @throws {Error} Throws an error if there is an issue with setting bookmarks.
+   *
+   * @example
+   * // Example usage of handleAddBookmark
+   * handleAddBookmark();
+   */
   const handleAddBookmark = () => {
     const newBookmark: BookmarkType = {
       id: `bookmark-${bookmarks.length + 1}`,
@@ -87,11 +154,40 @@ function App() {
     setShowRightPanel(true);
   };
 
+  /**
+   * Updates an existing bookmark in the bookmarks list and sets it as the selected bookmark.
+   *
+   * This function takes an updated bookmark object, replaces the corresponding bookmark in the
+   * current list of bookmarks if it matches by ID, and updates the selected bookmark state.
+   *
+   * @param {BookmarkType} updatedBookmark - The bookmark object containing updated information.
+   * @throws {Error} Throws an error if the updatedBookmark does not have a valid ID.
+   *
+   * @example
+   * const newBookmark = { id: 1, title: 'Updated Title', url: 'https://updated-url.com' };
+   * updateBookmark(newBookmark);
+   */
   const updateBookmark = (updatedBookmark: BookmarkType) => {
     setBookmarks(bookmarks.map(b => b.id === updatedBookmark.id ? updatedBookmark : b));
     setSelectedBookmark(updatedBookmark);
   };
 
+  /**
+   * Deletes a bookmark by its unique identifier.
+   * This function filters out the bookmark with the specified ID from the list of bookmarks.
+   * If the deleted bookmark is currently selected, it also resets the selected bookmark
+   * and hides the right panel.
+   *
+   * @param {string} id - The unique identifier of the bookmark to be deleted.
+   * @throws {Error} Throws an error if the ID is not valid or does not exist in the bookmarks.
+   *
+   * @example
+   * // Assuming bookmarks is an array of bookmark objects and '123' is a valid bookmark ID
+   * deleteBookmark('123');
+   *
+   * // After calling this function, the bookmark with ID '123' will be removed from bookmarks,
+   * // and if it was selected, the selected bookmark will be set to null and the right panel hidden.
+   */
   const deleteBookmark = (id: string) => {
     setBookmarks(bookmarks.filter(b => b.id !== id));
     if (selectedBookmark?.id === id) {
@@ -100,6 +196,21 @@ function App() {
     }
   };
 
+  /**
+   * Toggles the favorite status of a bookmark identified by its ID.
+   *
+   * This function updates the bookmarks state by mapping over the existing bookmarks and
+   * toggling the `favorite` property of the bookmark that matches the provided ID.
+   * If the currently selected bookmark matches the ID, it also updates the selected bookmark's
+   * favorite status accordingly.
+   *
+   * @param {string} id - The unique identifier of the bookmark to toggle.
+   * @throws {Error} Throws an error if the provided ID does not correspond to any existing bookmark.
+   *
+   * @example
+   * // Toggle the favorite status of a bookmark with ID '123'
+   * toggleFavorite('123');
+   */
   const toggleFavorite = (id: string) => {
     setBookmarks(bookmarks.map(b => 
       b.id === id ? { ...b, favorite: !b.favorite } : b
@@ -114,6 +225,22 @@ function App() {
   };
 
   // Get folder name with full path
+  /**
+   * Retrieves the path name of a folder based on its ID.
+   *
+   * This function checks for special folder IDs such as 'all' and 'favorites',
+   * and returns a formatted string representing the path to the specified folder.
+   *
+   * @param {string | null} folderId - The ID of the folder. Can be null or one of the special IDs.
+   * @returns {string} The path name of the folder, or an empty string if the folder ID is invalid.
+   *
+   * @example
+   * const pathName = getFolderPathName('123'); // Returns "Root > Subfolder > Folder"
+   * const pathNameAll = getFolderPathName('all'); // Returns "All Bookmarks"
+   * const pathNameFavorites = getFolderPathName('favorites'); // Returns "Favorites"
+   *
+   * @throws {Error} Throws an error if the folder ID does not correspond to any existing folder.
+   */
   const getFolderPathName = (folderId: string | null): string => {
     if (!folderId) {
     if (folderId === 'all') {
@@ -122,6 +249,18 @@ function App() {
     const folder = folders.find(f => f.id === folderId);
     if (!folder) {
     
+    /**
+     * Recursively retrieves the path of a folder by concatenating its name with the names of its parent folders.
+     *
+     * @param {FolderType} folder - The folder for which to retrieve the parent path.
+     * @returns {string} The full path of the folder, represented as a string.
+     *
+     * @throws {Error} Throws an error if the folder does not have a valid parent.
+     *
+     * @example
+     * const path = getParentPath(myFolder);
+     * console.log(path); // Outputs: "ParentFolder > MyFolder"
+     */
     const getParentPath = (folder: FolderType): string => {
       if (!folder.parentId) {
       const parent = folders.find(f => f.id === folder.parentId);
