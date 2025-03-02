@@ -8,6 +8,32 @@ interface BookmarkCardProps {
   onToggleFavorite: () => void;
 }
 
+/**
+ * A functional component that renders a bookmark card displaying the bookmark's details.
+ *
+ * @param {Object} props - The properties for the BookmarkCard component.
+ * @param {Bookmark} props.bookmark - The bookmark object containing details such as title, URL, thumbnail, description, favorite status, and tags.
+ * @param {Function} props.onClick - A callback function to handle click events on the card.
+ * @param {Function} props.onToggleFavorite - A callback function to toggle the favorite status of the bookmark.
+ *
+ * @returns {JSX.Element} The rendered bookmark card component.
+ *
+ * @example
+ * const bookmark = {
+ *   title: "Example Bookmark",
+ *   url: "https://example.com",
+ *   thumbnail: "https://example.com/image.jpg",
+ *   description: "This is an example bookmark.",
+ *   favorite: false,
+ *   tags: ["example", "bookmark", "test"]
+ * };
+ *
+ * <BookmarkCard
+ *   bookmark={bookmark}
+ *   onClick={() => console.log('Card clicked')}
+ *   onToggleFavorite={() => console.log('Favorite toggled')}
+ * />
+ */
 const BookmarkCard: React.FC<BookmarkCardProps> = ({ bookmark, onClick, onToggleFavorite }) => {
   return (
     <div 
