@@ -126,7 +126,7 @@ function App() {
     const getParentPath = (folder: FolderType): string => {
       if (!folder.parentId) {
       const parent = folders.find(f => f.id === folder.parentId);
-      if (!parent) return folder.name;
+      if (!parent) {
       return `${getParentPath(parent)} > ${folder.name}`;
     };
     
