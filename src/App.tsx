@@ -117,7 +117,7 @@ function App() {
   const getFolderPathName = (folderId: string | null): string => {
     if (!folderId) return 'All Bookmarks';
     if (folderId === 'all') {
-    if (folderId === 'favorites') return 'Favorites';
+    if (folderId === 'favorites') {
     
     const folder = folders.find(f => f.id === folderId);
     if (!folder) return 'Unknown Folder';
