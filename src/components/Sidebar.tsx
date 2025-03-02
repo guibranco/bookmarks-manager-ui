@@ -9,6 +9,26 @@ interface SidebarProps {
   bookmarks: BookmarkType[];
 }
 
+/**
+ * Sidebar component that displays a list of folders, bookmarks, and tags.
+ * It allows users to navigate through their bookmarks and manage folder structures.
+ *
+ * @component
+ * @param {Object} props - The properties for the Sidebar component.
+ * @param {Array<FolderType>} props.folders - The list of folders to display.
+ * @param {string} props.selectedFolder - The ID of the currently selected folder.
+ * @param {function} props.onSelectFolder - Callback function to handle folder selection.
+ * @param {Array<BookmarkType>} props.bookmarks - The list of bookmarks to display.
+ * @returns {JSX.Element} The rendered Sidebar component.
+ *
+ * @example
+ * <Sidebar
+ *   folders={folders}
+ *   selectedFolder={selectedFolder}
+ *   onSelectFolder={handleSelectFolder}
+ *   bookmarks={bookmarks}
+ * />
+ */
 const Sidebar: React.FC<SidebarProps> = ({ folders, selectedFolder, onSelectFolder, bookmarks }) => {
   const [expandedSections, setExpandedSections] = useState({
     folders: true,
@@ -19,6 +39,22 @@ const Sidebar: React.FC<SidebarProps> = ({ folders, selectedFolder, onSelectFold
   // Track expanded folder states
   const [expandedFolders, setExpandedFolders] = useState<Record<string, boolean>>({});
 
+  /**
+   * Toggles the expansion state of a specified section.
+   *
+   * This function updates the `expandedSections` state by inverting the current
+   * expansion state of the given section. It is useful for managing UI components
+   * that can be expanded or collapsed, such as accordions or dropdowns.
+   *
+   * @param {keyof typeof expandedSections} section - The key of the section to toggle.
+   * This should correspond to a valid key in the `expandedSections` object.
+   *
+   * @throws {Error} Throws an error if the provided section key is not valid.
+   *
+   * @example
+   * // Assuming expandedSections has keys 'section1' and 'section2'
+   * toggleSection('section1'); // Toggles the state of section1
+   */
   const toggleSection = (section: keyof typeof expandedSections) => {
     setExpandedSections({
       ...expandedSections,
@@ -26,6 +62,21 @@ const Sidebar: React.FC<SidebarProps> = ({ folders, selectedFolder, onSelectFold
     });
   };
 
+  /**
+   * Toggles the expansion state of a folder identified by its ID.
+   * This function updates the state of expanded folders by flipping the
+   * current expansion state of the specified folder.
+   *
+   * @param {string} folderId - The unique identifier of the folder to toggle.
+   *
+   * @returns {void} This function does not return a value.
+   *
+   * @throws {Error} Throws an error if the folderId is not valid or does not exist.
+   *
+   * @example
+   * // Assuming expandedFolders is an object with folder IDs as keys
+   * toggleFolder('folder1'); // Toggles the expansion state of 'folder1'
+   */
   const toggleFolder = (folderId: string) => {
     setExpandedFolders({
       ...expandedFolders,
@@ -43,11 +94,46 @@ const Sidebar: React.FC<SidebarProps> = ({ folders, selectedFolder, onSelectFold
   const rootFolders = folders.filter(folder => folder.parentId === null);
   
   // Get subfolders for a given parent folder
+  /**
+   * Retrieves a list of subfolders that belong to a specified parent folder.
+   *
+   * This function filters the global `folders` array to find all folders
+   * whose `parentId` matches the provided `parentId`. It is useful for
+   * organizing and displaying folder structures in applications.
+   *
+   * @param {string} parentId - The ID of the parent folder for which to retrieve subfolders.
+   * @returns {Array} An array of subfolder objects that have the specified parentId.
+   *
+   * @example
+   * const subfolders = getSubfolders('12345');
+   * console.log(subfolders); // Outputs an array of subfolders under the folder with ID '12345'.
+   *
+   * @throws {Error} Throws an error if the folders array is not defined or is not an array.
+   */
   const getSubfolders = (parentId: string) => {
     return folders.filter(folder => folder.parentId === parentId);
   };
 
   // Count bookmarks in a folder and its subfolders
+  /**
+   * Counts the total number of bookmarks within a specified folder,
+   * including bookmarks in any subfolders.
+   *
+   * This function recursively counts bookmarks that are directly
+   * associated with the given folder ID and also counts bookmarks
+   * in all subfolders of that folder.
+   *
+   * @param {string} folderId - The ID of the folder for which to count bookmarks.
+   * @returns {number} The total number of bookmarks in the specified folder
+   *                  and its subfolders.
+   *
+   * @example
+   * // Assuming folderId '123' has 5 bookmarks and contains a subfolder
+   * // with 3 bookmarks, this will return 8.
+   * const totalBookmarks = countFolderBookmarks('123');
+   *
+   * @throws {Error} Throws an error if the folderId is invalid or does not exist.
+   */
   const countFolderBookmarks = (folderId: string): number => {
     const directBookmarks = bookmarks.filter(b => b.folderId === folderId).length;
     const subfolderIds = folders.filter(f => f.parentId === folderId).map(f => f.id);
@@ -59,6 +145,25 @@ const Sidebar: React.FC<SidebarProps> = ({ folders, selectedFolder, onSelectFold
   };
 
   // Recursive function to render folder and its subfolders
+  /**
+   * Renders a folder component, displaying its name, subfolders, and bookmark count.
+   *
+   * This function recursively renders folders and their subfolders, allowing for
+   * expansion and selection of folders. It also displays the number of bookmarks
+   * contained within each folder.
+   *
+   * @param {FolderType} folder - The folder object containing details such as id and name.
+   * @param {number} [depth=0] - The current depth of the folder in the hierarchy, used for styling.
+   *
+   * @returns {JSX.Element} A JSX element representing the folder and its contents.
+   *
+   * @example
+   * // Example usage of renderFolder
+   * const folder = { id: '1', name: 'My Folder' };
+   * const folderElement = renderFolder(folder);
+   *
+   * @throws {Error} Throws an error if the folder object is invalid or missing required properties.
+   */
   const renderFolder = (folder: FolderType, depth: number = 0) => {
     const subfolders = getSubfolders(folder.id);
     const hasSubfolders = subfolders.length > 0;
