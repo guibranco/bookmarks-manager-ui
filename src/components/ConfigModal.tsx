@@ -8,10 +8,44 @@ interface ConfigModalProps {
   onSave: (config: AppConfig) => void;
 }
 
+/**
+ * A functional component that renders a modal for configuring application settings.
+ *
+ * @param {Object} props - The properties for the ConfigModal component.
+ * @param {AppConfig} props.config - The initial configuration settings to be edited.
+ * @param {Function} props.onClose - Callback function to be called when the modal is closed.
+ * @param {Function} props.onSave - Callback function to be called when the settings are saved.
+ *
+ * @returns {JSX.Element} The rendered modal component.
+ *
+ * @example
+ * <ConfigModal
+ *   config={{ showSidebar: true, darkMode: false, viewMode: 'grid' }}
+ *   onClose={() => console.log('Modal closed')}
+ *   onSave={(newConfig) => console.log('New config saved:', newConfig)}
+ * />
+ */
 const ConfigModal: React.FC<ConfigModalProps> = ({ config, onClose, onSave }) => {
   const [editedConfig, setEditedConfig] = useState<AppConfig>({ ...config });
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  /**
+   * Updates the configuration state by modifying a specific key with a new value.
+   *
+   * This function takes a key that corresponds to a property in the AppConfig type
+   * and a value that will be assigned to that property. It creates a new configuration
+   * object by merging the existing configuration with the updated key-value pair.
+   *
+   * @param {keyof AppConfig} key - The key of the configuration property to update.
+   * @param {any} value - The new value to assign to the specified key.
+   *
+   * @returns {void} This function does not return a value.
+   *
+   * @example
+   * // Assuming editedConfig is an object with properties defined in AppConfig
+   * handleChange('theme', 'dark');
+   * // This will update the theme property of editedConfig to 'dark'.
+   */
   const handleChange = (key: keyof AppConfig, value: any) => {
     setEditedConfig({
       ...editedConfig,
@@ -19,6 +53,22 @@ const ConfigModal: React.FC<ConfigModalProps> = ({ config, onClose, onSave }) =>
     });
   };
 
+  /**
+   * Handles the save operation by invoking the onSave callback with the edited configuration
+   * and then closes the current context.
+   *
+   * This function is typically used in scenarios where user changes need to be saved
+   * and the interface should be updated accordingly.
+   *
+   * @function handleSave
+   * @returns {void} This function does not return a value.
+   *
+   * @throws {Error} Throws an error if the onSave callback fails during execution.
+   *
+   * @example
+   * // Example usage of handleSave
+   * handleSave();
+   */
   const handleSave = () => {
     onSave(editedConfig);
     onClose();
