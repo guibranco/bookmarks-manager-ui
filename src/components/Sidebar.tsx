@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Folder, Star, Tag, ChevronDown, ChevronRight, Bookmark, Plus } from 'lucide-react';
 import { Folder as FolderType, Bookmark as BookmarkType } from '../types';
 
@@ -17,14 +17,48 @@ const Sidebar: React.FC<SidebarProps> = ({
   bookmarks,
   onAddFolder
 }) => {
-  const [expandedSections, setExpandedSections] = useState({
-    folders: true,
-    favorites: true,
-    tags: false
-  });
+  // Load expanded sections from localStorage or use defaults
+  const loadExpandedSections = () => {
+    const saved = localStorage.getItem('bookmarkManagerExpandedSections');
+    if (saved) {
+      try {
+        return JSON.parse(saved);
+      } catch (e) {
+        console.error('Failed to parse saved expanded sections:', e);
+        return { folders: true, favorites: true, tags: false };
+      }
+    }
+    return { folders: true, favorites: true, tags: false };
+  };
+
+  // Load expanded folders from localStorage or use empty object
+  const loadExpandedFolders = () => {
+    const saved = localStorage.getItem('bookmarkManagerExpandedFolders');
+    if (saved) {
+      try {
+        return JSON.parse(saved);
+      } catch (e) {
+        console.error('Failed to parse saved expanded folders:', e);
+        return {};
+      }
+    }
+    return {};
+  };
+
+  const [expandedSections, setExpandedSections] = useState(loadExpandedSections());
   
   // Track expanded folder states
-  const [expandedFolders, setExpandedFolders] = useState<Record<string, boolean>>({});
+  const [expandedFolders, setExpandedFolders] = useState<Record<string, boolean>>(loadExpandedFolders());
+
+  // Save expanded sections to localStorage when they change
+  useEffect(() => {
+    localStorage.setItem('bookmarkManagerExpandedSections', JSON.stringify(expandedSections));
+  }, [expandedSections]);
+
+  // Save expanded folders to localStorage when they change
+  useEffect(() => {
+    localStorage.setItem('bookmarkManagerExpandedFolders', JSON.stringify(expandedFolders));
+  }, [expandedFolders]);
 
   const toggleSection = (section: keyof typeof expandedSections) => {
     setExpandedSections({

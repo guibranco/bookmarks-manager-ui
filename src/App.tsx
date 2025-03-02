@@ -9,13 +9,30 @@ import FolderModal from './components/FolderModal';
 import { Bookmark as BookmarkType, Folder as FolderType, AppConfig } from './types';
 import { sampleBookmarks, sampleFolders } from './data/sampleData';
 
+// Default configuration
+const defaultConfig: AppConfig = {
+  darkMode: false,
+  showSidebar: true,
+  viewMode: 'grid'
+};
+
 function App() {
+  // Load config from localStorage or use default
+  const loadConfig = (): AppConfig => {
+    const savedConfig = localStorage.getItem('bookmarkManagerConfig');
+    if (savedConfig) {
+      try {
+        return JSON.parse(savedConfig);
+      } catch (e) {
+        console.error('Failed to parse saved config:', e);
+        return defaultConfig;
+      }
+    }
+    return defaultConfig;
+  };
+  
   // App configuration
-  const [config, setConfig] = useState<AppConfig>({
-    darkMode: false,
-    showSidebar: true,
-    viewMode: 'grid'
-  });
+  const [config, setConfig] = useState<AppConfig>(loadConfig());
   
   // App state
   const [bookmarks, setBookmarks] = useState<BookmarkType[]>(sampleBookmarks);
@@ -29,6 +46,11 @@ function App() {
   const [showConfigModal, setShowConfigModal] = useState(false);
   const [showFolderModal, setShowFolderModal] = useState(false);
   const [newFolderParentId, setNewFolderParentId] = useState<string | null>(null);
+
+  // Save config to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem('bookmarkManagerConfig', JSON.stringify(config));
+  }, [config]);
 
   // Apply dark mode
   useEffect(() => {
