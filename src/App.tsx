@@ -59,10 +59,10 @@ function App() {
 
   }).filter(bookmark => {
     // Then apply search filter
-    const matchesSearch = bookmark.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                          bookmark.url.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                          bookmark.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    return matchesSearch;
+    return bookmark.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                              bookmark.url.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                              bookmark.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+
   });
 
   const handleBookmarkClick = (bookmark: BookmarkType) => {
