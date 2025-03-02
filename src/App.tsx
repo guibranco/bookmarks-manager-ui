@@ -55,9 +55,8 @@ function App() {
     
     // For specific folder, include bookmarks in this folder and all subfolders
     const folderIds = [selectedFolder, ...getAllChildFolderIds(selectedFolder!)];
-    const matchesFolder = folderIds.includes(bookmark.folderId!);
-    
-    return matchesFolder;
+    return folderIds.includes(bookmark.folderId!);
+
   }).filter(bookmark => {
     // Then apply search filter
     const matchesSearch = bookmark.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
