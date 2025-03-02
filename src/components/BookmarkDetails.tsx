@@ -10,6 +10,27 @@ interface BookmarkDetailsProps {
   onDelete: () => void;
 }
 
+/**
+ * A functional component that displays and manages the details of a bookmark.
+ * It allows users to edit bookmark properties, add/remove tags, and organize bookmarks into folders.
+ *
+ * @component
+ * @param {Object} props - The properties for the component.
+ * @param {Bookmark} props.bookmark - The bookmark object to be edited.
+ * @param {Folder[]} props.folders - An array of folders for organizing bookmarks.
+ * @param {Function} props.onClose - Callback function to close the bookmark details view.
+ * @param {Function} props.onUpdate - Callback function to update the bookmark with edited details.
+ * @param {Function} props.onDelete - Callback function to delete the bookmark.
+ *
+ * @example
+ * <BookmarkDetails
+ *   bookmark={bookmarkData}
+ *   folders={folderData}
+ *   onClose={handleClose}
+ *   onUpdate={handleUpdate}
+ *   onDelete={handleDelete}
+ * />
+ */
 const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({ 
   bookmark, 
   folders,

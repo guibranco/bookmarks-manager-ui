@@ -9,10 +9,44 @@ interface FolderModalProps {
   onSave: (name: string, parentId: string | null) => void;
 }
 
+/**
+ * A modal component for creating a new folder within a hierarchical folder structure.
+ *
+ * @component
+ * @param {Object} props - The properties for the FolderModal component.
+ * @param {Array<FolderType>} props.folders - An array of folder objects to display in the dropdown.
+ * @param {string | null} props.parentId - The ID of the parent folder, if any.
+ * @param {Function} props.onClose - Callback function to close the modal.
+ * @param {Function} props.onSave - Callback function to save the new folder with its name and parent ID.
+ *
+ * @example
+ * <FolderModal
+ *   folders={folderList}
+ *   parentId={null}
+ *   onClose={() => setShowModal(false)}
+ *   onSave={(name, parentId) => createFolder(name, parentId)}
+ * />
+ */
 const FolderModal: React.FC<FolderModalProps> = ({ folders, parentId, onClose, onSave }) => {
   const [folderName, setFolderName] = useState('');
   const [selectedParentId, setSelectedParentId] = useState<string | null>(parentId);
 
+  /**
+   * Handles the save action for a folder.
+   * This function checks if the folder name is not empty,
+   * then calls the onSave function with the trimmed folder name
+   * and the selected parent ID. After saving, it triggers
+   * the onClose function to close the current dialog or interface.
+   *
+   * @function handleSave
+   * @returns {void}
+   *
+   * @throws {Error} Throws an error if the onSave function fails.
+   *
+   * @example
+   * // Example usage of handleSave
+   * handleSave();
+   */
   const handleSave = () => {
     if (folderName.trim()) {
       onSave(folderName.trim(), selectedParentId);
@@ -21,9 +55,41 @@ const FolderModal: React.FC<FolderModalProps> = ({ folders, parentId, onClose, o
   };
 
   // Organize folders into a hierarchical structure for the dropdown
+  /**
+   * Retrieves a list of folder options for selection, structured hierarchically based on their parent-child relationships.
+   * The function starts by filtering the root folders (those without a parent) and then recursively renders options
+   * for each folder and its subfolders.
+   *
+   * @returns {JSX.Element[]} An array of JSX elements representing the folder options, each wrapped in an <option> tag.
+   *
+   * @example
+   * const options = getFolderOptions();
+   * // options will contain a list of <option> elements for all root folders and their subfolders.
+   */
   const getFolderOptions = () => {
     const rootFolders = folders.filter(folder => folder.parentId === null);
     
+    /**
+     * Recursively generates a list of option elements for a folder structure.
+     *
+     * This function takes an array of folders and a depth level, and returns a flat array of option elements
+     * representing the folder hierarchy. Each option displays the folder name, prefixed by a visual indicator
+     * based on its depth in the hierarchy.
+     *
+     * @param {FolderType[]} folderList - An array of folders to be rendered as options.
+     * @param {number} [depth=0] - The current depth in the folder hierarchy, used for prefixing the folder names.
+     * @returns {JSX.Element[]} An array of JSX option elements representing the folders.
+     *
+     * @example
+     * const folders = [
+     *   { id: 1, name: 'Folder 1', parentId: null },
+     *   { id: 2, name: 'Folder 2', parentId: 1 },
+     *   { id: 3, name: 'Folder 3', parentId: 1 }
+     * ];
+     * const options = renderOptions(folders);
+     *
+     * @throws {Error} Throws an error if folderList is not an array.
+     */
     const renderOptions = (folderList: FolderType[], depth: number = 0) => {
       return folderList.flatMap(folder => {
         const subfolders = folders.filter(f => f.parentId === folder.id);

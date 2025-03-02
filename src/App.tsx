@@ -16,8 +16,29 @@ const defaultConfig: AppConfig = {
   viewMode: 'grid'
 };
 
+/**
+ * Main application component that manages bookmarks and folders.
+ * It handles loading and saving configuration, managing application state,
+ * and rendering the user interface.
+ *
+ * @returns {JSX.Element} The rendered application component.
+ */
 function App() {
   // Load config from localStorage or use default
+  /**
+   * Loads the application configuration from local storage.
+   * If a saved configuration is found, it attempts to parse it as JSON.
+   * In case of a parsing error, it logs the error to the console and returns the default configuration.
+   * If no saved configuration is found, the default configuration is returned.
+   *
+   * @returns {AppConfig} The application configuration object.
+   *
+   * @throws {Error} Throws an error if the JSON parsing fails, which is caught and logged.
+   *
+   * @example
+   * const config = loadConfig();
+   * console.log(config);
+   */
   const loadConfig = (): AppConfig => {
     const savedConfig = localStorage.getItem('bookmarkManagerConfig');
     if (savedConfig) {
@@ -145,11 +166,48 @@ function App() {
     }
   };
 
+  /**
+   * Opens a modal for adding a new folder under a specified parent folder.
+   *
+   * This function sets the ID of the parent folder where the new folder will be created
+   * and triggers the display of the folder creation modal.
+   *
+   * @param {string | null} parentId - The ID of the parent folder. If null, the new folder will be created at the root level.
+   *
+   * @returns {void} This function does not return a value.
+   *
+   * @example
+   * // To add a new folder under a folder with ID '123':
+   * handleAddFolder('123');
+   *
+   * // To add a new folder at the root level:
+   * handleAddFolder(null);
+   */
   const handleAddFolder = (parentId: string | null) => {
     setNewFolderParentId(parentId);
     setShowFolderModal(true);
   };
 
+  /**
+   * Creates a new folder with the specified name and parent ID.
+   *
+   * This function generates a unique ID for the new folder, adds it to the
+   * existing list of folders, and updates the state accordingly. If the new
+   * folder is a subfolder (i.e., it has a parent ID), additional handling
+   * may be required to ensure that the parent folder is expanded in the UI.
+   *
+   * @param {string} name - The name of the new folder.
+   * @param {string | null} parentId - The ID of the parent folder, or null if it is a top-level folder.
+   *
+   * @throws {Error} Throws an error if the folder name is empty.
+   *
+   * @example
+   * // Creating a top-level folder
+   * createFolder('Documents', null);
+   *
+   * // Creating a subfolder under a parent folder with ID 'folder-1'
+   * createFolder('Projects', 'folder-1');
+   */
   const createFolder = (name: string, parentId: string | null) => {
     const newFolder: FolderType = {
       id: `folder-${folders.length + 1}`,
@@ -164,6 +222,22 @@ function App() {
     }
   };
 
+  /**
+   * Toggles the visibility of the sidebar in the application.
+   * This function updates the configuration state to either show or hide the sidebar
+   * based on its current visibility status.
+   *
+   * It uses the existing configuration and inverts the value of the `showSidebar` property.
+   *
+   * @function toggleSidebar
+   * @returns {void} This function does not return a value.
+   *
+   * @example
+   * // To toggle the sidebar visibility
+   * toggleSidebar();
+   *
+   * @throws {Error} Throws an error if the configuration state cannot be updated.
+   */
   const toggleSidebar = () => {
     setConfig({
       ...config,
@@ -171,11 +245,65 @@ function App() {
     });
   };
 
+  /**
+   * Updates the application configuration with the provided new configuration.
+   *
+   * This function takes a new configuration object and applies it to the
+   * application's current configuration state. It is essential for ensuring
+   * that the application runs with the latest settings defined by the user
+   * or system.
+   *
+   * @param {AppConfig} newConfig - The new configuration object that contains
+   * the updated settings for the application.
+   *
+   * @returns {void} This function does not return a value.
+   *
+   * @throws {Error} Throws an error if the new configuration is invalid or
+   * cannot be applied.
+   *
+   * @example
+   * const newSettings = {
+   *   theme: 'dark',
+   *   language: 'en-US',
+   * };
+   * updateConfig(newSettings);
+   */
   const updateConfig = (newConfig: AppConfig) => {
     setConfig(newConfig);
   };
 
   // Get folder name with full path
+  /**
+   * Retrieves the display name of a folder based on its ID.
+   *
+   * This function checks for specific folder IDs and returns corresponding names.
+   * If the folder ID is not recognized, it attempts to find the folder in a predefined list.
+   * If the folder is found, it constructs the full path from the folder to its root parent.
+   *
+   * @param {string | null} folderId - The ID of the folder to retrieve the name for.
+   *                                    Can be null or one of the special identifiers:
+   *                                    'all' for "All Bookmarks" or 'favorites' for "Favorites".
+   * @returns {string} The name of the folder, or a default string if the folder ID is not recognized.
+   *                  Possible return values include:
+   *                  - "All Bookmarks" if folderId is null or 'all'.
+   *                  - "Favorites" if folderId is 'favorites'.
+   *                  - "Unknown Folder" if the folder cannot be found in the list.
+   *
+   * @example
+   * // Returns "All Bookmarks"
+   * getFolderPathName(null);
+   *
+   * @example
+   * // Returns "Favorites"
+   * getFolderPathName('favorites');
+   *
+   * @example
+   * // Assuming a folder with ID '123' exists and has a parent,
+   * // Returns "Parent Folder > Child Folder"
+   * getFolderPathName('123');
+   *
+   * @throws {Error} Throws an error if there is an issue accessing the folders list.
+   */
   const getFolderPathName = (folderId: string | null): string => {
     if (!folderId) return 'All Bookmarks';
     if (folderId === 'all') return 'All Bookmarks';
@@ -184,6 +312,25 @@ function App() {
     const folder = folders.find(f => f.id === folderId);
     if (!folder) return 'Unknown Folder';
     
+    /**
+     * Recursively retrieves the full path of a folder by concatenating its name
+     * with the names of its parent folders, separated by a ' > ' delimiter.
+     *
+     * @param {FolderType} folder - The folder object for which to retrieve the parent path.
+     * @returns {string} The full path of the folder, or just the folder's name if it has no parent.
+     *
+     * @example
+     * const folder = { id: 1, name: 'Documents', parentId: null };
+     * const path = getParentPath(folder);
+     * // path will be 'Documents'
+     *
+     * @example
+     * const subFolder = { id: 2, name: 'Projects', parentId: 1 };
+     * const path = getParentPath(subFolder);
+     * // path will be 'Documents > Projects'
+     *
+     * @throws {Error} Throws an error if the folder object is invalid or if the parent folder cannot be found.
+     */
     const getParentPath = (folder: FolderType): string => {
       if (!folder.parentId) return folder.name;
       const parent = folders.find(f => f.id === folder.parentId);
