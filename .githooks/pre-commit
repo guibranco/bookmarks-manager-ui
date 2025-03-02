@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+LC_ALL=C
+
+local_branch="$(git rev-parse --abbrev-ref HEAD)"
+
+valid_branch_regex="^(penify|gitauto|dependabot|feature|fix|docs|style|refactor|perf|hotfix|test|chore|create)(\/[a-zA-Z0-9#._-]+)+$"
+
+message="There is something wrong with your branch name. Branch names in this project must adhere to this contract: $valid_branch_regex. Your commit will be rejected. You should rename your branch to a valid name and try again."
+
+if [[ ! $local_branch =~ $valid_branch_regex ]]
+then
+    echo "$message"
+    exit 1
+fi
+
+# Ensure we're in the repository root
+cd "$(git rev-parse --show-toplevel)" || exit 1
+
+# Check if package.json exists
+if [ ! -f "package.json" ]; then
+    echo "Error: package.json not found in repository root"
+    echo "Hint: Ensure you're running git commands from within the repository"
+    exit 1
+fi
+
+# Check if npm is installed
+if ! command -v npm >/dev/null 2>&1; then
+    echo "Error: npm is not installed on your system"
+    echo "Hint: Install npm from https://nodejs.org/"
+    exit 1
+fi
+
+# Run lint with error handling
+if ! npm run lint --check; then
+    echo "Linting failed"
+    exit 1
+fi
