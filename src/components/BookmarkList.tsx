@@ -8,6 +8,37 @@ interface BookmarkListProps {
   onToggleFavorite: (id: string) => void;
 }
 
+/**
+ * A functional component that renders a list of bookmarks in a table format.
+ * Each bookmark displays its title, URL, tags, date added, and provides actions for favoriting and opening the link.
+ *
+ * @param {Object} props - The properties for the component.
+ * @param {Array<Bookmark>} props.bookmarks - An array of bookmark objects to display.
+ * @param {function} props.onBookmarkClick - Callback function invoked when a bookmark is clicked.
+ * @param {function} props.onToggleFavorite - Callback function invoked to toggle the favorite status of a bookmark.
+ *
+ * @returns {JSX.Element} The rendered bookmark list component.
+ *
+ * @example
+ * const bookmarks = [
+ *   { id: 1, title: 'Example', url: 'https://example.com', tags: ['tag1', 'tag2'], dateAdded: '2023-01-01', favorite: false },
+ *   // more bookmarks...
+ * ];
+ *
+ * const handleBookmarkClick = (bookmark) => {
+ *   console.log('Bookmark clicked:', bookmark);
+ * };
+ *
+ * const handleToggleFavorite = (id) => {
+ *   console.log('Toggle favorite for bookmark with id:', id);
+ * };
+ *
+ * <BookmarkList
+ *   bookmarks={bookmarks}
+ *   onBookmarkClick={handleBookmarkClick}
+ *   onToggleFavorite={handleToggleFavorite}
+ * />
+ */
 const BookmarkList: React.FC<BookmarkListProps> = ({ bookmarks, onBookmarkClick, onToggleFavorite }) => {
   return (
     <div className="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden">
