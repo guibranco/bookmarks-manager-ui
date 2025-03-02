@@ -234,12 +234,17 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
           <div className="pt-4 flex justify-between">
             <button
               type="button"
-              onClick={onDelete}
+              onClick={() => {
+                if (window.confirm('Are you sure you want to delete this bookmark?')) {
+                  onDelete();
+                }
+              }}
               className="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 flex items-center"
             >
               <Trash className="h-4 w-4 mr-1" />
               Delete
             </button>
+          </div>
             <button
               type="button"
               onClick={handleSave}
