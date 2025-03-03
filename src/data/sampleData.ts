@@ -3185,7 +3185,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "ndepend-20171-get-estimating",
     title: "NDepend 2017.1: Get Estimating!",
-    url: "http://www.paraesthesia.com/archive/2017/01/26/ndepend-2017-1-get-estimating/",
+    url: "https://www.paraesthesia.com/archive/2017/01/26/ndepend-2017-1-get-estimating/",
     description: "",
     thumbnail: "",
     tags: [],
@@ -3365,7 +3365,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "busca-de-cep---webservice-de-cep---xml-ajax-query-string",
     title: "Busca de CEP - WebService de CEP - XML, AJAX, QUERY STRING",
-    url: "http://www.republicavirtual.com.br/cep/",
+    url: "https://www.republicavirtual.com.br/cep/",
     description: "",
     thumbnail: "",
     tags: [],
@@ -3464,7 +3464,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "free-proxy-api-access",
     title: "Free Proxy API Access",
-    url: "http://pubproxy.com/",
+    url: "https://pubproxy.com/",
     description: "",
     thumbnail: "",
     tags: [],
@@ -4170,7 +4170,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "convert-cidr-notation-to-a-list-of-ip-addresses",
     title: "Convert CIDR notation to a list of IP addresses",
-    url: "http://magic-cookie.co.uk/iplist.html",
+    url: "https://magic-cookie.co.uk/iplist.html",
     description: "",
     thumbnail: "",
     tags: [],
@@ -4449,7 +4449,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "cheat-sheet--all-cheat-sheets-in-one-page",
     title: "Cheat Sheet : All Cheat Sheets in one page",
-    url: "http://www.cheat-sheets.org/",
+    url: "https://www.cheat-sheets.org/",
     description: "",
     thumbnail: "",
     tags: [],
@@ -4755,7 +4755,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "bdd-com-net-parte-1--blogs-da-lambda3",
     title: "BDD com .NET (parte 1) | Blogs da Lambda3",
-    url: "http://blog.lambda3.com.br/2011/05/bdd-com-net-parte-1/",
+    url: "https://blog.lambda3.com.br/2011/05/bdd-com-net-parte-1/",
     description: "",
     thumbnail: "",
     tags: [],
@@ -4767,7 +4767,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "behavior-driven-design-bdd---validando-o-comportamento-de-uma-aplicao-com-vs-2015--specflow--selenium",
     title:
       "Behavior Driven Design (BDD) - Validando o comportamento de uma aplicação com VS 2015 + SpecFlow + Selenium",
-    url: "http://netcoders.com.br/blog/behavior-driven-design-bdd-validando-o-comportamento-de-uma-aplicacao-com-vs-2015-specflow-selenium/",
+    url: "https://netcoders.com.br/blog/behavior-driven-design-bdd-validando-o-comportamento-de-uma-aplicacao-com-vs-2015-specflow-selenium/",
     description: "",
     thumbnail: "",
     tags: [],
@@ -4789,7 +4789,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "c-with-patterns-notification--tiago-pariz",
     title: "C# with Patterns: Notification – Tiago Pariz",
-    url: "http://blog.tiagopariz.com/c-with-patterns-notification/",
+    url: "https://blog.tiagopariz.com/c-with-patterns-notification/",
     description: "",
     thumbnail: "",
     tags: [],
@@ -4992,7 +4992,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "clean-coder-blog",
     title: "Clean Coder Blog",
-    url: "http://blog.cleancoder.com/uncle-bob/2017/05/05/TestDefinitions.html",
+    url: "https://blog.cleancoder.com/uncle-bob/2017/05/05/TestDefinitions.html",
     description: "",
     thumbnail: "",
     tags: [],
@@ -5047,7 +5047,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "gabs-ferreira",
     title: "Gabs Ferreira",
-    url: "http://gabsferreira.com/#open",
+    url: "https://gabsferreira.com/#open",
     description: "",
     thumbnail: "",
     tags: [],
@@ -5058,7 +5058,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "gregor-riegler--merciless-refactorer",
     title: "Gregor Riegler · Merciless Refactorer",
-    url: "http://gregorriegler.com/",
+    url: "https://gregorriegler.com/",
     description: "",
     thumbnail: "",
     tags: [],
@@ -5137,7 +5137,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "software-design-blog--step-by-step-guide-to-use-dependency-injection",
     title:
       "Software Design Blog | Step-by-step guide to use dependency injection",
-    url: "http://www.webdevelopment.co.nz/post/step-by-step-guide-to-use-dependency-injection",
+    url: "https://www.webdevelopment.co.nz/post/step-by-step-guide-to-use-dependency-injection",
     description: "",
     thumbnail: "",
     tags: [],
@@ -5318,7 +5318,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses---joel-on-software",
     title:
       "The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets (No Excuses!) - Joel on Software",
-    url: "http://www.joelonsoftware.com/articles/Unicode.html",
+    url: "https://www.joelonsoftware.com/articles/Unicode.html",
     description: "",
     thumbnail: "",
     tags: [],
@@ -5434,7 +5434,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "event-sourcing-and-cqrs-in-c",
     title: "Event Sourcing and CQRS in C#",
-    url: "http://www.andreavallotti.tech/en/2018/01/event-sourcing-and-cqrs-in-c/",
+    url: "https://www.andreavallotti.tech/en/2018/01/event-sourcing-and-cqrs-in-c/",
     description: "",
     thumbnail: "",
     tags: [],
@@ -5479,7 +5479,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "net-design-patterns-in-c-and-vbnet---gang-of-four-gof---dofactorycom",
     title:
       ".NET Design Patterns in C# and VB.NET - Gang of Four (GOF) - doFactory.com",
-    url: "http://www.dofactory.com/net/design-patterns",
+    url: "https://www.dofactory.com/net/design-patterns",
     description: "",
     thumbnail: "",
     tags: [],
@@ -5856,7 +5856,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "mvc-is-dead-its-time-to-move-on",
     title: "MVC is dead, it's time to MOVE on.",
-    url: "http://cirw.in/blog/time-to-move-on",
+    url: "https://cirw.in/blog/time-to-move-on",
     description: "",
     thumbnail: "",
     tags: [],
@@ -6117,7 +6117,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "gregor-riegler--lift-up-conditional",
     title: "Gregor Riegler · lift up conditional",
-    url: "http://gregorriegler.com/2019/12/08/lift-up-conditional.html",
+    url: "https://gregorriegler.com/2019/12/08/lift-up-conditional.html",
     description: "",
     thumbnail: "",
     tags: [],
@@ -6187,7 +6187,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "learn-how-to-exploit-multiple-cores-for-better-performance-and-scalability---high-scalability--",
     title:
       "Learn How to Exploit Multiple Cores for Better Performance and Scalability - High Scalability -",
-    url: "http://highscalability.com/learn-how-exploit-multiple-cores-better-performance-and-scalability",
+    url: "https://highscalability.com/learn-how-exploit-multiple-cores-better-performance-and-scalability",
     description: "",
     thumbnail: "",
     tags: [],
@@ -6314,7 +6314,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "stack-overflow-architecture---high-scalability--",
     title: "Stack Overflow Architecture - High Scalability -",
-    url: "http://highscalability.com/stack-overflow-architecture",
+    url: "https://highscalability.com/stack-overflow-architecture",
     description: "",
     thumbnail: "",
     tags: [],
@@ -6420,7 +6420,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "a-simple-c-wrapper-for-ffmpeg--jasonjanos-blog",
     title: "A Simple c# Wrapper for ffMpeg « JasonJano's Blog",
-    url: "http://jasonjano.wordpress.com/2010/02/09/a-simple-c-wrapper-for-ffmpeg/",
+    url: "https://jasonjano.wordpress.com/2010/02/09/a-simple-c-wrapper-for-ffmpeg/",
     description: "",
     thumbnail: "",
     tags: [],
@@ -6431,7 +6431,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "audio-library-part-i---windows-mixer-control---codeproject",
     title: "Audio Library Part I - (Windows Mixer Control) - CodeProject",
-    url: "http://www.codeproject.com/Articles/11695/Audio-Library-Part-I-Windows-Mixer-Control",
+    url: "https://www.codeproject.com/Articles/11695/Audio-Library-Part-I-Windows-Mixer-Control",
     description: "",
     thumbnail: "",
     tags: [],
@@ -6586,7 +6586,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "stephen-cleary-the-blog-various-implementations-of-asynchronous-background-tasks",
     title:
       "Stephen Cleary (the blog): Various Implementations of Asynchronous Background Tasks",
-    url: "http://blog.stephencleary.com/2010/08/various-implementations-of-asynchronous.html",
+    url: "https://blog.stephencleary.com/2010/08/various-implementations-of-asynchronous.html",
     description: "",
     thumbnail: "",
     tags: [],
@@ -6692,7 +6692,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "net---notify-c-client-when-smtp-server-receive-a-new-email---stack-overflow",
     title:
       ".net - Notify C# Client, when SMTP Server receive a new Email - Stack Overflow",
-    url: "http://stackoverflow.com/questions/7358322/notify-c-sharp-client-when-smtp-server-receive-a-new-email",
+    url: "https://stackoverflow.com/questions/7358322/notify-c-sharp-client-when-smtp-server-receive-a-new-email",
     description: "",
     thumbnail: "",
     tags: [],
@@ -6703,7 +6703,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "net--usando-sockets",
     title: ".NET- Usando Sockets",
-    url: "http://www.macoratti.net/net_soc1.htm",
+    url: "https://www.macoratti.net/net_soc1.htm",
     description: "",
     thumbnail: "",
     tags: [],
@@ -6805,7 +6805,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "c-helper-use-a-cryptographic-random-number-generator-in-c",
     title: "C# Helper: Use a cryptographic random number generator in C#",
-    url: "http://csharphelper.com/howtos/howto_crypto_random_numbers.html",
+    url: "https://csharphelper.com/howtos/howto_crypto_random_numbers.html",
     description: "",
     thumbnail: "",
     tags: [],
@@ -6839,7 +6839,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "c---crud-no-sql-server-com-dapper-e-metroframework",
     title: "C# - CRUD no SQL Server com Dapper e MetroFramework",
-    url: "http://www.macoratti.net/17/07/cshp_metdap1.htm",
+    url: "https://www.macoratti.net/17/07/cshp_metdap1.htm",
     description: "",
     thumbnail: "",
     tags: [],
@@ -6850,7 +6850,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "c---crud-no-sql-server-com-dapper-e-metroframework---ii",
     title: "C# - CRUD no SQL Server com Dapper e MetroFramework - II",
-    url: "http://www.macoratti.net/17/07/cshp_metdap2.htm",
+    url: "https://www.macoratti.net/17/07/cshp_metdap2.htm",
     description: "",
     thumbnail: "",
     tags: [],
@@ -6942,7 +6942,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "aspnet---one-dbcontext-per-web-request-why---stack-overflow",
     title: "asp.net - One DbContext per web request... why? - Stack Overflow",
-    url: "http://stackoverflow.com/questions/10585478/one-dbcontext-per-web-request-why",
+    url: "https://stackoverflow.com/questions/10585478/one-dbcontext-per-web-request-why",
     description: "",
     thumbnail: "",
     tags: [],
@@ -6990,7 +6990,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "customizing-reverse-engineer-code-first-in-the-ef-power-tools--romillercom",
     title:
       "Customizing ‘Reverse Engineer Code First’ in the EF Power Tools | RoMiller.com",
-    url: "http://romiller.com/2012/05/09/customizing-reverse-engineer-code-first-in-the-ef-power-tools/",
+    url: "https://romiller.com/2012/05/09/customizing-reverse-engineer-code-first-in-the-ef-power-tools/",
     description: "",
     thumbnail: "",
     tags: [],
@@ -7002,7 +7002,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "entity-framework---aspnet-web-api-2--ef6-first-call-initialization-performance---stack-overflow",
     title:
       "entity framework - ASP.NET Web Api 2 / EF6 first call initialization performance - Stack Overflow",
-    url: "http://stackoverflow.com/questions/26160950/asp-net-web-api-2-ef6-first-call-initialization-performance",
+    url: "https://stackoverflow.com/questions/26160950/asp-net-web-api-2-ef6-first-call-initialization-performance",
     description: "",
     thumbnail: "",
     tags: [],
@@ -7062,7 +7062,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "managing-dbcontext-the-right-way-with-entity-framework-6-an-in-depth-guide",
     title:
       "Managing DbContext the right way with Entity Framework 6: an in-depth guide",
-    url: "http://mehdi.me/ambient-dbcontext-in-ef6/",
+    url: "https://mehdi.me/ambient-dbcontext-in-ef6/",
     description: "",
     thumbnail: "",
     tags: [],
@@ -7156,7 +7156,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "using-ef-cores-migration-with-docker-and-mysql",
     title: "Using EF Core's migration with Docker and MySQL",
-    url: "http://www.andreavallotti.tech/en/2017/10/using-ef-cores-migration-with-docker-and-mysql/",
+    url: "https://www.andreavallotti.tech/en/2017/10/using-ef-cores-migration-with-docker-and-mysql/",
     description: "",
     thumbnail: "",
     tags: [],
@@ -7191,7 +7191,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "build-your-own-generic-data-access-layer---codeproject",
     title: "Build Your Own Generic Data Access Layer - CodeProject",
-    url: "http://www.codeproject.com/Articles/630277/Build-Your-Own-Generic-Data-Access-Layer",
+    url: "https://www.codeproject.com/Articles/630277/Build-Your-Own-Generic-Data-Access-Layer",
     description: "",
     thumbnail: "",
     tags: [],
@@ -7227,7 +7227,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "creating-a-more-complex-data-model-for-an-aspnet-mvc-application-4-of-10--the-official-microsoft-aspnet-site",
     title:
       "Creating a More Complex Data Model for an ASP.NET MVC Application (4 of 10) : The Official Microsoft ASP.NET Site",
-    url: "http://www.asp.net/mvc/tutorials/getting-started-with-ef-using-mvc/creating-a-more-complex-data-model-for-an-asp-net-mvc-application",
+    url: "https://www.asp.net/mvc/tutorials/getting-started-with-ef-using-mvc/creating-a-more-complex-data-model-for-an-asp-net-mvc-application",
     description: "",
     thumbnail: "",
     tags: [],
@@ -7238,7 +7238,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "linq-to-sql-like-operator---guy-bursteins-blog",
     title: "Linq to SQL Like Operator - Guy Burstein's Blog",
-    url: "http://blogs.microsoft.co.il/blogs/bursteg/archive/2007/10/16/linq-to-sql-like-operator.aspx",
+    url: "https://blogs.microsoft.co.il/blogs/bursteg/archive/2007/10/16/linq-to-sql-like-operator.aspx",
     description: "",
     thumbnail: "",
     tags: [],
@@ -7249,7 +7249,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "monitoring-data-change-using-sqldependency-and-c---this-dot-life",
     title: "Monitoring data change using SqlDependency and C# - This Dot Life",
-    url: "http://blog.jsinh.in/monitoring-data-change-using-sqldependency-and-c/#.Vyjrs_krLIU",
+    url: "https://blog.jsinh.in/monitoring-data-change-using-sqldependency-and-c/#.Vyjrs_krLIU",
     description: "",
     thumbnail: "",
     tags: [],
@@ -7318,7 +7318,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "its-my-turn-to-build-an-ioc-container-in-15-minutes-and-33-lines---ken-egozi--web-builder",
     title:
       "It's My Turn To Build An IoC Container In 15 Minutes and 33 Lines - Ken Egozi | Web builder",
-    url: "http://kenegozi.com/blog/2008/01/17/its-my-turn-to-build-an-ioc-container-in-15-minutes-and-33-lines",
+    url: "https://kenegozi.com/blog/2008/01/17/its-my-turn-to-build-an-ioc-container-in-15-minutes-and-33-lines",
     description: "",
     thumbnail: "",
     tags: [],
@@ -7353,7 +7353,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "extending-aspnet-mvc-music-store-with-elasticsearch",
     title: "Extending ASP.NET MVC Music Store with elasticsearch",
-    url: "http://joelabrahamsson.com/extending-aspnet-mvc-music-store-with-elasticsearch/",
+    url: "https://joelabrahamsson.com/extending-aspnet-mvc-music-store-with-elasticsearch/",
     description: "",
     thumbnail: "",
     tags: [],
@@ -7490,7 +7490,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "export-data-to-excel-using-c--matija-boievi---software-developer",
     title:
       "Export data to Excel using C# | Matija Božičević - Software developer",
-    url: "http://matijabozicevic.com/blog/csharp-net-development/export-data-to-excel-using-csharp",
+    url: "https://matijabozicevic.com/blog/csharp-net-development/export-data-to-excel-using-csharp",
     description: "",
     thumbnail: "",
     tags: [],
@@ -7512,7 +7512,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "image-cropping-with-image-resizing-using-vbnet---codeproject",
     title: "Image Cropping with Image Resizing Using VB.NET - CodeProject",
-    url: "http://www.codeproject.com/Articles/27061/Image-Cropping-with-Image-Resizing-Using-VB-NET",
+    url: "https://www.codeproject.com/Articles/27061/Image-Cropping-with-Image-Resizing-Using-VB-NET",
     description: "",
     thumbnail: "",
     tags: [],
@@ -7548,7 +7548,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "web-api-file-upload-single-or-multiple-files--software-engineering",
     title:
       "Web API File Upload, Single or Multiple files | Software Engineering",
-    url: "http://damienbod.wordpress.com/2014/03/28/web-api-file-upload-single-or-multiple-files/",
+    url: "https://damienbod.wordpress.com/2014/03/28/web-api-file-upload-single-or-multiple-files/",
     description: "",
     thumbnail: "",
     tags: [],
@@ -7570,7 +7570,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "build-your-own-membership-system-for-aspnet-mvc---part-ii",
     title: "Build Your Own Membership System For ASP.NET MVC - Part II",
-    url: "http://odetocode.com/blogs/scott/archive/2012/10/02/build-your-own-membership-system-for-asp-net-mvc-part-again.aspx",
+    url: "https://odetocode.com/blogs/scott/archive/2012/10/02/build-your-own-membership-system-for-asp-net-mvc-part-again.aspx",
     description: "",
     thumbnail: "",
     tags: [],
@@ -7628,7 +7628,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "c-razor-sharp--c--net-full-text-search-using-solr--lucene-and-c--net-end-to-end-tutorial-on-using-these-technologies-with-solrnet",
     title:
       "C Razor Sharp / C# / .NET: Full Text Search using Solr / Lucene and C# / .NET. End to end tutorial on using these technologies with SolrNet.",
-    url: "http://crazorsharp.blogspot.com.br/2010/01/full-text-search-using-solr-lucene-and.html?m=1",
+    url: "https://crazorsharp.blogspot.com.br/2010/01/full-text-search-using-solr-lucene-and.html?m=1",
     description: "",
     thumbnail: "",
     tags: [],
@@ -7640,7 +7640,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "lucenenet-ultra-fast-search-for-mvc-or-webforms-site--made-easy---codeproject",
     title:
       "Lucene.Net ultra fast search for MVC or WebForms site => made easy! - CodeProject",
-    url: "http://www.codeproject.com/Articles/320219/Lucene-Net-ultra-fast-search-for-MVC-or-WebForms",
+    url: "https://www.codeproject.com/Articles/320219/Lucene-Net-ultra-fast-search-for-MVC-or-WebForms",
     description: "",
     thumbnail: "",
     tags: [],
@@ -7651,7 +7651,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "small-lucenenet-demo-app---codeproject",
     title: "Small Lucene.NET Demo App - CodeProject",
-    url: "http://www.codeproject.com/Articles/609980/Small-Lucene-NET-Demo-App",
+    url: "https://www.codeproject.com/Articles/609980/Small-Lucene-NET-Demo-App",
     description: "",
     thumbnail: "",
     tags: [],
@@ -7675,7 +7675,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "back-to-basics-32-bit-and-64-bit-confusion-around-x86-and-x64-and-the-net-framework-and-clr---scott-hanselman",
     title:
       "Back to Basics: 32-bit and 64-bit confusion around x86 and x64 and the .NET Framework and CLR - Scott Hanselman",
-    url: "http://www.hanselman.com/blog/BackToBasics32bitAnd64bitConfusionAroundX86AndX64AndTheNETFrameworkAndCLR.aspx",
+    url: "https://www.hanselman.com/blog/BackToBasics32bitAnd64bitConfusionAroundX86AndX64AndTheNETFrameworkAndCLR.aspx",
     description: "",
     thumbnail: "",
     tags: [],
@@ -7731,7 +7731,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "crie-seu-primeiro-bot-utilizando-o-bot-framework",
     title: "Crie seu primeiro Bot utilizando o Bot Framework",
-    url: "http://netcoders.com.br/blog/crie-seu-primeiro-bot-utilizando-o-bot-framework/",
+    url: "https://netcoders.com.br/blog/crie-seu-primeiro-bot-utilizando-o-bot-framework/",
     description: "",
     thumbnail: "",
     tags: [],
@@ -7789,7 +7789,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "laziness-in-c-40--lazyt--sankarsans-journal",
     title: "Laziness in C# 4.0 – Lazy<T> | Sankarsan's Journal",
-    url: "http://sankarsan.wordpress.com/2009/10/04/laziness-in-c-4-0-lazyt/",
+    url: "https://sankarsan.wordpress.com/2009/10/04/laziness-in-c-4-0-lazyt/",
     description: "",
     thumbnail: "",
     tags: [],
@@ -7800,7 +7800,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "list---bad-words-filter---stack-overflow",
     title: 'list - "bad words" filter - Stack Overflow',
-    url: "http://stackoverflow.com/questions/24515/bad-words-filter",
+    url: "https://stackoverflow.com/questions/24515/bad-words-filter",
     description: "",
     thumbnail: "",
     tags: [],
@@ -7879,7 +7879,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "net---single-assembly-from-multiple-projects---stack-overflow",
     title: ".net - Single assembly from multiple projects - Stack Overflow",
-    url: "http://stackoverflow.com/questions/893267/single-assembly-from-multiple-projects",
+    url: "https://stackoverflow.com/questions/893267/single-assembly-from-multiple-projects",
     description: "",
     thumbnail: "",
     tags: [],
@@ -7925,7 +7925,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "how-to-inject-a-managed-net-assembly-dll-into-another-process",
     title: "How To Inject a Managed .NET Assembly (DLL) Into Another Process",
-    url: "http://web.archive.org/web/20101224064236/http://codingthewheel.com/archives/how-to-inject-a-managed-assembly-dll",
+    url: "https://web.archive.org/web/20101224064236/https://codingthewheel.com/archives/how-to-inject-a-managed-assembly-dll",
     description: "",
     thumbnail: "",
     tags: [],
@@ -8100,7 +8100,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "creating-a-basic-windows-service-in-c---codeproject",
     title: "Creating a Basic Windows Service in C# - CodeProject®",
-    url: "http://www.codeproject.com/Articles/14353/Creating-a-Basic-Windows-Service-in-C",
+    url: "https://www.codeproject.com/Articles/14353/Creating-a-Basic-Windows-Service-in-C",
     description: "",
     thumbnail: "",
     tags: [],
@@ -8111,7 +8111,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "criando-um-servio-do-windows",
     title: "Criando um serviço do Windows",
-    url: "http://www.macoratti.net/vbn5_csw.htm",
+    url: "https://www.macoratti.net/vbn5_csw.htm",
     description: "",
     thumbnail: "",
     tags: [],
@@ -8122,7 +8122,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "ip-watchdog-simple-windows-service-written-in-c---codeproject",
     title: "IP Watchdog: Simple Windows Service Written in C# - CodeProject",
-    url: "http://www.codeproject.com/Articles/419660/IP-Watchdog-Simple-Windows-Service-Written-in-Csha",
+    url: "https://www.codeproject.com/Articles/419660/IP-Watchdog-Simple-Windows-Service-Written-in-Csha",
     description: "",
     thumbnail: "",
     tags: [],
@@ -8133,7 +8133,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "aspnet-signalr-hubs-api-guide---server-c--the-aspnet-site",
     title: "ASP.NET SignalR Hubs API Guide - Server (C#) | The ASP.NET Site",
-    url: "http://www.asp.net/signalr/overview/guide-to-the-api/hubs-api-guide-server#connectionlifetime",
+    url: "https://www.asp.net/signalr/overview/guide-to-the-api/hubs-api-guide-server#connectionlifetime",
     description: "",
     thumbnail: "",
     tags: [],
@@ -8144,7 +8144,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "aspnet-signalr-building-a-simple-real-time-chat-application",
     title: "ASP.NET SignalR: Building a Simple Real-Time Chat Application",
-    url: "http://geekswithblogs.net/dotNETvinz/archive/2014/02/27/asp.net-signalr-building-a-simple-real-time-chat-application.aspx",
+    url: "https://geekswithblogs.net/dotNETvinz/archive/2014/02/27/asp.net-signalr-building-a-simple-real-time-chat-application.aspx",
     description: "",
     thumbnail: "",
     tags: [],
@@ -8177,7 +8177,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "real-time-notifications-with-signalr---codeproject",
     title: "Real-time Notifications with SignalR - CodeProject",
-    url: "http://www.codeproject.com/Tips/672433/Real-time-Notifications-with-SignalR",
+    url: "https://www.codeproject.com/Tips/672433/Real-time-Notifications-with-SignalR",
     description: "",
     thumbnail: "",
     tags: [],
@@ -8211,7 +8211,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "tutorial-high-frequency-realtime-with-signalr-2--the-aspnet-site",
     title:
       "Tutorial: High-Frequency Realtime with SignalR 2 | The ASP.NET Site",
-    url: "http://www.asp.net/signalr/overview/getting-started/tutorial-high-frequency-realtime-with-signalr",
+    url: "https://www.asp.net/signalr/overview/getting-started/tutorial-high-frequency-realtime-with-signalr",
     description: "",
     thumbnail: "",
     tags: [],
@@ -8348,7 +8348,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "phantomjs---deploy-casperjs-within-c-project---stack-overflow",
     title: "phantomjs - Deploy CasperJS within C# project - Stack Overflow",
-    url: "http://stackoverflow.com/questions/25025828/deploy-casperjs-within-c-sharp-project",
+    url: "https://stackoverflow.com/questions/25025828/deploy-casperjs-within-c-sharp-project",
     description: "",
     thumbnail: "",
     tags: [],
@@ -8360,7 +8360,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "phantomjs---installing-casperjs-on-windows-how-to-do-it-correctly---stack-overflow",
     title:
       "phantomjs - Installing CasperJS on Windows: How to do it correctly? - Stack Overflow",
-    url: "http://stackoverflow.com/questions/14894311/installing-casperjs-on-windows-how-to-do-it-correctly",
+    url: "https://stackoverflow.com/questions/14894311/installing-casperjs-on-windows-how-to-do-it-correctly",
     description: "",
     thumbnail: "",
     tags: [],
@@ -8371,7 +8371,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "quick-ab-testing-in-aspnet-mvc---part-1-using-2-pages",
     title: "Quick A/B Testing in ASP.net MVC - Part 1 Using 2 Pages",
-    url: "http://blog.simontimms.com/2014/01/06/quick-ab-testing-in-asp-net-mvc-part-1-having-2-pages/",
+    url: "https://blog.simontimms.com/2014/01/06/quick-ab-testing-in-asp-net-mvc-part-1-having-2-pages/",
     description: "",
     thumbnail: "",
     tags: [],
@@ -8393,7 +8393,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "specflow---cucumber-for-net",
     title: "SpecFlow - Cucumber for .NET",
-    url: "http://www.specflow.org/",
+    url: "https://www.specflow.org/",
     description: "",
     thumbnail: "",
     tags: [],
@@ -8439,7 +8439,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "the-urban-canuk-eh-challenges-with-parallel-tests-on-azure-devops",
     title:
       "the urban canuk, eh: Challenges with Parallel Tests on Azure DevOps",
-    url: "http://www.bryancook.net/2020/02/challenges-with-parallel-tests-on-azure.html",
+    url: "https://www.bryancook.net/2020/02/challenges-with-parallel-tests-on-azure.html",
     description: "",
     thumbnail: "",
     tags: [],
@@ -8451,7 +8451,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "using-htmlunit-on-net-for-headless-browser-automation---steve-sandersons-blog---as-seen-on-youtube",
     title:
       "Using HtmlUnit on .NET for Headless Browser Automation - Steve Sanderson’s blog - As seen on YouTube™",
-    url: "http://blog.stevensanderson.com/2010/03/30/using-htmlunit-on-net-for-headless-browser-automation/",
+    url: "https://blog.stevensanderson.com/2010/03/30/using-htmlunit-on-net-for-headless-browser-automation/",
     description: "",
     thumbnail: "",
     tags: [],
@@ -8462,7 +8462,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "net---parallelforeach---graceful-cancellation---stack-overflow",
     title: ".net - Parallel.ForEach - Graceful Cancellation - Stack Overflow",
-    url: "http://stackoverflow.com/questions/4671865/parallel-foreach-graceful-cancellation",
+    url: "https://stackoverflow.com/questions/4671865/parallel-foreach-graceful-cancellation",
     description: "",
     thumbnail: "",
     tags: [],
@@ -8542,7 +8542,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "controlando-threads-com-semforos-c--desenvolvedoresnet--techblog",
     title:
       "Controlando Threads com Semáforos (C#) « Desenvolvedores.Net – TechBlog",
-    url: "http://techblog.desenvolvedores.net/2011/04/21/controlando-threads-com-semaforos-c/",
+    url: "https://techblog.desenvolvedores.net/2011/04/21/controlando-threads-com-semaforos-c/",
     description: "",
     thumbnail: "",
     tags: [],
@@ -8554,7 +8554,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "how-to-synchronize-a-producer-and-a-consumer-thread-c-and-visual-basic",
     title:
       "How to: Synchronize a Producer and a Consumer Thread (C# and Visual Basic)",
-    url: "http://msdn.microsoft.com/en-us/library/yy12yx1f.aspx",
+    url: "https://msdn.microsoft.com/en-us/library/yy12yx1f.aspx",
     description: "",
     thumbnail: "",
     tags: [],
@@ -8577,7 +8577,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "multithreading---is-the-c-static-constructor-thread-safe---stack-overflow",
     title:
       "multithreading - Is the C# static constructor thread safe? - Stack Overflow",
-    url: "http://stackoverflow.com/questions/7095/is-the-c-sharp-static-constructor-thread-safe",
+    url: "https://stackoverflow.com/questions/7095/is-the-c-sharp-static-constructor-thread-safe",
     description: "",
     thumbnail: "",
     tags: [],
@@ -8588,7 +8588,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "threading-in-c---free-e-book",
     title: "Threading in C# - Free E-book",
-    url: "http://www.albahari.com/threading/",
+    url: "https://www.albahari.com/threading/",
     description: "",
     thumbnail: "",
     tags: [],
@@ -8705,7 +8705,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "getting-started-with-web-api-2-c--the-official-microsoft-aspnet-site",
     title:
       "Getting Started with Web API 2 (C#) : The Official Microsoft ASP.NET Site",
-    url: "http://www.asp.net/web-api/overview/getting-started-with-aspnet-web-api/tutorial-your-first-web-api",
+    url: "https://www.asp.net/web-api/overview/getting-started-with-aspnet-web-api/tutorial-your-first-web-api",
     description: "",
     thumbnail: "",
     tags: [],
@@ -8728,7 +8728,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "part-5-creating-a-dynamic-ui-with-knockoutjs--the-official-microsoft-aspnet-site",
     title:
       "Part 5: Creating a Dynamic UI with Knockout.js : The Official Microsoft ASP.NET Site",
-    url: "http://www.asp.net/web-api/overview/creating-web-apis/using-web-api-with-entity-framework/using-web-api-with-entity-framework,-part-5",
+    url: "https://www.asp.net/web-api/overview/creating-web-apis/using-web-api-with-entity-framework/using-web-api-with-entity-framework,-part-5",
     description: "",
     thumbnail: "",
     tags: [],
@@ -8752,7 +8752,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "net-phone-communication-library-part-iv---receive-sms---codeproject",
     title:
       ".NET Phone Communication Library Part IV - Receive SMS - CodeProject",
-    url: "http://www.codeproject.com/KB/vb/phonesmsrecv.aspx",
+    url: "https://www.codeproject.com/KB/vb/phonesmsrecv.aspx",
     description: "",
     thumbnail: "",
     tags: [],
@@ -8764,7 +8764,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "how-to-build-a-net-softphone-in-c-with-sip-sdp-rtp-and-rtcp---codeproject",
     title:
       "How to Build a .NET Softphone in C# with SIP, SDP, RTP and RTCP - CodeProject",
-    url: "http://www.codeproject.com/Articles/170415/How-to-Build-a-NET-Softphone-in-C-with-SIP-SDP-RTP",
+    url: "https://www.codeproject.com/Articles/170415/How-to-Build-a-NET-Softphone-in-C-with-SIP-SDP-RTP",
     description: "",
     thumbnail: "",
     tags: [],
@@ -8775,7 +8775,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "introduction-to-sip-for-java-c-and-vb-developers---codeproject",
     title: "Introduction to SIP for Java, C#, and VB Developers - CodeProject",
-    url: "http://www.codeproject.com/Articles/97657/Introduction-to-SIP-for-Java-C-and-VB-Developers",
+    url: "https://www.codeproject.com/Articles/97657/Introduction-to-SIP-for-Java-C-and-VB-Developers",
     description: "",
     thumbnail: "",
     tags: [],
@@ -8786,7 +8786,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "a-simple-duplex-service-in-wcf",
     title: "A Simple Duplex Service in WCF",
-    url: "http://www.c-sharpcorner.com/uploadfile/dhananjaycoder/a-simple-duplex-service-in-wcf/",
+    url: "https://www.c-sharpcorner.com/uploadfile/dhananjaycoder/a-simple-duplex-service-in-wcf/",
     description: "",
     thumbnail: "",
     tags: [],
@@ -8797,7 +8797,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "five-steps-to-create-a-wcf-rest-service--easy-wcf",
     title: "Five steps to create a WCF Rest service | Easy WCF",
-    url: "http://easywcf.com/five-steps-to-create-a-wcf-rest-service/",
+    url: "https://easywcf.com/five-steps-to-create-a-wcf-rest-service/",
     description: "",
     thumbnail: "",
     tags: [],
@@ -8809,7 +8809,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "logging-messages-from-windows-service-to-windows-form-using-wcf-duplex-messaging--ovais-mehboobs-techblog",
     title:
       "Logging Messages from Windows Service to Windows Form using WCF Duplex Messaging | Ovais Mehboob's TechBlog",
-    url: "http://ovaismehboob.wordpress.com/2012/03/11/logging-messages-from-windows-service-to-windows-form-using-wcf-duplex-messaging/",
+    url: "https://ovaismehboob.wordpress.com/2012/03/11/logging-messages-from-windows-service-to-windows-form-using-wcf-duplex-messaging/",
     description: "",
     thumbnail: "",
     tags: [],
@@ -8820,7 +8820,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "passo-a-passo-criando-e-acessando-os-servios-wcf",
     title: "Passo a passo: Criando e acessando os serviços WCF",
-    url: "http://msdn.microsoft.com/pt-br/library/vstudio/bb386386.aspx",
+    url: "https://msdn.microsoft.com/pt-br/library/vstudio/bb386386.aspx",
     description: "",
     thumbnail: "",
     tags: [],
@@ -8831,7 +8831,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "wcf--wpf-chat-application---codeproject",
     title: "WCF / WPF Chat Application - CodeProject",
-    url: "http://www.codeproject.com/Articles/19752/WCF-WPF-Chat-Application",
+    url: "https://www.codeproject.com/Articles/19752/WCF-WPF-Chat-Application",
     description: "",
     thumbnail: "",
     tags: [],
@@ -8843,7 +8843,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "wcf-duplex-bi-directional-streaming-with-websocket-transport---net-web-development-and-tools-blog---site-home---msdn-blogs",
     title:
       "WCF Duplex Bi-directional Streaming with WebSocket Transport - .NET Web Development and Tools Blog - Site Home - MSDN Blogs",
-    url: "http://blogs.msdn.com/b/webdev/archive/2012/09/26/wcf-duplex-bi-directional-streaming-with-websocket-transport.aspx",
+    url: "https://blogs.msdn.com/b/webdev/archive/2012/09/26/wcf-duplex-bi-directional-streaming-with-websocket-transport.aspx",
     description: "",
     thumbnail: "",
     tags: [],
@@ -8854,7 +8854,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "wcf-service-library-with-windows-service-hosting---codeproject",
     title: "WCF Service Library with Windows Service Hosting - CodeProject",
-    url: "http://www.codeproject.com/Articles/38160/WCF-Service-Library-with-Windows-Service-Hosting",
+    url: "https://www.codeproject.com/Articles/38160/WCF-Service-Library-with-Windows-Service-Hosting",
     description: "",
     thumbnail: "",
     tags: [],
@@ -8865,7 +8865,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "wcf-a-few-tips---codeproject",
     title: "WCF: A few tips - CodeProject",
-    url: "http://www.codeproject.com/Articles/27308/WCF-A-few-tips",
+    url: "https://www.codeproject.com/Articles/27308/WCF-A-few-tips",
     description: "",
     thumbnail: "",
     tags: [],
@@ -8876,7 +8876,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "wpf-the-classic-snakes-wpfed---codeproject",
     title: "WPF: The Classic Snakes WPF'ed - CodeProject",
-    url: "http://www.codeproject.com/Articles/20901/WPF-The-Classic-Snakes-WPF-ed",
+    url: "https://www.codeproject.com/Articles/20901/WPF-The-Classic-Snakes-WPF-ed",
     description: "",
     thumbnail: "",
     tags: [],
@@ -9172,7 +9172,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "como-criar-uma-api-restfull-em-nodejs-e-autenticar-usando-json-web-token-jwt--rcdev-labs",
     title:
       "Como criar uma API RESTfull em NodeJS e autenticar usando JSON Web Token JWT? | RcDev Labs",
-    url: "http://rcdevlabs.github.io/2015/02/12/como-criar-uma-api-restfull-em-nodejs-e-autenticar-usando-json-web-token-jwt/",
+    url: "https://rcdevlabs.github.io/2015/02/12/como-criar-uma-api-restfull-em-nodejs-e-autenticar-usando-json-web-token-jwt/",
     description: "",
     thumbnail: "",
     tags: [],
@@ -9195,7 +9195,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "jogos-em-html5-para-multiplayers-com-nodejs--imasters",
     title: "Jogos em HTML5 para multiplayers com Node.js – iMasters",
-    url: "http://imasters.com.br/artigo/22564/html/jogos-em-html5-para-multiplayers-com-nodejs",
+    url: "https://imasters.com.br/artigo/22564/html/jogos-em-html5-para-multiplayers-com-nodejs",
     description: "",
     thumbnail: "",
     tags: [],
@@ -9467,7 +9467,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "ardalis---sql-server-error-user-group-or-role-already-exists-in-the-current-database--ardalis",
     title:
       "Ardalis - SQL Server Error User Group or Role Already Exists in the Current Database | ardalis",
-    url: "http://ardalis.com/sql-server-error-user-group-or-role-already-exists-in-the-current-database",
+    url: "https://ardalis.com/sql-server-error-user-group-or-role-already-exists-in-the-current-database",
     description: "",
     thumbnail: "",
     tags: [],
@@ -9478,7 +9478,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "byte-rot-performance-series-guids-vs-identity-int-in-rdbms",
     title: "Byte Rot: Performance series: GUIDs vs. IDENTITY INT in RDBMS",
-    url: "http://byterot.blogspot.com/2013/02/performance-series-guids-vs-identity-rdbms-sql.html",
+    url: "https://byterot.blogspot.com/2013/02/performance-series-guids-vs-identity-rdbms-sql.html",
     description: "",
     thumbnail: "",
     tags: [],
@@ -9489,7 +9489,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "categories-and-subcategories",
     title: "Categories and Subcategories",
-    url: "http://sqllessons.com/categories.html",
+    url: "https://sqllessons.com/categories.html",
     description: "",
     thumbnail: "",
     tags: [],
@@ -9500,7 +9500,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "common-mysql-queries",
     title: "Common MySQL Queries",
-    url: "http://www.artfulsoftware.com/infotree/queries.php?&bw=1366#1075",
+    url: "https://www.artfulsoftware.com/infotree/queries.php?&bw=1366#1075",
     description: "",
     thumbnail: "",
     tags: [],
@@ -9524,7 +9524,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "database---how-to-create-facebook-like-friends-system-in-php-with-mysql---stack-overflow",
     title:
       "database - How to create Facebook like friends system in php with mysql - Stack Overflow",
-    url: "http://stackoverflow.com/questions/3385589/how-to-create-facebook-like-friends-system-in-php-with-mysql",
+    url: "https://stackoverflow.com/questions/3385589/how-to-create-facebook-like-friends-system-in-php-with-mysql",
     description: "",
     thumbnail: "",
     tags: [],
@@ -9535,7 +9535,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "eliminando-caracteres-especiais-de-strings-no-sql-server---collate",
     title: "Eliminando caracteres especiais de strings no SQL Server - Collate",
-    url: "http://www.devmedia.com.br/eliminando-caracteres-especiais-de-strings-no-sql-server-collate/25286",
+    url: "https://www.devmedia.com.br/eliminando-caracteres-especiais-de-strings-no-sql-server-collate/25286",
     description: "",
     thumbnail: "",
     tags: [],
@@ -9570,7 +9570,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "migrao-de-bases-de-dados-sql-com-o-sqlpackage-e-data-tier-application--net-coders",
     title:
       "Migração de Bases de Dados SQL com o SqlPackage e Data-tier Application | .NET Coders",
-    url: "http://netcoders.com.br/blog/migracao-base-dados-sqlpackage-data-tier/",
+    url: "https://netcoders.com.br/blog/migracao-base-dados-sqlpackage-data-tier/",
     description: "",
     thumbnail: "",
     tags: [],
@@ -9582,7 +9582,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "otimizao-de-banco-de-dados-com-sql-server-database-engine-tuning-advisor--net-coders",
     title:
       "Otimização de Banco de Dados com SQL Server Database Engine Tuning Advisor | .NET Coders",
-    url: "http://netcoders.com.br/blog/otimizando-o-desempenho-do-seu-banco-de-dados-utilizando-o-sql-server-database-engine-tuning-advisor/",
+    url: "https://netcoders.com.br/blog/otimizando-o-desempenho-do-seu-banco-de-dados-utilizando-o-sql-server-database-engine-tuning-advisor/",
     description: "",
     thumbnail: "",
     tags: [],
@@ -9593,7 +9593,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "otimizando-consultas-mysql-com-o-memcached---thiago-belem--blog",
     title: "Otimizando consultas MySQL com o Memcached - Thiago Belem / Blog",
-    url: "http://blog.thiagobelem.net/otimizando-consultas-mysql-com-o-memcached",
+    url: "https://blog.thiagobelem.net/otimizando-consultas-mysql-com-o-memcached",
     description: "",
     thumbnail: "",
     tags: [],
@@ -9605,7 +9605,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "sql-server---currently-all-my-sql-request-showing-systemcomponentmodelwin32exception-the-wait-operation-timed-out---stack-overflow",
     title:
       'sql server - Currently, All my SQL Request showing "System.ComponentModel.Win32Exception: The wait operation timed out" - Stack Overflow',
-    url: "http://stackoverflow.com/questions/20067818/currently-all-my-sql-request-showing-system-componentmodel-win32exception-the",
+    url: "https://stackoverflow.com/questions/20067818/currently-all-my-sql-request-showing-system-componentmodel-win32exception-the",
     description: "",
     thumbnail: "",
     tags: [],
@@ -9616,7 +9616,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "storing-hierarchical-data-in-a-database---sitepoint",
     title: "Storing Hierarchical Data in a Database - SitePoint",
-    url: "http://www.sitepoint.com/hierarchical-data-database-2/",
+    url: "https://www.sitepoint.com/hierarchical-data-database-2/",
     description: "",
     thumbnail: "",
     tags: [],
@@ -9638,7 +9638,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "walkthrough-creating-a-sql-server-express-database-file",
     title: "Walkthrough: Creating a SQL Server Express Database File",
-    url: "http://msdn.microsoft.com/en-us/library/ms233763(v=vs.80).aspx",
+    url: "https://msdn.microsoft.com/en-us/library/ms233763(v=vs.80).aspx",
     description: "",
     thumbnail: "",
     tags: [],
@@ -9649,7 +9649,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "dicas-l-enviando-e-recebendo-sms-pelo-modem-3g",
     title: "[Dicas-L] Enviando e Recebendo SMS pelo modem 3G",
-    url: "http://www.dicas-l.com.br/arquivo/enviando_e_recebendo_sms_pelo_modem_3g.php#.Urt5afRDvh4",
+    url: "https://www.dicas-l.com.br/arquivo/enviando_e_recebendo_sms_pelo_modem_3g.php#.Urt5afRDvh4",
     description: "",
     thumbnail: "",
     tags: [],
@@ -9660,7 +9660,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "dicas-l-modem-3g-zte-mf622-com-operadora-vivo-no-debian-lenny",
     title: "[Dicas-L] Modem 3G ZTE MF622 com Operadora Vivo, no Debian Lenny",
-    url: "http://www.dicas-l.com.br/arquivo/modem_3g_zte_mf622_com_operadora_vivo_no_debian_lenny.php#.Urt5efRDvh5",
+    url: "https://www.dicas-l.com.br/arquivo/modem_3g_zte_mf622_com_operadora_vivo_no_debian_lenny.php#.Urt5efRDvh5",
     description: "",
     thumbnail: "",
     tags: [],
@@ -9672,7 +9672,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "developer-learning-solutions-android---how-to-intercept-sms-messages-and-prevent-them-from-appearing-in-the-messaging-app",
     title:
       "Developer Learning Solutions: Android - How to intercept SMS messages and prevent them from appearing in the Messaging App?",
-    url: "http://weimenglee.blogspot.com.br/2011/05/android-how-to-prevent-sms-messages_13.html",
+    url: "https://weimenglee.blogspot.com.br/2011/05/android-how-to-prevent-sms-messages_13.html",
     description: "",
     thumbnail: "",
     tags: [],
@@ -9683,7 +9683,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "exjobbsframsida",
     title: "Exjobbsframsida",
-    url: "http://uu.diva-portal.org/smash/get/diva2:613296/FULLTEXT01.pdf",
+    url: "https://uu.diva-portal.org/smash/get/diva2:613296/FULLTEXT01.pdf",
     description: "",
     thumbnail: "",
     tags: [],
@@ -9750,7 +9750,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "blog-do-teta--onde-voc-aprende-engenharia-e-se-diverte",
     title: "Blog do Teta – Onde você aprende engenharia e se diverte",
-    url: "http://blogdoteta.wordpress.com/",
+    url: "https://blogdoteta.wordpress.com/",
     description: "",
     thumbnail: "",
     tags: [],
@@ -9807,7 +9807,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "engenharia-onde-os-nobres-semi-hbeis-trabalhadores-executam-a-viso-daqueles-que-imaginam-e-sonham-ol-ooompa-loompas-da-cincia-dar-vote---pesquisa-google",
     title:
       "engenharia: onde os nobres semi-hábeis trabalhadores executam a visão daqueles que imaginam e sonham. olá, ooompa-loompas da ciência. dar vote - Pesquisa Google",
-    url: "http://www.google.com.br/search?gcx=c&sourceid=chrome&ie=UTF-8&q=Engenharia%3A+onde+os+nobres+semi-h%C3%A1beis+trabalhadores+executam+a+vis%C3%A3o+daqueles+que+imaginam+e+sonham.+Ol%C3%A1%2C+Ooompa-Loompas+da+ci%C3%AAncia.%0ADar+Vote",
+    url: "https://www.google.com.br/search?gcx=c&sourceid=chrome&ie=UTF-8&q=Engenharia%3A+onde+os+nobres+semi-h%C3%A1beis+trabalhadores+executam+a+vis%C3%A3o+daqueles+que+imaginam+e+sonham.+Ol%C3%A1%2C+Ooompa-Loompas+da+ci%C3%AAncia.%0ADar+Vote",
     description: "",
     thumbnail: "",
     tags: [],
@@ -9923,7 +9923,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "angular-schema-form",
     title: "Angular Schema Form",
-    url: "http://schemaform.io/",
+    url: "https://schemaform.io/",
     description: "",
     thumbnail: "",
     tags: [],
@@ -9990,7 +9990,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "jquery---check-if-element-is-visible-after-scrolling---stack-overflow",
     title:
       "jQuery - Check if element is visible after scrolling - Stack Overflow",
-    url: "http://stackoverflow.com/questions/487073/jquery-check-if-element-is-visible-after-scrolling",
+    url: "https://stackoverflow.com/questions/487073/jquery-check-if-element-is-visible-after-scrolling",
     description: "",
     thumbnail: "",
     tags: [],
@@ -10014,7 +10014,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "jquery-rain--croppie---a-simple-javascript-image-cropper---foliotek",
     title:
       "jQuery Rain | Croppie - a simple javascript image cropper - Foliotek",
-    url: "http://www.jqueryrain.com/?VAAZCOTI",
+    url: "https://www.jqueryrain.com/?VAAZCOTI",
     description: "",
     thumbnail: "",
     tags: [],
@@ -10025,7 +10025,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "the-pete-design--bangkok-tech-entrepreneur",
     title: "The Pete Design | Bangkok Tech Entrepreneur",
-    url: "http://www.thepetedesign.com/#plugins",
+    url: "https://www.thepetedesign.com/#plugins",
     description: "",
     thumbnail: "",
     tags: [],
@@ -10218,7 +10218,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "css-sprite-generator--project-fondue",
     title: "CSS Sprite Generator | Project Fondue",
-    url: "http://spritegen.website-performance.org/",
+    url: "https://spritegen.website-performance.org/",
     description: "",
     thumbnail: "",
     tags: [],
@@ -10229,7 +10229,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "guide-to-css-support-in-email---articles--tips---campaign-monitor",
     title: "Guide to CSS support in email - Articles & Tips - Campaign Monitor",
-    url: "http://www.campaignmonitor.com/css/",
+    url: "https://www.campaignmonitor.com/css/",
     description: "",
     thumbnail: "",
     tags: [],
@@ -10262,7 +10262,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "screen-resolution--browser-window--css-tricks",
     title: "Screen Resolution ≠ Browser Window | CSS-Tricks",
-    url: "http://css-tricks.com/screen-resolution-notequalto-browser-window/",
+    url: "https://css-tricks.com/screen-resolution-notequalto-browser-window/",
     description: "",
     thumbnail: "",
     tags: [],
@@ -10344,7 +10344,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "como-fazer-um-tutorial-passo-a-passo-com-etapas-dentro-do-seu-site-simples-e-customizvel",
     title:
       "Como fazer um Tutorial (passo a passo) com etapas dentro do seu site, simples e customizável!",
-    url: "http://www.blog.conradosaud.com.br/artigo/36#",
+    url: "https://www.blog.conradosaud.com.br/artigo/36#",
     description: "",
     thumbnail: "",
     tags: [],
@@ -10356,7 +10356,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "dom---how-to-check-if-an-element-is-really-visible-with-javascript---stack-overflow",
     title:
       "dom - How to check if an element is really visible with javascript - Stack Overflow",
-    url: "http://stackoverflow.com/questions/704758/how-to-check-if-an-element-is-really-visible-with-javascript",
+    url: "https://stackoverflow.com/questions/704758/how-to-check-if-an-element-is-really-visible-with-javascript",
     description: "",
     thumbnail: "",
     tags: [],
@@ -10901,7 +10901,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "cluster-rabbitmq-in-docker--fellow-developer",
     title: "Cluster RabbitMQ in Docker – Fellow Developer",
-    url: "http://fellowdeveloper.se/2017/05/24/cluster-rabbitmq-in-docker/",
+    url: "https://fellowdeveloper.se/2017/05/24/cluster-rabbitmq-in-docker/",
     description: "",
     thumbnail: "",
     tags: [],
@@ -11190,7 +11190,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "how-to-setup-linux-for-newbies--a-vps-guide-sell-emailus---youtube",
     title:
       "How to setup Linux for newbies : A VPS guide (Sell-email.us) - YouTube",
-    url: "http://www.youtube.com/watch?v=UTOLj9Su8KA",
+    url: "https://www.youtube.com/watch?v=UTOLj9Su8KA",
     description: "",
     thumbnail: "",
     tags: [],
@@ -11202,7 +11202,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "inputoutput-error-dpkg-sub-process-usrbindpkg-returned-and-error-code-2",
     title:
       "Input/Output Error; dpkg sub-process /usr/bin/dpkg returned and error code (2)",
-    url: "http://www.linuxquestions.org/questions/linux-software-2/input-output-error%3B-dpkg-sub-process-usr-bin-dpkg-returned-and-error-code-2-a-443352/",
+    url: "https://www.linuxquestions.org/questions/linux-software-2/input-output-error%3B-dpkg-sub-process-usr-bin-dpkg-returned-and-error-code-2-a-443352/",
     description: "",
     thumbnail: "",
     tags: [],
@@ -11214,7 +11214,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "install-and-configure-apache2-with-php5-and-ssl-support-in-debian-etch",
     title:
       "Install and Configure Apache2 with PHP5 and SSL Support in Debian Etch",
-    url: "http://www.debianadmin.com/install-and-configure-apache2-with-php5-and-ssl-support-in-debian-etch.html",
+    url: "https://www.debianadmin.com/install-and-configure-apache2-with-php5-and-ssl-support-in-debian-etch.html",
     description: "",
     thumbnail: "",
     tags: [],
@@ -11225,7 +11225,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "install-webserver-to-a-vps---youtube",
     title: "Install Webserver to a VPS - YouTube",
-    url: "http://www.youtube.com/watch?v=xjxYwMyE7LQ",
+    url: "https://www.youtube.com/watch?v=xjxYwMyE7LQ",
     description: "",
     thumbnail: "",
     tags: [],
@@ -11236,7 +11236,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "installing-virtualmin---youtube",
     title: "Installing Virtualmin - YouTube",
-    url: "http://www.youtube.com/watch?v=LWlwsGx7Mmc&feature=related",
+    url: "https://www.youtube.com/watch?v=LWlwsGx7Mmc&feature=related",
     description: "",
     thumbnail: "",
     tags: [],
@@ -11258,7 +11258,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "virtualmin-error-while-installing-on-ubuntu-104--geekyboycom",
     title: "Virtualmin error while installing on Ubuntu 10.4 | GeekyBoy.com",
-    url: "http://www.geekyboy.com/archives/364",
+    url: "https://www.geekyboy.com/archives/364",
     description: "",
     thumbnail: "",
     tags: [],
@@ -11539,7 +11539,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "apache--load-balance--lenny--eeeeee-jo",
     title: "Apache + Load Balance + Lenny « EEEEEE Jão!!!",
-    url: "http://joaocosme.wordpress.com/2009/07/27/apache-load-balance-lenny/",
+    url: "https://joaocosme.wordpress.com/2009/07/27/apache-load-balance-lenny/",
     description: "",
     thumbnail: "",
     tags: [],
@@ -11551,7 +11551,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "configuring-apache-for-maximum-performance--howtoforge---linux-howtos-and-tutorials",
     title:
       "Configuring Apache for Maximum Performance | HowtoForge - Linux Howtos and Tutorials",
-    url: "http://www.howtoforge.com/configuring_apache_for_maximum_performance",
+    url: "https://www.howtoforge.com/configuring_apache_for_maximum_performance",
     description: "",
     thumbnail: "",
     tags: [],
@@ -11585,7 +11585,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "instalando-ssltls-no-servidor-wamp-com-certificado-auto-assinado--prrm",
     title:
       "Instalando SSL/TLS no Servidor WAMP com Certificado auto-assinado | prəʊɡræmə",
-    url: "http://www.deepcell.org/blog/?p=72",
+    url: "https://www.deepcell.org/blog/?p=72",
     description: "",
     thumbnail: "",
     tags: [],
@@ -11597,7 +11597,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "load-balancing-with-web-server-redundancy-apache--getting-started-with-grails",
     title:
       "Load Balancing with Web Server Redundancy (Apache) « Getting Started with Grails",
-    url: "http://fletchermcbeth.wordpress.com/2009/02/19/load-balancing-with-web-server-redundancy-apache/",
+    url: "https://fletchermcbeth.wordpress.com/2009/02/19/load-balancing-with-web-server-redundancy-apache/",
     description: "",
     thumbnail: "",
     tags: [],
@@ -11688,7 +11688,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "haproxy-varnish-and-the-single-hostname-website--haproxy-technologies-blog",
     title:
       "HAProxy, Varnish and the single hostname website | HAProxy Technologies Blog",
-    url: "http://blog.haproxy.com/2012/08/25/haproxy-varnish-and-the-single-hostname-website/",
+    url: "https://blog.haproxy.com/2012/08/25/haproxy-varnish-and-the-single-hostname-website/",
     description: "",
     thumbnail: "",
     tags: [],
@@ -11700,7 +11700,7 @@ export const sampleBookmarks: Bookmark[] = [
     id: "how-browsers-work-behind-the-scenes-of-modern-web-browsers---html5-rocks",
     title:
       "How Browsers Work: Behind the scenes of modern web browsers - HTML5 Rocks",
-    url: "http://www.html5rocks.com/en/tutorials/internals/howbrowserswork/",
+    url: "https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/",
     description: "",
     thumbnail: "",
     tags: [],
@@ -11989,7 +11989,7 @@ export const sampleBookmarks: Bookmark[] = [
   {
     id: "income-tax-calculator--deloitte-ireland",
     title: "Income Tax Calculator | Deloitte Ireland",
-    url: "http://services.deloitte.ie/",
+    url: "https://services.deloitte.ie/",
     description: "",
     thumbnail: "",
     tags: [],
