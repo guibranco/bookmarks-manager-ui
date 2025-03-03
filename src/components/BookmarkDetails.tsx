@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { X, Save, Trash, ExternalLink } from 'lucide-react';
+import { X, Save, Trash, ExternalLink, Lock } from 'lucide-react';
 import { Bookmark, Folder } from '../types';
 
 interface BookmarkDetailsProps {
@@ -8,35 +8,16 @@ interface BookmarkDetailsProps {
   onClose: () => void;
   onUpdate: (bookmark: Bookmark) => void;
   onDelete: () => void;
+  isAuthenticated: boolean;
 }
 
-/**
- * A functional component that displays and manages the details of a bookmark.
- * It allows users to edit bookmark properties, add/remove tags, and organize bookmarks into folders.
- *
- * @component
- * @param {Object} props - The properties for the component.
- * @param {Bookmark} props.bookmark - The bookmark object to be edited.
- * @param {Folder[]} props.folders - An array of folders for organizing bookmarks.
- * @param {Function} props.onClose - Callback function to close the bookmark details view.
- * @param {Function} props.onUpdate - Callback function to update the bookmark with edited details.
- * @param {Function} props.onDelete - Callback function to delete the bookmark.
- *
- * @example
- * <BookmarkDetails
- *   bookmark={bookmarkData}
- *   folders={folderData}
- *   onClose={handleClose}
- *   onUpdate={handleUpdate}
- *   onDelete={handleDelete}
- * />
- */
 const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({ 
   bookmark, 
   folders,
   onClose, 
   onUpdate,
-  onDelete
+  onDelete,
+  isAuthenticated
 }) => {
   const [editedBookmark, setEditedBookmark] = useState<Bookmark>({...bookmark});
   const [tagInput, setTagInput] = useState('');
@@ -116,6 +97,13 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
           </button>
         </div>
 
+        {!isAuthenticated && (
+          <div className="mb-4 p-3 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-md text-sm text-yellow-800 dark:text-yellow-300 flex items-center">
+            <Lock className="h-4 w-4 mr-2 text-yellow-500" />
+            <span>You are in read-only mode</span>
+          </div>
+        )}
+
         <div className="space-y-4">
           <div>
             <label htmlFor="title" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
@@ -127,7 +115,8 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
               name="title"
               value={editedBookmark.title}
               onChange={handleChange}
-              className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700"
+              className={`w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 ${!isAuthenticated ? 'opacity-75 cursor-not-allowed' : ''}`}
+              disabled={!isAuthenticated}
             />
           </div>
 
@@ -142,7 +131,8 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
                 name="url"
                 value={editedBookmark.url}
                 onChange={handleChange}
-                className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-l-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700"
+                className={`flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-l-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 ${!isAuthenticated ? 'opacity-75 cursor-not-allowed' : ''}`}
+                disabled={!isAuthenticated}
               />
               <a 
                 href={editedBookmark.url}
@@ -165,7 +155,8 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
               rows={3}
               value={editedBookmark.description}
               onChange={handleChange}
-              className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700"
+              className={`w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 ${!isAuthenticated ? 'opacity-75 cursor-not-allowed' : ''}`}
+              disabled={!isAuthenticated}
             />
           </div>
 
@@ -179,7 +170,8 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
               name="thumbnail"
               value={editedBookmark.thumbnail}
               onChange={handleChange}
-              className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700"
+              className={`w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 ${!isAuthenticated ? 'opacity-75 cursor-not-allowed' : ''}`}
+              disabled={!isAuthenticated}
             />
             {editedBookmark.thumbnail && (
               <div className="mt-2 h-32 bg-gray-200 dark:bg-gray-700 rounded overflow-hidden">
@@ -204,7 +196,8 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
               name="folderId"
               value={editedBookmark.folderId || ''}
               onChange={handleChange}
-              className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700"
+              className={`w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 ${!isAuthenticated ? 'opacity-75 cursor-not-allowed' : ''}`}
+              disabled={!isAuthenticated}
             >
               <option value="">No Folder</option>
               {getFolderOptions()}
@@ -223,12 +216,18 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
                 onChange={(e) => setTagInput(e.target.value)}
                 onKeyDown={handleTagKeyDown}
                 placeholder="Add a tag"
-                className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-l-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700"
+                className={`flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-l-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 ${!isAuthenticated ? 'opacity-75 cursor-not-allowed' : ''}`}
+                disabled={!isAuthenticated}
               />
               <button
                 type="button"
                 onClick={handleTagAdd}
-                className="px-3 py-2 bg-blue-600 text-white rounded-r-md hover:bg-blue-700"
+                className={`px-3 py-2 ${
+                  isAuthenticated 
+                    ? 'bg-blue-600 text-white hover:bg-blue-700' 
+                    : 'bg-blue-400 text-white cursor-not-allowed'
+                } rounded-r-md`}
+                disabled={!isAuthenticated}
               >
                 Add
               </button>
@@ -240,40 +239,40 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
                   className="flex items-center bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-300 px-2 py-1 rounded text-sm"
                 >
                   <span>{tag}</span>
-                  <button
-                    type="button"
-                    onClick={() => handleTagRemove(tag)}
-                    className="ml-1 text-blue-800 dark:text-blue-300 hover:text-blue-900 dark:hover:text-blue-200"
-                  >
-                    <X className="h-3 w-3" />
-                  </button>
+                  {isAuthenticated && (
+                    <button
+                      type="button"
+                      onClick={() => handleTagRemove(tag)}
+                      className="ml-1 text-blue-800 dark:text-blue-300 hover:text-blue-900 dark:hover:text-blue-200"
+                    >
+                      <X className="h-3 w-3" />
+                    </button>
+                  )}
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="pt-4 flex justify-between">
-            <button
-              type="button"
-              onClick={() => {
-                if (window.confirm('Are you sure you want to delete this bookmark?')) {
-                  onDelete();
-                }
-              }}
-              className="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 flex items-center"
-            >
-              <Trash className="h-4 w-4 mr-1" />
-              Delete
-            </button>
-            <button
-              type="button"
-              onClick={handleSave}
-              className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 flex items-center"
-            >
-              <Save className="h-4 w-4 mr-1" />
-              Save
-            </button>
-          </div>
+          {isAuthenticated && (
+            <div className="pt-4 flex justify-between">
+              <button
+                type="button"
+                onClick={onDelete}
+                className="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 flex items-center"
+              >
+                <Trash className="h-4 w-4 mr-1" />
+                Delete
+              </button>
+              <button
+                type="button"
+                onClick={handleSave}
+                className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 flex items-center"
+              >
+                <Save className="h-4 w-4 mr-1" />
+                Save
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </div>

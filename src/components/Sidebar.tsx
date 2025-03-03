@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Folder, Star, Tag, ChevronDown, ChevronRight, Bookmark, Plus } from 'lucide-react';
+import { Folder, Star, Tag, ChevronDown, ChevronRight, Bookmark, Plus, Lock } from 'lucide-react';
 import { Folder as FolderType, Bookmark as BookmarkType } from '../types';
 
 interface SidebarProps {
@@ -8,50 +8,18 @@ interface SidebarProps {
   onSelectFolder: (folderId: string | null) => void;
   bookmarks: BookmarkType[];
   onAddFolder: (parentId: string | null) => void;
+  isAuthenticated: boolean;
 }
 
-/**
- * Sidebar component for managing bookmarks and folders.
- *
- * This component displays a sidebar with sections for all bookmarks, favorites, folders, and tags.
- * It allows users to expand/collapse sections, select folders, and add new folders.
- *
- * @param {Object} props - The properties for the Sidebar component.
- * @param {Array<FolderType>} props.folders - The list of folders to display.
- * @param {string} props.selectedFolder - The ID of the currently selected folder.
- * @param {function} props.onSelectFolder - Callback function to handle folder selection.
- * @param {Array<BookmarkType>} props.bookmarks - The list of bookmarks to display.
- * @param {function} props.onAddFolder - Callback function to handle adding a new folder.
- *
- * @returns {JSX.Element} The rendered Sidebar component.
- */
 const Sidebar: React.FC<SidebarProps> = ({ 
   folders, 
   selectedFolder, 
   onSelectFolder, 
   bookmarks,
-  onAddFolder
+  onAddFolder,
+  isAuthenticated
 }) => {
   // Load expanded sections from localStorage or use defaults
-  /**
-   * Loads the expanded sections state from local storage.
-   *
-   * This function retrieves the saved state of expanded sections for the bookmark manager
-   * from the browser's local storage. If the saved data is found, it attempts to parse it
-   * as JSON. In case of a parsing error, it logs an error message to the console and returns
-   * a default state.
-   *
-   * @returns {Object} An object representing the state of expanded sections, with boolean
-   *                  properties for folders, favorites, and tags. The default return value
-   *                  is { folders: true, favorites: true, tags: false } if no saved data is found
-   *                  or if parsing fails.
-   *
-   * @throws {SyntaxError} Throws an error if the saved data cannot be parsed as JSON.
-   *
-   * @example
-   * const expandedSections = loadExpandedSections();
-   * console.log(expandedSections); // { folders: true, favorites: true, tags: false }
-   */
   const loadExpandedSections = () => {
     const saved = localStorage.getItem('bookmarkManagerExpandedSections');
     if (saved) {
@@ -66,26 +34,6 @@ const Sidebar: React.FC<SidebarProps> = ({
   };
 
   // Load expanded folders from localStorage or use empty object
-  /**
-   * Loads the expanded folders from the local storage.
-   *
-   * This function retrieves a JSON string stored under the key
-   * 'bookmarkManagerExpandedFolders' in the local storage. If the
-   * string is found, it attempts to parse it into an object. In case
-   * of a parsing error, it logs an error message to the console and
-   * returns an empty object.
-   *
-   * @returns {Object} An object representing the expanded folders.
-   *                  If no data is found or an error occurs, an
-   *                  empty object is returned.
-   *
-   * @throws {SyntaxError} Throws a SyntaxError if the JSON parsing
-   *                       fails due to invalid format.
-   *
-   * @example
-   * const expandedFolders = loadExpandedFolders();
-   * console.log(expandedFolders); // Outputs the loaded expanded folders or {}
-   */
   const loadExpandedFolders = () => {
     const saved = localStorage.getItem('bookmarkManagerExpandedFolders');
     if (saved) {
@@ -207,6 +155,13 @@ const Sidebar: React.FC<SidebarProps> = ({
   return (
     <aside className="w-64 border-r border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 overflow-y-auto flex-shrink-0">
       <div className="p-4">
+        {!isAuthenticated && (
+          <div className="mb-4 p-3 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-md text-xs text-yellow-800 dark:text-yellow-300 flex items-center">
+            <Lock className="h-4 w-4 mr-2 text-yellow-500" />
+            <span>Read-only mode</span>
+          </div>
+        )}
+
         <div className="mb-6">
           <button
             className={`w-full flex items-center justify-between p-2 rounded-md ${
@@ -273,16 +228,18 @@ const Sidebar: React.FC<SidebarProps> = ({
               <span className="font-medium">Folders</span>
             </div>
             <div className="flex items-center">
-              <button 
-                className="p-1 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 mr-1"
-                aria-label="Add folder"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  onAddFolder(null);
-                }}
-              >
-                <Plus className="h-4 w-4 text-gray-500" />
-              </button>
+              {isAuthenticated && (
+                <button 
+                  className="p-1 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 mr-1"
+                  aria-label="Add folder"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onAddFolder(null);
+                  }}
+                >
+                  <Plus className="h-4 w-4 text-gray-500" />
+                </button>
+              )}
               {expandedSections.folders ? (
                 <ChevronDown className="h-4 w-4 text-gray-500" />
               ) : (
