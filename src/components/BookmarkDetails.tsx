@@ -11,6 +11,32 @@ interface BookmarkDetailsProps {
   isAuthenticated: boolean;
 }
 
+/**
+ * A functional component that displays and manages the details of a bookmark.
+ * It allows users to edit bookmark properties, add/remove tags, and organize bookmarks into folders.
+ *
+ * @param {Object} props - The properties for the component.
+ * @param {Bookmark} props.bookmark - The bookmark object containing details to be displayed.
+ * @param {Folder[]} props.folders - An array of folder objects for organizing bookmarks.
+ * @param {Function} props.onClose - Callback function to close the bookmark details view.
+ * @param {Function} props.onUpdate - Callback function to update the bookmark with edited details.
+ * @param {Function} props.onDelete - Callback function to delete the bookmark.
+ * @param {boolean} props.isAuthenticated - Indicates whether the user is authenticated to edit bookmarks.
+ *
+ * @returns {JSX.Element} The rendered component.
+ *
+ * @example
+ * <BookmarkDetails
+ *   bookmark={bookmark}
+ *   folders={folders}
+ *   onClose={handleClose}
+ *   onUpdate={handleUpdate}
+ *   onDelete={handleDelete}
+ *   isAuthenticated={isUserAuthenticated}
+ * />
+ *
+ * @throws {Error} Throws an error if the bookmark cannot be updated or deleted.
+ */
 const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({ 
   bookmark, 
   folders,

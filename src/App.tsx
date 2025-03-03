@@ -17,8 +17,31 @@ const defaultConfig: AppConfig = {
   apiKey: ''
 };
 
+/**
+ * Main application component for the Bookmark Manager.
+ * This component handles the loading of configuration, authentication state,
+ * bookmark management, and rendering of the user interface.
+ *
+ * It utilizes React hooks for state management and side effects.
+ *
+ * @returns {JSX.Element} The rendered application component.
+ */
 function App() {
   // Load config from localStorage or use default
+  /**
+   * Loads the application configuration from local storage.
+   * If a saved configuration is found, it attempts to parse it as JSON.
+   * In case of a parsing error, it logs the error to the console and returns the default configuration.
+   * If no saved configuration is found, it returns the default configuration.
+   *
+   * @returns {AppConfig} The application configuration object.
+   *
+   * @throws {Error} Throws an error if the JSON parsing fails.
+   *
+   * @example
+   * const config = loadConfig();
+   * console.log(config);
+   */
   const loadConfig = (): AppConfig => {
     const savedConfig = localStorage.getItem('bookmarkManagerConfig');
     if (savedConfig) {
@@ -120,6 +143,22 @@ function App() {
     setShowRightPanel(true);
   };
 
+  /**
+   * Handles the addition of a new bookmark to the bookmarks list.
+   * If the user is not authenticated, it displays a configuration modal.
+   * Otherwise, it creates a new bookmark with default values and adds it to the current bookmarks.
+   *
+   * @function handleAddBookmark
+   * @returns {void} This function does not return a value.
+   *
+   * @throws {Error} Throws an error if there is an issue with adding the bookmark.
+   *
+   * @example
+   * // Example usage:
+   * handleAddBookmark();
+   *
+   * // This will create a new bookmark and update the state accordingly.
+   */
   const handleAddBookmark = () => {
     if (!authState.isAuthenticated) {
       setShowConfigModal(true);
@@ -142,6 +181,22 @@ function App() {
     setShowRightPanel(true);
   };
 
+  /**
+   * Updates an existing bookmark with the provided details.
+   *
+   * This function checks if the user is authenticated before proceeding to update the bookmark.
+   * If the user is not authenticated, it triggers a modal to show configuration options.
+   *
+   * @param {BookmarkType} updatedBookmark - The bookmark object containing updated details.
+   *
+   * @throws {Error} Throws an error if the bookmark update fails due to invalid data.
+   *
+   * @returns {void} This function does not return a value.
+   *
+   * @example
+   * const newBookmark = { id: 1, title: 'Updated Bookmark', url: 'https://example.com' };
+   * updateBookmark(newBookmark);
+   */
   const updateBookmark = (updatedBookmark: BookmarkType) => {
     if (!authState.isAuthenticated) {
       setShowConfigModal(true);
@@ -152,6 +207,20 @@ function App() {
     setSelectedBookmark(updatedBookmark);
   };
 
+  /**
+   * Deletes a bookmark by its identifier.
+   *
+   * This function checks if the user is authenticated before proceeding to delete the bookmark.
+   * If the user is not authenticated, it triggers a modal to show configuration options.
+   * Upon successful deletion, it updates the bookmarks state and clears the selected bookmark if it matches the deleted one.
+   *
+   * @param {string} id - The unique identifier of the bookmark to be deleted.
+   * @throws {Error} Throws an error if the bookmark cannot be deleted due to authentication issues.
+   *
+   * @example
+   * // Assuming '123' is the ID of the bookmark to delete
+   * deleteBookmark('123');
+   */
   const deleteBookmark = (id: string) => {
     if (!authState.isAuthenticated) {
       setShowConfigModal(true);
@@ -165,6 +234,21 @@ function App() {
     }
   };
 
+  /**
+   * Toggles the favorite status of a bookmark identified by its ID.
+   * If the user is not authenticated, it opens a configuration modal.
+   *
+   * @param {string} id - The unique identifier of the bookmark to toggle.
+   * @throws {Error} Throws an error if the bookmark with the given ID does not exist.
+   *
+   * @example
+   * // Assuming the user is authenticated and the bookmark with ID '123' exists
+   * toggleFavorite('123');
+   *
+   * @example
+   * // If the user is not authenticated
+   * toggleFavorite('123'); // This will open the configuration modal.
+   */
   const toggleFavorite = (id: string) => {
     if (!authState.isAuthenticated) {
       setShowConfigModal(true);
@@ -183,6 +267,28 @@ function App() {
     }
   };
 
+  /**
+   * Handles the addition of a new folder by managing the visibility of modals
+   * and setting the parent folder ID.
+   *
+   * This function checks if the user is authenticated. If not, it triggers
+   * the display of a configuration modal. If the user is authenticated, it
+   * sets the parent ID for the new folder and shows the folder creation modal.
+   *
+   * @param {string | null} parentId - The ID of the parent folder where the new folder will be added.
+   *                                   If null, it indicates that the new folder will be added at the root level.
+   *
+   * @returns {void} This function does not return a value.
+   *
+   * @throws {Error} Throws an error if there is an issue with modal visibility or state management.
+   *
+   * @example
+   * // Example usage when a user clicks on a button to add a folder under a specific parent
+   * handleAddFolder('12345');
+   *
+   * // Example usage when adding a folder at the root level
+   * handleAddFolder(null);
+   */
   const handleAddFolder = (parentId: string | null) => {
     if (!authState.isAuthenticated) {
       setShowConfigModal(true);
@@ -193,6 +299,25 @@ function App() {
     setShowFolderModal(true);
   };
 
+  /**
+   * Creates a new folder and adds it to the list of folders.
+   *
+   * This function checks if the user is authenticated before proceeding to create a folder.
+   * If the user is not authenticated, it triggers a modal to show configuration options.
+   *
+   * @param {string} name - The name of the folder to be created.
+   * @param {string | null} parentId - The ID of the parent folder. If null, the folder will be created at the root level.
+   *
+   * @throws {Error} Throws an error if the user is not authenticated.
+   *
+   * @example
+   * // Creating a new folder under a specific parent
+   * createFolder('New Folder', 'folder-1');
+   *
+   * @example
+   * // Creating a root folder
+   * createFolder('Root Folder', null);
+   */
   const createFolder = (name: string, parentId: string | null) => {
     if (!authState.isAuthenticated) {
       setShowConfigModal(true);
@@ -207,6 +332,21 @@ function App() {
     setFolders([...folders, newFolder]);
   };
 
+  /**
+   * Toggles the visibility of the sidebar in the application.
+   * This function updates the configuration state to either show or hide the sidebar,
+   * based on its current visibility status.
+   *
+   * It utilizes the `setConfig` function to update the `showSidebar` property
+   * in the configuration object. The new value is the opposite of the current value.
+   *
+   * @function toggleSidebar
+   * @returns {void} This function does not return a value.
+   *
+   * @example
+   * // To toggle the sidebar visibility
+   * toggleSidebar();
+   */
   const toggleSidebar = () => {
     setConfig({
       ...config,
@@ -214,11 +354,52 @@ function App() {
     });
   };
 
+  /**
+   * Updates the application configuration with the provided new settings.
+   *
+   * This function takes a new configuration object and applies it to the current application settings.
+   * It is essential to ensure that the new configuration adheres to the expected structure defined by
+   * the `AppConfig` interface.
+   *
+   * @param {AppConfig} newConfig - The new configuration object to be set.
+   * @throws {Error} Throws an error if the new configuration is invalid or cannot be applied.
+   *
+   * @example
+   * const newSettings = {
+   *   theme: 'dark',
+   *   language: 'en',
+   * };
+   * updateConfig(newSettings);
+   */
   const updateConfig = (newConfig: AppConfig) => {
     setConfig(newConfig);
   };
 
   // Get folder name with full path
+  /**
+   * Retrieves the display name for a folder based on its ID.
+   * If the folder ID is null or matches specific values, a default name is returned.
+   *
+   * @param {string | null} folderId - The ID of the folder. Can be null or a specific string.
+   * @returns {string} The name of the folder, or a default name if the folder ID is not recognized.
+   *
+   * @example
+   * // Returns 'All Bookmarks'
+   * getFolderPathName(null);
+   *
+   * @example
+   * // Returns 'Favorites'
+   * getFolderPathName('favorites');
+   *
+   * @example
+   * // Assuming a folder with ID '123' exists and has a name 'Work'
+   * // Returns 'Work'
+   * getFolderPathName('123');
+   *
+   * @example
+   * // Returns 'Unknown Folder' if no folder with the given ID exists
+   * getFolderPathName('unknownId');
+   */
   const getFolderPathName = (folderId: string | null): string => {
     if (!folderId) return 'All Bookmarks';
     if (folderId === 'all') return 'All Bookmarks';
@@ -227,6 +408,21 @@ function App() {
     const folder = folders.find(f => f.id === folderId);
     if (!folder) return 'Unknown Folder';
     
+    /**
+     * Recursively retrieves the full path of a folder by concatenating its name
+     * with the names of its parent folders, separated by a ' > ' delimiter.
+     *
+     * @param {FolderType} folder - The folder object for which to retrieve the parent path.
+     * @returns {string} The full path of the folder, including its parent folders.
+     *
+     * @example
+     * const folder = { id: 2, name: 'Subfolder', parentId: 1 };
+     * const path = getParentPath(folder);
+     * console.log(path); // Outputs: 'ParentFolder > Subfolder'
+     *
+     * @throws {Error} Throws an error if the folder object is invalid or if there is
+     *                 an issue retrieving the parent folder.
+     */
     const getParentPath = (folder: FolderType): string => {
       if (!folder.parentId) return folder.name;
       const parent = folders.find(f => f.id === folder.parentId);
