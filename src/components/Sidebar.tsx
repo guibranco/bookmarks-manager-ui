@@ -11,6 +11,20 @@ interface SidebarProps {
   isAuthenticated: boolean;
 }
 
+/**
+ * Sidebar component that displays folders, bookmarks, and tags.
+ * It allows users to navigate through their bookmarks and manage folders.
+ *
+ * @param {Object} props - The properties for the Sidebar component.
+ * @param {Array<FolderType>} props.folders - The list of folders to display.
+ * @param {string} props.selectedFolder - The ID of the currently selected folder.
+ * @param {function} props.onSelectFolder - Callback function to handle folder selection.
+ * @param {Array<BookmarkType>} props.bookmarks - The list of bookmarks to display.
+ * @param {function} props.onAddFolder - Callback function to handle adding a new folder.
+ * @param {boolean} props.isAuthenticated - Indicates if the user is authenticated.
+ *
+ * @returns {JSX.Element} The rendered Sidebar component.
+ */
 const Sidebar: React.FC<SidebarProps> = ({ 
   folders, 
   selectedFolder, 
@@ -20,6 +34,30 @@ const Sidebar: React.FC<SidebarProps> = ({
   isAuthenticated
 }) => {
   // Load expanded sections from localStorage or use defaults
+  /**
+   * Loads the expanded sections configuration from local storage.
+   *
+   * This function attempts to retrieve a JSON string from local storage under the key
+   * 'bookmarkManagerExpandedSections'. If the string is found, it attempts to parse it
+   * into an object. If parsing fails, it logs an error to the console and returns a default
+   * configuration.
+   *
+   * The default configuration returned is:
+   * - folders: true
+   * - favorites: true
+   * - tags: false
+   *
+   * @returns {Object} An object representing the expanded sections configuration.
+   * @returns {boolean} return.folders Indicates if folders are expanded.
+   * @returns {boolean} return.favorites Indicates if favorites are expanded.
+   * @returns {boolean} return.tags Indicates if tags are expanded.
+   *
+   * @throws {Error} Throws an error if JSON parsing fails, which is caught and logged.
+   *
+   * @example
+   * const config = loadExpandedSections();
+   * console.log(config); // { folders: true, favorites: true, tags: false }
+   */
   const loadExpandedSections = () => {
     const saved = localStorage.getItem('bookmarkManagerExpandedSections');
     if (saved) {
@@ -34,6 +72,22 @@ const Sidebar: React.FC<SidebarProps> = ({
   };
 
   // Load expanded folders from localStorage or use empty object
+  /**
+   * Loads expanded folders from the local storage.
+   *
+   * This function retrieves the 'bookmarkManagerExpandedFolders' item from local storage,
+   * attempts to parse it as JSON, and returns the resulting object. If the item does not exist
+   * or if parsing fails, it returns an empty object.
+   *
+   * @returns {Object} An object representing the expanded folders. If no data is found or an error
+   * occurs during parsing, an empty object is returned.
+   *
+   * @throws {SyntaxError} Throws a SyntaxError if the stored data is not valid JSON.
+   *
+   * @example
+   * const expandedFolders = loadExpandedFolders();
+   * console.log(expandedFolders); // Outputs the expanded folders or an empty object.
+   */
   const loadExpandedFolders = () => {
     const saved = localStorage.getItem('bookmarkManagerExpandedFolders');
     if (saved) {

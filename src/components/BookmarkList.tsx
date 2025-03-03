@@ -11,6 +11,7 @@ interface BookmarkListProps {
 
 /**
  * A functional component that renders a list of bookmarks in a table format.
+ * Each bookmark displays its title, URL, tags, date added, and provides actions
  * Each bookmark can be clicked to trigger a callback, and users can toggle favorites if authenticated.
  *
  * @param {Object} props - The properties for the component.

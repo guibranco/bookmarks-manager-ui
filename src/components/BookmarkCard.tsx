@@ -9,6 +9,38 @@ interface BookmarkCardProps {
   isAuthenticated: boolean;
 }
 
+/**
+ * A functional component that renders a bookmark card displaying the bookmark's details.
+ *
+ * @param {Object} props - The properties for the BookmarkCard component.
+ * @param {Object} props.bookmark - The bookmark object containing details to display.
+ * @param {string} props.bookmark.title - The title of the bookmark.
+ * @param {string} props.bookmark.url - The URL of the bookmark.
+ * @param {string} [props.bookmark.thumbnail] - The thumbnail image URL for the bookmark.
+ * @param {string} [props.bookmark.description] - A brief description of the bookmark.
+ * @param {Array<string>} props.bookmark.tags - An array of tags associated with the bookmark.
+ * @param {boolean} props.bookmark.favorite - Indicates if the bookmark is marked as favorite.
+ * @param {function} props.onClick - Callback function to handle click events on the card.
+ * @param {function} props.onToggleFavorite - Callback function to toggle the favorite status of the bookmark.
+ * @param {boolean} props.isAuthenticated - Indicates if the user is authenticated.
+ *
+ * @returns {JSX.Element} The rendered bookmark card component.
+ *
+ * @example
+ * <BookmarkCard
+ *   bookmark={{
+ *     title: "Example Bookmark",
+ *     url: "https://example.com",
+ *     thumbnail: "https://example.com/image.jpg",
+ *     description: "This is an example bookmark.",
+ *     tags: ["example", "bookmark"],
+ *     favorite: false
+ *   }}
+ *   onClick={() => console.log('Bookmark clicked')}
+ *   onToggleFavorite={() => console.log('Toggle favorite')}
+ *   isAuthenticated={true}
+ * />
+ */
 const BookmarkCard: React.FC<BookmarkCardProps> = ({ bookmark, onClick, onToggleFavorite, isAuthenticated }) => {
   return (
     <div 
