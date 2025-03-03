@@ -1,14 +1,15 @@
 import React from 'react';
-import { ExternalLink, Star } from 'lucide-react';
+import { ExternalLink, Star, Lock } from 'lucide-react';
 import { Bookmark } from '../types';
 
 interface BookmarkCardProps {
   bookmark: Bookmark;
   onClick: () => void;
   onToggleFavorite: () => void;
+  isAuthenticated: boolean;
 }
 
-const BookmarkCard: React.FC<BookmarkCardProps> = ({ bookmark, onClick, onToggleFavorite }) => {
+const BookmarkCard: React.FC<BookmarkCardProps> = ({ bookmark, onClick, onToggleFavorite, isAuthenticated }) => {
   return (
     <div 
       className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-200 flex flex-col"
@@ -29,12 +30,21 @@ const BookmarkCard: React.FC<BookmarkCardProps> = ({ bookmark, onClick, onToggle
             e.stopPropagation();
             onToggleFavorite();
           }}
-          className="absolute top-2 right-2 p-1 rounded-full bg-white/80 dark:bg-gray-800/80 hover:bg-white dark:hover:bg-gray-800 transition-colors"
+          className={`absolute top-2 right-2 p-1 rounded-full ${
+            isAuthenticated 
+              ? 'bg-white/80 dark:bg-gray-800/80 hover:bg-white dark:hover:bg-gray-800' 
+              : 'bg-gray-200/80 dark:bg-gray-700/80 cursor-not-allowed'
+          } transition-colors`}
           aria-label={bookmark.favorite ? "Remove from favorites" : "Add to favorites"}
+          disabled={!isAuthenticated}
         >
-          <Star 
-            className={`h-5 w-5 ${bookmark.favorite ? 'text-yellow-400 fill-yellow-400' : 'text-gray-400'}`} 
-          />
+          {isAuthenticated ? (
+            <Star 
+              className={`h-5 w-5 ${bookmark.favorite ? 'text-yellow-400 fill-yellow-400' : 'text-gray-400'}`} 
+            />
+          ) : (
+            <Lock className="h-5 w-5 text-gray-400" />
+          )}
         </button>
       </div>
       

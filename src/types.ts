@@ -21,4 +21,10 @@ export interface AppConfig {
   showSidebar: boolean;
   darkMode: boolean;
   viewMode: 'grid' | 'list';
+  apiKey: string;
+}
+
+export interface AuthState {
+  isAuthenticated: boolean;
+  apiKey: string;
 }
