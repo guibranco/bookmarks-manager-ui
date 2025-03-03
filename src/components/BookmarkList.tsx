@@ -1,14 +1,38 @@
 import React from 'react';
-import { ExternalLink, Star } from 'lucide-react';
+import { ExternalLink, Star, Lock } from 'lucide-react';
 import { Bookmark } from '../types';
 
 interface BookmarkListProps {
   bookmarks: Bookmark[];
   onBookmarkClick: (bookmark: Bookmark) => void;
   onToggleFavorite: (id: string) => void;
+  isAuthenticated: boolean;
 }
 
-const BookmarkList: React.FC<BookmarkListProps> = ({ bookmarks, onBookmarkClick, onToggleFavorite }) => {
+/**
+ * A functional component that renders a list of bookmarks in a table format.
+ * Each bookmark displays its title, URL, tags, date added, and provides actions
+ * Each bookmark can be clicked to trigger a callback, and users can toggle favorites if authenticated.
+ *
+ * @param {Object} props - The properties for the component.
+ * @param {Array} props.bookmarks - An array of bookmark objects to display.
+ * @param {Function} props.onBookmarkClick - Callback function triggered when a bookmark is clicked.
+ * @param {Function} props.onToggleFavorite - Callback function triggered when the favorite status of a bookmark is toggled.
+ * @param {boolean} props.isAuthenticated - Indicates if the user is authenticated, affecting the ability to toggle favorites.
+ *
+ * @returns {JSX.Element} The rendered bookmark list component.
+ *
+ * @example
+ * <BookmarkList
+ *   bookmarks={bookmarksArray}
+ *   onBookmarkClick={handleBookmarkClick}
+ *   onToggleFavorite={handleToggleFavorite}
+ *   isAuthenticated={true}
+ * />
+ *
+ * @throws {Error} Throws an error if the bookmarks array is not provided or is not an array.
+ */
+const BookmarkList: React.FC<BookmarkListProps> = ({ bookmarks, onBookmarkClick, onToggleFavorite, isAuthenticated }) => {
   return (
     <div className="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden">
       <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
@@ -95,10 +119,20 @@ const BookmarkList: React.FC<BookmarkListProps> = ({ bookmarks, onBookmarkClick,
                       e.stopPropagation();
                       onToggleFavorite(bookmark.id);
                     }}
-                    className="text-gray-400 hover:text-yellow-500"
+                    className={`p-1 rounded-full ${isAuthenticated
+                        ? 'bg-white/80 dark:bg-gray-800/80 hover:bg-white dark:hover:bg-gray-800'
+                        : 'bg-gray-200/80 dark:bg-gray-700/80 cursor-not-allowed'
+                      } transition-colors`}
                     aria-label={bookmark.favorite ? "Remove from favorites" : "Add to favorites"}
+                    disabled={!isAuthenticated}
                   >
-                    <Star className={`h-5 w-5 ${bookmark.favorite ? 'text-yellow-400 fill-yellow-400' : ''}`} />
+                    {isAuthenticated ? (
+                      <Star
+                        className={`h-5 w-5 ${bookmark.favorite ? 'text-yellow-400 fill-yellow-400' : 'text-gray-400'}`}
+                      />
+                    ) : (
+                      <Lock className="h-5 w-5 text-gray-400" />
+                    )}
                   </button>
                   <a
                     href={bookmark.url}
