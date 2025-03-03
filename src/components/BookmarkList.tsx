@@ -96,7 +96,7 @@ const BookmarkList: React.FC<BookmarkListProps> = ({ bookmarks, onBookmarkClick,
                       e.stopPropagation();
                       onToggleFavorite(bookmark.id);
                     }}
-                    className={`absolute top-2 right-2 p-1 rounded-full ${isAuthenticated
+                    className={`p-1 rounded-full ${isAuthenticated
                         ? 'bg-white/80 dark:bg-gray-800/80 hover:bg-white dark:hover:bg-gray-800'
                         : 'bg-gray-200/80 dark:bg-gray-700/80 cursor-not-allowed'
                       } transition-colors`}
