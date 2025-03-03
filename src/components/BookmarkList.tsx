@@ -9,6 +9,28 @@ interface BookmarkListProps {
   isAuthenticated: boolean;
 }
 
+/**
+ * A functional component that renders a list of bookmarks in a table format.
+ * Each bookmark can be clicked to trigger a callback, and users can toggle favorites if authenticated.
+ *
+ * @param {Object} props - The properties for the component.
+ * @param {Array} props.bookmarks - An array of bookmark objects to display.
+ * @param {Function} props.onBookmarkClick - Callback function triggered when a bookmark is clicked.
+ * @param {Function} props.onToggleFavorite - Callback function triggered when the favorite status of a bookmark is toggled.
+ * @param {boolean} props.isAuthenticated - Indicates if the user is authenticated, affecting the ability to toggle favorites.
+ *
+ * @returns {JSX.Element} The rendered bookmark list component.
+ *
+ * @example
+ * <BookmarkList
+ *   bookmarks={bookmarksArray}
+ *   onBookmarkClick={handleBookmarkClick}
+ *   onToggleFavorite={handleToggleFavorite}
+ *   isAuthenticated={true}
+ * />
+ *
+ * @throws {Error} Throws an error if the bookmarks array is not provided or is not an array.
+ */
 const BookmarkList: React.FC<BookmarkListProps> = ({ bookmarks, onBookmarkClick, onToggleFavorite, isAuthenticated }) => {
   return (
     <div className="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden">
