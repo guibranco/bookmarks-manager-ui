@@ -12,13 +12,13 @@ interface BookmarkListProps {
 /**
  * A functional component that renders a list of bookmarks in a table format.
  * Each bookmark displays its title, URL, tags, date added, and provides actions
- * for toggling favorites and opening links.
+ * Each bookmark can be clicked to trigger a callback, and users can toggle favorites if authenticated.
  *
  * @param {Object} props - The properties for the component.
  * @param {Array} props.bookmarks - An array of bookmark objects to display.
  * @param {Function} props.onBookmarkClick - Callback function triggered when a bookmark is clicked.
  * @param {Function} props.onToggleFavorite - Callback function triggered when the favorite status of a bookmark is toggled.
- * @param {boolean} props.isAuthenticated - Indicates whether the user is authenticated.
+ * @param {boolean} props.isAuthenticated - Indicates if the user is authenticated, affecting the ability to toggle favorites.
  *
  * @returns {JSX.Element} The rendered bookmark list component.
  *
@@ -30,7 +30,7 @@ interface BookmarkListProps {
  *   isAuthenticated={true}
  * />
  *
- * @throws {Error} Throws an error if bookmarks are not provided or are not an array.
+ * @throws {Error} Throws an error if the bookmarks array is not provided or is not an array.
  */
 const BookmarkList: React.FC<BookmarkListProps> = ({ bookmarks, onBookmarkClick, onToggleFavorite, isAuthenticated }) => {
   return (
@@ -119,7 +119,7 @@ const BookmarkList: React.FC<BookmarkListProps> = ({ bookmarks, onBookmarkClick,
                       e.stopPropagation();
                       onToggleFavorite(bookmark.id);
                     }}
-                    className={`absolute top-2 right-2 p-1 rounded-full ${isAuthenticated
+                    className={`p-1 rounded-full ${isAuthenticated
                         ? 'bg-white/80 dark:bg-gray-800/80 hover:bg-white dark:hover:bg-gray-800'
                         : 'bg-gray-200/80 dark:bg-gray-700/80 cursor-not-allowed'
                       } transition-colors`}
