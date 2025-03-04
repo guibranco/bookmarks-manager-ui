@@ -16,6 +16,7 @@
     <h3>Select Folders:</h3>
     <div id="folderTree"></div>
     <button id="generateJson">Generate JSON</button>
+    <button id="downloadJson">Download JSON</button>
     <h3>Parsed JSON Output:</h3>
     <textarea id="output" readonly></textarea>
 
@@ -42,7 +43,19 @@
             const filteredFolders = allFolders.filter(folder => selectedFolders.has(folder.id));
             const filteredBookmarks = allBookmarks.filter(bookmark => selectedFolders.has(bookmark.folderId));
             
-            document.getElementById("output").value = JSON.stringify({ folders: filteredFolders, bookmarks: filteredBookmarks }, null, 2);
+            const jsonData = JSON.stringify({ folders: filteredFolders, bookmarks: filteredBookmarks }, null, 2);
+            document.getElementById("output").value = jsonData;
+        });
+
+        document.getElementById("downloadJson").addEventListener("click", () => {
+            const jsonData = document.getElementById("output").value;
+            if (!jsonData) return;
+            
+            const blob = new Blob([jsonData], { type: "application/json" });
+            const link = document.createElement("a");
+            link.href = URL.createObjectURL(blob);
+            link.download = "bookmarks.json";
+            link.click();
         });
 
         function renderFolderTree() {
