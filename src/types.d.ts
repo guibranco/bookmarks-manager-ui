@@ -18,8 +18,8 @@ export interface Folder {
 }
 
 export interface AppConfig {
-  showSidebar: boolean;
   darkMode: boolean;
+  showSidebar: boolean;
   viewMode: 'grid' | 'list';
   apiKey: string;
 }

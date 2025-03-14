@@ -11,52 +11,28 @@ interface BookmarkDetailsProps {
   isAuthenticated: boolean;
 }
 
-/**
- * A functional component that displays and manages the details of a bookmark.
- * It allows users to edit bookmark properties, add/remove tags, and organize bookmarks into folders.
- *
- * @param {Object} props - The properties for the component.
- * @param {Bookmark} props.bookmark - The bookmark object containing details to be displayed.
- * @param {Folder[]} props.folders - An array of folder objects for organizing bookmarks.
- * @param {Function} props.onClose - Callback function to close the bookmark details view.
- * @param {Function} props.onUpdate - Callback function to update the bookmark with edited details.
- * @param {Function} props.onDelete - Callback function to delete the bookmark.
- * @param {boolean} props.isAuthenticated - Indicates whether the user is authenticated to edit bookmarks.
- *
- * @returns {JSX.Element} The rendered component.
- *
- * @example
- * <BookmarkDetails
- *   bookmark={bookmark}
- *   folders={folders}
- *   onClose={handleClose}
- *   onUpdate={handleUpdate}
- *   onDelete={handleDelete}
- *   isAuthenticated={isUserAuthenticated}
- * />
- *
- * @throws {Error} Throws an error if the bookmark cannot be updated or deleted.
- */
-const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({ 
-  bookmark, 
+const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
+  bookmark,
   folders,
-  onClose, 
+  onClose,
   onUpdate,
   onDelete,
-  isAuthenticated
+  isAuthenticated,
 }) => {
-  const [editedBookmark, setEditedBookmark] = useState<Bookmark>({...bookmark});
+  const [editedBookmark, setEditedBookmark] = useState<Bookmark>({ ...bookmark });
   const [tagInput, setTagInput] = useState('');
 
   useEffect(() => {
-    setEditedBookmark({...bookmark});
+    setEditedBookmark({ ...bookmark });
   }, [bookmark]);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
     const { name, value } = e.target;
     setEditedBookmark({
       ...editedBookmark,
-      [name]: value
+      [name]: value,
     });
   };
 
@@ -64,7 +40,7 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
     if (tagInput.trim() && !editedBookmark.tags.includes(tagInput.trim())) {
       setEditedBookmark({
         ...editedBookmark,
-        tags: [...editedBookmark.tags, tagInput.trim()]
+        tags: [...editedBookmark.tags, tagInput.trim()],
       });
       setTagInput('');
     }
@@ -73,7 +49,7 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
   const handleTagRemove = (tagToRemove: string) => {
     setEditedBookmark({
       ...editedBookmark,
-      tags: editedBookmark.tags.filter(tag => tag !== tagToRemove)
+      tags: editedBookmark.tags.filter(tag => tag !== tagToRemove),
     });
   };
 
@@ -91,21 +67,21 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
   // Organize folders into a hierarchical structure for the dropdown
   const getFolderOptions = () => {
     const rootFolders = folders.filter(folder => folder.parentId === null);
-    
+
     const renderOptions = (folderList: Folder[], depth: number = 0) => {
       return folderList.flatMap(folder => {
         const subfolders = folders.filter(f => f.parentId === folder.id);
         const prefix = depth > 0 ? '—'.repeat(depth) + ' ' : '';
-        
+
         return [
           <option key={folder.id} value={folder.id}>
             {prefix + folder.name}
           </option>,
-          ...renderOptions(subfolders, depth + 1)
+          ...renderOptions(subfolders, depth + 1),
         ];
       });
     };
-    
+
     return renderOptions(rootFolders);
   };
 
@@ -114,7 +90,7 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
       <div className="p-4">
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-lg font-medium">Bookmark Details</h3>
-          <button 
+          <button
             onClick={onClose}
             className="p-1 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700"
             aria-label="Close details"
@@ -132,7 +108,10 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
 
         <div className="space-y-4">
           <div>
-            <label htmlFor="title" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+            <label
+              htmlFor="title"
+              className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+            >
               Title
             </label>
             <input
@@ -147,7 +126,10 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
           </div>
 
           <div>
-            <label htmlFor="url" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+            <label
+              htmlFor="url"
+              className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+            >
               URL
             </label>
             <div className="flex">
@@ -160,7 +142,7 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
                 className={`flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-l-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 ${!isAuthenticated ? 'opacity-75 cursor-not-allowed' : ''}`}
                 disabled={!isAuthenticated}
               />
-              <a 
+              <a
                 href={editedBookmark.url}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -172,7 +154,10 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
           </div>
 
           <div>
-            <label htmlFor="description" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+            <label
+              htmlFor="description"
+              className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+            >
               Description
             </label>
             <textarea
@@ -187,7 +172,10 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
           </div>
 
           <div>
-            <label htmlFor="thumbnail" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+            <label
+              htmlFor="thumbnail"
+              className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+            >
               Thumbnail URL
             </label>
             <input
@@ -201,12 +189,13 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
             />
             {editedBookmark.thumbnail && (
               <div className="mt-2 h-32 bg-gray-200 dark:bg-gray-700 rounded overflow-hidden">
-                <img 
-                  src={editedBookmark.thumbnail} 
-                  alt="Thumbnail preview" 
+                <img
+                  src={editedBookmark.thumbnail}
+                  alt="Thumbnail preview"
                   className="w-full h-full object-cover"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1481487196290-c152efe083f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80';
+                  onError={e => {
+                    (e.target as HTMLImageElement).src =
+                      'https://images.unsplash.com/photo-1481487196290-c152efe083f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80';
                   }}
                 />
               </div>
@@ -214,7 +203,10 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
           </div>
 
           <div>
-            <label htmlFor="folderId" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+            <label
+              htmlFor="folderId"
+              className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+            >
               Folder
             </label>
             <select
@@ -231,7 +223,10 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
           </div>
 
           <div>
-            <label htmlFor="tags" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+            <label
+              htmlFor="tags"
+              className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+            >
               Tags
             </label>
             <div className="flex">
@@ -239,7 +234,7 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
                 type="text"
                 id="tags"
                 value={tagInput}
-                onChange={(e) => setTagInput(e.target.value)}
+                onChange={e => setTagInput(e.target.value)}
                 onKeyDown={handleTagKeyDown}
                 placeholder="Add a tag"
                 className={`flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-l-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 ${!isAuthenticated ? 'opacity-75 cursor-not-allowed' : ''}`}
@@ -249,8 +244,8 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
                 type="button"
                 onClick={handleTagAdd}
                 className={`px-3 py-2 ${
-                  isAuthenticated 
-                    ? 'bg-blue-600 text-white hover:bg-blue-700' 
+                  isAuthenticated
+                    ? 'bg-blue-600 text-white hover:bg-blue-700'
                     : 'bg-blue-400 text-white cursor-not-allowed'
                 } rounded-r-md`}
                 disabled={!isAuthenticated}
@@ -260,7 +255,7 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
             </div>
             <div className="mt-2 flex flex-wrap gap-2">
               {editedBookmark.tags.map(tag => (
-                <div 
+                <div
                   key={tag}
                   className="flex items-center bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-300 px-2 py-1 rounded text-sm"
                 >

@@ -8,49 +8,14 @@ interface ConfigModalProps {
   onSave: (config: AppConfig) => void;
 }
 
-/**
- * A React functional component that renders a modal for configuring application settings.
- *
- * @param {Object} props - The properties passed to the component.
- * @param {AppConfig} props.config - The current configuration settings to be edited.
- * @param {Function} props.onClose - Callback function to be called when the modal is closed.
- * @param {Function} props.onSave - Callback function to be called when the configuration is saved.
- *
- * @returns {JSX.Element} The rendered modal component.
- *
- * @example
- * <ConfigModal
- *   config={currentConfig}
- *   onClose={handleClose}
- *   onSave={handleSave}
- * />
- */
 const ConfigModal: React.FC<ConfigModalProps> = ({ config, onClose, onSave }) => {
   const [editedConfig, setEditedConfig] = useState<AppConfig>({ ...config });
   const [apiKeyError, setApiKeyError] = useState<string | null>(null);
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  /**
-   * Updates the configuration state with the new value for the specified key.
-   * If the key being updated is 'apiKey', it also clears any existing API key error.
-   *
-   * @param {keyof AppConfig} key - The key of the configuration to update.
-   *                                It must be a valid key from the AppConfig type.
-   * @param {any} value - The new value to set for the specified configuration key.
-   *
-   * @throws {Error} Throws an error if the key is not a valid key of AppConfig.
-   *
-   * @example
-   * // Update the 'apiKey' in the configuration
-   * handleChange('apiKey', 'new-api-key-value');
-   *
-   * // Update another configuration key
-   * handleChange('someOtherKey', 'new-value');
-   */
-  const handleChange = (key: keyof AppConfig, value: any) => {
+  const handleChange = (key: keyof AppConfig, value: boolean | string | 'grid' | 'list') => {
     setEditedConfig({
       ...editedConfig,
-      [key]: value
+      [key]: value,
     });
 
     // Clear API key error when user starts typing
@@ -59,51 +24,16 @@ const ConfigModal: React.FC<ConfigModalProps> = ({ config, onClose, onSave }) =>
     }
   };
 
-  /**
-   * Validates the provided API key.
-   *
-   * This function checks if the API key meets the minimum length requirement of 8 characters.
-   * In a real application, additional validation against a backend service would be necessary.
-   *
-   * @param {string} apiKey - The API key to validate.
-   * @returns {boolean} Returns true if the API key is valid (at least 8 characters), otherwise false.
-   *
-   * @example
-   * const isValid = validateApiKey('myApiKey123');
-   * console.log(isValid); // true
-   *
-   * @example
-   * const isValid = validateApiKey('short');
-   * console.log(isValid); // false
-   */
   const validateApiKey = (apiKey: string): boolean => {
     // This is a simple validation - in a real app, you would validate against your backend
     // For demo purposes, we'll accept any key that's at least 8 characters
     return apiKey.trim().length >= 8;
   };
 
-  /**
-   * Handles the save operation for the edited configuration.
-   *
-   * This function validates the API key provided in the edited configuration.
-   * If the API key is invalid (i.e., less than 8 characters), it sets an error message
-   * and terminates the save operation. If the API key is valid, it proceeds to save
-   * the edited configuration and closes the associated dialog or interface.
-   *
-   * @throws {Error} Throws an error if the API key is invalid.
-   *
-   * @example
-   * // Assuming editedConfig.apiKey is valid
-   * handleSave();
-   *
-   * @example
-   * // Assuming editedConfig.apiKey is invalid
-   * handleSave(); // This will set an error message for the API key.
-   */
   const handleSave = () => {
     // If API key is provided but invalid, show error
     if (editedConfig.apiKey && !validateApiKey(editedConfig.apiKey)) {
-      setApiKeyError("API key must be at least 8 characters");
+      setApiKeyError('API key must be at least 8 characters');
       return;
     }
 
@@ -116,7 +46,7 @@ const ConfigModal: React.FC<ConfigModalProps> = ({ config, onClose, onSave }) =>
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl w-full max-w-md">
         <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
           <h2 className="text-xl font-semibold">Settings</h2>
-          <button 
+          <button
             onClick={onClose}
             className="p-1 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700"
             aria-label="Close settings"
@@ -124,7 +54,7 @@ const ConfigModal: React.FC<ConfigModalProps> = ({ config, onClose, onSave }) =>
             <X className="h-5 w-5" />
           </button>
         </div>
-        
+
         <div className="p-4 space-y-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
@@ -132,35 +62,36 @@ const ConfigModal: React.FC<ConfigModalProps> = ({ config, onClose, onSave }) =>
               <span>Show Sidebar</span>
             </div>
             <label className="relative inline-flex items-center cursor-pointer">
-              <input 
-                type="checkbox" 
+              <input
+                type="checkbox"
                 className="sr-only peer"
                 checked={editedConfig.showSidebar}
-                onChange={(e) => handleChange('showSidebar', e.target.checked)}
+                onChange={e => handleChange('showSidebar', e.target.checked)}
               />
               <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
             </label>
           </div>
-          
+
           <div className="flex items-center justify-between">
             <div className="flex items-center">
-              {editedConfig.darkMode ? 
-                <Sun className="h-5 w-5 mr-2 text-yellow-500" /> : 
+              {editedConfig.darkMode ? (
+                <Sun className="h-5 w-5 mr-2 text-yellow-500" />
+              ) : (
                 <Moon className="h-5 w-5 mr-2 text-gray-600 dark:text-gray-400" />
-              }
+              )}
               <span>Dark Mode</span>
             </div>
             <label className="relative inline-flex items-center cursor-pointer">
-              <input 
-                type="checkbox" 
+              <input
+                type="checkbox"
                 className="sr-only peer"
                 checked={editedConfig.darkMode}
-                onChange={(e) => handleChange('darkMode', e.target.checked)}
+                onChange={e => handleChange('darkMode', e.target.checked)}
               />
               <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
             </label>
           </div>
-          
+
           <div className="flex items-center justify-between">
             <div className="flex items-center">
               <Layout className="h-5 w-5 mr-2 text-gray-600 dark:text-gray-400" />
@@ -170,8 +101,8 @@ const ConfigModal: React.FC<ConfigModalProps> = ({ config, onClose, onSave }) =>
               <button
                 onClick={() => handleChange('viewMode', 'grid')}
                 className={`px-3 py-1 rounded ${
-                  editedConfig.viewMode === 'grid' 
-                    ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400' 
+                  editedConfig.viewMode === 'grid'
+                    ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400'
                     : 'bg-gray-100 dark:bg-gray-700'
                 }`}
               >
@@ -180,8 +111,8 @@ const ConfigModal: React.FC<ConfigModalProps> = ({ config, onClose, onSave }) =>
               <button
                 onClick={() => handleChange('viewMode', 'list')}
                 className={`px-3 py-1 rounded ${
-                  editedConfig.viewMode === 'list' 
-                    ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400' 
+                  editedConfig.viewMode === 'list'
+                    ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400'
                     : 'bg-gray-100 dark:bg-gray-700'
                 }`}
               >
@@ -196,14 +127,17 @@ const ConfigModal: React.FC<ConfigModalProps> = ({ config, onClose, onSave }) =>
               <span className="font-medium">Authentication</span>
             </div>
             <div className="mt-2">
-              <label htmlFor="apiKey" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+              <label
+                htmlFor="apiKey"
+                className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+              >
                 API Key
               </label>
               <input
                 type="password"
                 id="apiKey"
                 value={editedConfig.apiKey || ''}
-                onChange={(e) => handleChange('apiKey', e.target.value)}
+                onChange={e => handleChange('apiKey', e.target.value)}
                 placeholder="Enter your API key"
                 className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700"
               />
@@ -216,7 +150,7 @@ const ConfigModal: React.FC<ConfigModalProps> = ({ config, onClose, onSave }) =>
             </div>
           </div>
         </div>
-        
+
         <div className="p-4 border-t border-gray-200 dark:border-gray-700 flex justify-end">
           <button
             onClick={handleSave}
