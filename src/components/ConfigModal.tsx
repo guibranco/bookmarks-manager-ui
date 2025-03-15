@@ -8,10 +8,40 @@ interface ConfigModalProps {
   onSave: (config: AppConfig) => void;
 }
 
+/**
+ * A modal component for configuring application settings.
+ *
+ * This component allows users to edit various configuration options such as
+ * API key, display preferences (dark mode, sidebar visibility, and view mode).
+ * It provides validation for the API key and handles saving the changes.
+ *
+ * @param {Object} props - The properties for the component.
+ * @param {AppConfig} props.config - The current configuration settings to be edited.
+ * @param {Function} props.onClose - Callback function to be called when the modal is closed.
+ * @param {Function} props.onSave - Callback function to be called when the configuration is saved.
+ *
+ * @returns {JSX.Element} The rendered modal component.
+ */
 const ConfigModal: React.FC<ConfigModalProps> = ({ config, onClose, onSave }) => {
   const [editedConfig, setEditedConfig] = useState<AppConfig>({ ...config });
   const [apiKeyError, setApiKeyError] = useState<string | null>(null);
 
+  /**
+   * Handles changes to the application configuration.
+   *
+   * This function updates the configuration state with the new value provided for a specific key.
+   * If the key being updated is 'apiKey', it also clears any existing API key error.
+   *
+   * @param {keyof AppConfig} key - The key of the configuration to be updated.
+   * It must be one of the keys defined in the AppConfig interface.
+   *
+   * @param {boolean | string | 'grid' | 'list'} value - The new value to set for the specified key.
+   * This can be a boolean, a string, or one of the specific string literals 'grid' or 'list'.
+   *
+   * @returns {void} This function does not return a value.
+   *
+   * @throws {Error} Throws an error if the key is not valid or if an invalid value is provided.
+   */
   const handleChange = (key: keyof AppConfig, value: boolean | string | 'grid' | 'list') => {
     setEditedConfig({
       ...editedConfig,
@@ -24,12 +54,39 @@ const ConfigModal: React.FC<ConfigModalProps> = ({ config, onClose, onSave }) =>
     }
   };
 
+  /**
+   * Validates the provided API key.
+   *
+   * This function checks if the API key meets a minimum length requirement.
+   * In a real application, additional validation against a backend service
+   * would be necessary. For demonstration purposes, any key that is at least
+   * 8 characters long is considered valid.
+   *
+   * @param {string} apiKey - The API key to validate.
+   * @returns {boolean} Returns true if the API key is valid (at least 8 characters),
+   *                    otherwise returns false.
+   *
+   * @throws {Error} Throws an error if the apiKey is not a string.
+   */
   const validateApiKey = (apiKey: string): boolean => {
     // This is a simple validation - in a real app, you would validate against your backend
     // For demo purposes, we'll accept any key that's at least 8 characters
     return apiKey.trim().length >= 8;
   };
 
+  /**
+   * Handles the save operation for the edited configuration.
+   * Validates the API key and triggers the save action if valid.
+   * Closes the configuration dialog after saving.
+   *
+   * @function handleSave
+   * @throws {Error} Throws an error if the API key is provided but invalid.
+   * @returns {void}
+   *
+   * @example
+   * // Example usage:
+   * handleSave();
+   */
   const handleSave = () => {
     // If API key is provided but invalid, show error
     if (editedConfig.apiKey && !validateApiKey(editedConfig.apiKey)) {

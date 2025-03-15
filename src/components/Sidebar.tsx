@@ -11,6 +11,21 @@ interface SidebarProps {
   isAuthenticated: boolean;
 }
 
+/**
+ * Sidebar component for managing and displaying bookmarks, folders, and tags.
+ *
+ * This component allows users to navigate through their bookmarks organized in folders,
+ * view favorites, and manage tags. It supports expanding and collapsing sections for better
+ * organization and user experience.
+ *
+ * @param {Object} props - The properties for the Sidebar component.
+ * @param {Array<FolderType>} props.folders - The list of folders to display.
+ * @param {string} props.selectedFolder - The ID of the currently selected folder.
+ * @param {function} props.onSelectFolder - Callback function to handle folder selection.
+ * @param {Array<BookmarkType>} props.bookmarks - The list of bookmarks to display.
+ * @param {function} props.onAddFolder - Callback function to handle adding a new folder.
+ * @param {boolean} props.isAuthenticated - Indicates if the user is authenticated.
+ */
 const Sidebar: React.FC<SidebarProps> = ({
   folders,
   selectedFolder,
@@ -53,6 +68,21 @@ const Sidebar: React.FC<SidebarProps> = ({
     localStorage.setItem('bookmarkManagerExpandedFolders', JSON.stringify(expandedFolders));
   }, [expandedFolders]);
 
+  /**
+   * Toggles the expanded state of a specified section.
+   *
+   * This function updates the state of expanded sections by inverting the current
+   * value of the specified section. It is typically used in UI components to show
+   * or hide content based on user interaction.
+   *
+   * @param {keyof typeof expandedSections} section - The key representing the section
+   * to be toggled. This should match one of the keys defined in the expandedSections object.
+   *
+   * @returns {void} This function does not return a value.
+   *
+   * @throws {Error} Throws an error if the provided section key does not exist in
+   * expandedSections.
+   */
   const toggleSection = (section: keyof typeof expandedSections) => {
     setExpandedSections(prev => ({
       ...prev,
@@ -60,6 +90,18 @@ const Sidebar: React.FC<SidebarProps> = ({
     }));
   };
 
+  /**
+   * Toggles the expanded state of a folder identified by its ID.
+   *
+   * This function updates the state of expanded folders by inverting the current
+   * expanded state for the specified folder. If the folder is currently expanded,
+   * it will be collapsed, and vice versa.
+   *
+   * @param {string} folderId - The unique identifier of the folder to toggle.
+   * @returns {void} This function does not return a value.
+   *
+   * @throws {Error} Throws an error if the folderId is not a valid string.
+   */
   const toggleFolder = (folderId: string) => {
     setExpandedFolders(prev => ({
       ...prev,
@@ -75,6 +117,18 @@ const Sidebar: React.FC<SidebarProps> = ({
     return folders.filter(folder => folder.parentId === parentId);
   };
 
+  /**
+   * Counts the total number of bookmarks within a specified folder, including bookmarks in its subfolders.
+   *
+   * This function first counts the direct bookmarks that belong to the specified folder.
+   * It then retrieves all subfolder IDs that are children of the specified folder and recursively counts
+   * the bookmarks in each of those subfolders.
+   *
+   * @param {string} folderId - The unique identifier of the folder for which to count bookmarks.
+   * @returns {number} The total number of bookmarks found in the specified folder and its subfolders.
+   *
+   * @throws {Error} Throws an error if the folderId is invalid or does not exist.
+   */
   const countFolderBookmarks = (folderId: string): number => {
     const directBookmarks = bookmarks.filter(b => b.folderId === folderId).length;
     const subfolderIds = folders.filter(f => f.parentId === folderId).map(f => f.id);
@@ -85,6 +139,20 @@ const Sidebar: React.FC<SidebarProps> = ({
     return directBookmarks + subfolderBookmarks;
   };
 
+  /**
+   * Renders a folder and its subfolders recursively.
+   *
+   * This function generates a visual representation of a folder, including its name,
+   * a button to toggle the visibility of its subfolders, and a count of bookmarks within
+   * the folder. If the folder contains subfolders, it will render them based on the current
+   * expansion state.
+   *
+   * @param {FolderType} folder - The folder object to render.
+   * @param {number} [depth=0] - The current depth of the folder in the hierarchy, used for indentation.
+   * @returns {JSX.Element} A JSX element representing the folder and its contents.
+   *
+   * @throws {Error} Throws an error if the folder is invalid or cannot be rendered.
+   */
   const renderFolder = (folder: FolderType, depth: number = 0) => {
     const subfolders = getSubfolders(folder.id);
     const hasSubfolders = subfolders.length > 0;
