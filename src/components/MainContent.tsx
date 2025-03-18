@@ -17,6 +17,25 @@ interface MainContentProps {
   onOpenSettings: () => void;
 }
 
+/**
+ * MainContent component that renders the main interface for managing bookmarks.
+ * It displays bookmarks in either grid or list view based on user preference.
+ *
+ * @param {Object} props - The properties for the component.
+ * @param {Object} props.config - Configuration settings for the component.
+ * @param {boolean} props.isAuthenticated - Indicates if the user is authenticated.
+ * @param {string} props.selectedFolder - The currently selected folder for bookmarks.
+ * @param {Array} props.filteredBookmarks - The list of bookmarks to display.
+ * @param {string} props.folderPath - The path of the current folder being viewed.
+ * @param {Function} props.onToggleView - Function to toggle between grid and list view.
+ * @param {Function} props.onBookmarkClick - Function to handle bookmark click events.
+ * @param {Function} props.onToggleFavorite - Function to toggle the favorite status of a bookmark.
+ * @param {Function} props.onOpenSettings - Function to open the settings modal.
+ *
+ * @returns {JSX.Element} The rendered component.
+ *
+ * @throws {Error} Throws an error if rendering fails due to invalid props.
+ */
 const MainContent: React.FC<MainContentProps> = ({
   config,
   isAuthenticated,
