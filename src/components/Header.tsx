@@ -13,6 +13,25 @@ interface HeaderProps {
   onOpenSettings: () => void;
 }
 
+/**
+ * A functional component that renders the header of the Bookmark Manager application.
+ * It includes controls for searching bookmarks, toggling the sidebar, dark mode,
+ * and managing user authentication states.
+ *
+ * @param {Object} props - The properties for the Header component.
+ * @param {Object} props.config - Configuration settings for the application.
+ * @param {Object} props.authState - The current authentication state of the user.
+ * @param {string} props.searchQuery - The current search query for bookmarks.
+ * @param {Function} props.onSearchChange - Callback function to handle search query changes.
+ * @param {Function} props.onToggleSidebar - Callback function to toggle the sidebar visibility.
+ * @param {Function} props.onToggleDarkMode - Callback function to toggle dark mode.
+ * @param {Function} props.onAddBookmark - Callback function to add a new bookmark.
+ * @param {Function} props.onOpenSettings - Callback function to open settings.
+ *
+ * @returns {JSX.Element} The rendered header component.
+ *
+ * @throws {Error} Throws an error if any required prop is missing or invalid.
+ */
 const Header: React.FC<HeaderProps> = ({
   config,
   authState,
