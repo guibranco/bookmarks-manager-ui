@@ -11,27 +11,27 @@
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css,md,json}\" --config ./.prettierrc"
   },
   "dependencies": {
-    "lucide-react": "^0.294.0",
+    "lucide-react": "^0.482.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@eslint/js": "^8.55.0",
+    "@eslint/js": "^9.22.0",
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
     "@vitejs/plugin-react": "^4.2.0",
     "autoprefixer": "^10.4.16",
-    "eslint": "^8.55.0",
-    "eslint-config-prettier": "^9.0.0",
+    "eslint": "^9.22.0",
+    "eslint-config-prettier": "^10.1.1",
     "eslint-plugin-prettier": "^5.0.1",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.4",
-    "globals": "^13.23.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^16.0.0",
     "postcss": "^8.4.31",
     "prettier": "^3.1.0",
     "tailwindcss": "^3.3.5",
     "typescript": "^5.2.2",
-    "typescript-eslint": "^0.0.1-alpha.0",
+    "typescript-eslint": "^8.26.1",
     "vite": "^5.0.0"
   }
 }
