@@ -55,14 +55,14 @@ const MainContent: React.FC<MainContentProps> = ({
           <div className="flex items-center space-x-2">
             <button
               onClick={() => onToggleView('grid')}
-              className={`p-2 rounded ${config.viewMode === 'grid' ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400' : 'hover:bg-gray-200 dark:hover:bg-gray-700'}`}
+              className={`p-2 rounded-sm ${config.viewMode === 'grid' ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400' : 'hover:bg-gray-200 dark:hover:bg-gray-700'}`}
               aria-label="Grid view"
             >
               <Grid className="h-5 w-5" />
             </button>
             <button
               onClick={() => onToggleView('list')}
-              className={`p-2 rounded ${config.viewMode === 'list' ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400' : 'hover:bg-gray-200 dark:hover:bg-gray-700'}`}
+              className={`p-2 rounded-sm ${config.viewMode === 'list' ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400' : 'hover:bg-gray-200 dark:hover:bg-gray-700'}`}
               aria-label="List view"
             >
               <List className="h-5 w-5" />

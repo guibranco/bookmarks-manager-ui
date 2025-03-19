@@ -110,7 +110,7 @@ const BookmarkCard: React.FC<BookmarkCardProps> = ({
             target="_blank"
             rel="noopener noreferrer"
             onClick={e => e.stopPropagation()}
-            className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 ml-2 flex-shrink-0"
+            className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 ml-2 shrink-0"
             aria-label="Open link"
           >
             <ExternalLink className="h-4 w-4" />
@@ -125,13 +125,13 @@ const BookmarkCard: React.FC<BookmarkCardProps> = ({
           {bookmark.tags.slice(0, 3).map(tag => (
             <span
               key={tag}
-              className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-300 text-xs px-2 py-1 rounded"
+              className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-300 text-xs px-2 py-1 rounded-sm"
             >
               {tag}
             </span>
           ))}
           {bookmark.tags.length > 3 && (
-            <span className="inline-block bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-300 text-xs px-2 py-1 rounded">
+            <span className="inline-block bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-300 text-xs px-2 py-1 rounded-sm">
               +{bookmark.tags.length - 3}
             </span>
           )}

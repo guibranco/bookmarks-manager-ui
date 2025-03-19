@@ -116,7 +116,7 @@ const FolderModal: React.FC<FolderModalProps> = ({ folders, parentId, onClose, o
               id="folderName"
               value={folderName}
               onChange={e => setFolderName(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700"
+              className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-xs focus:outline-hidden focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700"
               placeholder="My New Folder"
               autoFocus
             />
@@ -133,7 +133,7 @@ const FolderModal: React.FC<FolderModalProps> = ({ folders, parentId, onClose, o
               id="parentFolder"
               value={selectedParentId || ''}
               onChange={e => setSelectedParentId(e.target.value || null)}
-              className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700"
+              className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-xs focus:outline-hidden focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700"
             >
               <option value="">No Parent (Root Folder)</option>
               {getFolderOptions()}

@@ -27,7 +27,7 @@ const AuthWarning: React.FC<AuthWarningProps> = ({ onOpenSettings }) => {
   return (
     <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-md p-4 mb-4">
       <div className="flex">
-        <div className="flex-shrink-0">
+        <div className="shrink-0">
           <Lock className="h-5 w-5 text-yellow-400" aria-hidden="true" />
         </div>
         <div className="ml-3">

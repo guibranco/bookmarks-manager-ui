@@ -328,7 +328,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                   return (
                     <div
                       key={tag}
-                      className="flex items-center bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-300 px-2 py-1 rounded text-xs"
+                      className="flex items-center bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-300 px-2 py-1 rounded-sm text-xs"
                     >
                       <span>{tag}</span>
                       <span className="ml-1 bg-blue-200 dark:bg-blue-800 px-1.5 py-0.5 rounded-full text-xs">

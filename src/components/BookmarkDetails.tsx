@@ -154,7 +154,7 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
   };
 
   return (
-    <div className="w-80 border-l border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 overflow-y-auto flex-shrink-0">
+    <div className="w-80 border-l border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 overflow-y-auto shrink-0">
       <div className="p-4">
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-lg font-medium">Bookmark Details</h3>
@@ -188,7 +188,7 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
               name="title"
               value={editedBookmark.title}
               onChange={handleChange}
-              className={`w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 ${!isAuthenticated ? 'opacity-75 cursor-not-allowed' : ''}`}
+              className={`w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-xs focus:outline-hidden focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 ${!isAuthenticated ? 'opacity-75 cursor-not-allowed' : ''}`}
               disabled={!isAuthenticated}
             />
           </div>
@@ -207,7 +207,7 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
                 name="url"
                 value={editedBookmark.url}
                 onChange={handleChange}
-                className={`flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-l-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 ${!isAuthenticated ? 'opacity-75 cursor-not-allowed' : ''}`}
+                className={`flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-l-md shadow-xs focus:outline-hidden focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 ${!isAuthenticated ? 'opacity-75 cursor-not-allowed' : ''}`}
                 disabled={!isAuthenticated}
               />
               <a
@@ -234,7 +234,7 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
               rows={3}
               value={editedBookmark.description}
               onChange={handleChange}
-              className={`w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 ${!isAuthenticated ? 'opacity-75 cursor-not-allowed' : ''}`}
+              className={`w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-xs focus:outline-hidden focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 ${!isAuthenticated ? 'opacity-75 cursor-not-allowed' : ''}`}
               disabled={!isAuthenticated}
             />
           </div>
@@ -252,11 +252,11 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
               name="thumbnail"
               value={editedBookmark.thumbnail}
               onChange={handleChange}
-              className={`w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 ${!isAuthenticated ? 'opacity-75 cursor-not-allowed' : ''}`}
+              className={`w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-xs focus:outline-hidden focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 ${!isAuthenticated ? 'opacity-75 cursor-not-allowed' : ''}`}
               disabled={!isAuthenticated}
             />
             {editedBookmark.thumbnail && (
-              <div className="mt-2 h-32 bg-gray-200 dark:bg-gray-700 rounded overflow-hidden">
+              <div className="mt-2 h-32 bg-gray-200 dark:bg-gray-700 rounded-sm overflow-hidden">
                 <img
                   src={editedBookmark.thumbnail}
                   alt="Thumbnail preview"
@@ -282,7 +282,7 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
               name="folderId"
               value={editedBookmark.folderId || ''}
               onChange={handleChange}
-              className={`w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 ${!isAuthenticated ? 'opacity-75 cursor-not-allowed' : ''}`}
+              className={`w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-xs focus:outline-hidden focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 ${!isAuthenticated ? 'opacity-75 cursor-not-allowed' : ''}`}
               disabled={!isAuthenticated}
             >
               <option value="">No Folder</option>
@@ -305,7 +305,7 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
                 onChange={e => setTagInput(e.target.value)}
                 onKeyDown={handleTagKeyDown}
                 placeholder="Add a tag"
-                className={`flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-l-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 ${!isAuthenticated ? 'opacity-75 cursor-not-allowed' : ''}`}
+                className={`flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-l-md shadow-xs focus:outline-hidden focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 ${!isAuthenticated ? 'opacity-75 cursor-not-allowed' : ''}`}
                 disabled={!isAuthenticated}
               />
               <button
@@ -325,7 +325,7 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
               {editedBookmark.tags.map(tag => (
                 <div
                   key={tag}
-                  className="flex items-center bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-300 px-2 py-1 rounded text-sm"
+                  className="flex items-center bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-300 px-2 py-1 rounded-sm text-sm"
                 >
                   <span>{tag}</span>
                   {isAuthenticated && (
