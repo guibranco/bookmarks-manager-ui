@@ -9,6 +9,16 @@ interface BookmarkListProps {
   isAuthenticated: boolean;
 }
 
+/**
+ * A functional component that renders a list of bookmarks.
+ * It displays bookmarks in both table and card layouts depending on the screen size.
+ *
+ * @param {Object} props - The properties for the component.
+ * @param {Array} props.bookmarks - An array of bookmark objects to display.
+ * @param {function} props.onBookmarkClick - Callback function invoked when a bookmark is clicked.
+ * @param {function} props.onToggleFavorite - Callback function invoked to toggle the favorite status of a bookmark.
+ * @param {boolean} props.isAuthenticated - Indicates whether the user is authenticated.
+ */
 const BookmarkList: React.FC<BookmarkListProps> = ({
   bookmarks,
   onBookmarkClick,
@@ -16,6 +26,18 @@ const BookmarkList: React.FC<BookmarkListProps> = ({
   isAuthenticated,
 }) => {
   // Extract domain for favicon
+  /**
+   * Retrieves the favicon URL for a given website URL.
+   *
+   * This function takes a URL as input, extracts the domain from it,
+   * and constructs a URL to fetch the favicon from Google's favicon service.
+   * If the provided URL is invalid, it returns null.
+   *
+   * @param {string} url - The website URL from which to extract the favicon.
+   * @returns {string | null} The constructed favicon URL or null if the input URL is invalid.
+   *
+   * @throws {Error} Throws an error if the URL cannot be parsed.
+   */
   const getFaviconUrl = (url: string) => {
     try {
       const domain = new URL(url).hostname;
