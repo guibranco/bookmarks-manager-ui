@@ -43,7 +43,7 @@ const Header: React.FC<HeaderProps> = ({
   onOpenSettings,
 }) => {
   return (
-    <header className="bg-white dark:bg-gray-800 shadow-sm border-b border-gray-200 dark:border-gray-700 sticky top-0 z-40">
+    <header className="bg-white dark:bg-gray-800 shadow-xs border-b border-gray-200 dark:border-gray-700 sticky top-0 z-40">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <div className="flex items-center space-x-2">
           <button
@@ -65,7 +65,7 @@ const Header: React.FC<HeaderProps> = ({
             <input
               type="text"
               placeholder="Search bookmarks..."
-              className="block w-full pl-10 pr-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400"
+              className="block w-full pl-10 pr-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-700 focus:outline-hidden focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400"
               value={searchQuery}
               onChange={e => onSearchChange(e.target.value)}
             />
