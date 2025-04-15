@@ -1,37 +1,28 @@
 import React, { useState, useEffect } from 'react';
-import { Folder, Star, Tag, ChevronDown, ChevronRight, Bookmark, Plus, Lock } from 'lucide-react';
+import { Folder, Star, Tag, ChevronDown, ChevronRight, Bookmark, Plus, Lock, Edit2, Check, X } from 'lucide-react';
 import { Folder as FolderType, Bookmark as BookmarkType } from '../types';
 
 interface SidebarProps {
   folders: FolderType[];
   selectedFolder: string | null;
+  selectedTag: string | null;
   onSelectFolder: (folderId: string | null) => void;
+  onSelectTag: (tag: string | null) => void;
   bookmarks: BookmarkType[];
   onAddFolder: (parentId: string | null) => void;
+  onUpdateFolder: (folderId: string, newName: string) => void;
   isAuthenticated: boolean;
 }
 
-/**
- * Sidebar component for managing and displaying bookmarks, folders, and tags.
- *
- * This component allows users to navigate through their bookmarks organized in folders,
- * view favorites, and manage tags. It supports expanding and collapsing sections for better
- * organization and user experience.
- *
- * @param {Object} props - The properties for the Sidebar component.
- * @param {Array<FolderType>} props.folders - The list of folders to display.
- * @param {string} props.selectedFolder - The ID of the currently selected folder.
- * @param {function} props.onSelectFolder - Callback function to handle folder selection.
- * @param {Array<BookmarkType>} props.bookmarks - The list of bookmarks to display.
- * @param {function} props.onAddFolder - Callback function to handle adding a new folder.
- * @param {boolean} props.isAuthenticated - Indicates if the user is authenticated.
- */
 const Sidebar: React.FC<SidebarProps> = ({
   folders,
   selectedFolder,
+  selectedTag,
   onSelectFolder,
+  onSelectTag,
   bookmarks,
   onAddFolder,
+  onUpdateFolder,
   isAuthenticated,
 }) => {
   const [expandedSections, setExpandedSections] = useState(() => {
@@ -60,6 +51,9 @@ const Sidebar: React.FC<SidebarProps> = ({
     return {};
   });
 
+  const [editingFolderId, setEditingFolderId] = useState<string | null>(null);
+  const [editingFolderName, setEditingFolderName] = useState('');
+
   useEffect(() => {
     localStorage.setItem('bookmarkManagerExpandedSections', JSON.stringify(expandedSections));
   }, [expandedSections]);
@@ -68,21 +62,6 @@ const Sidebar: React.FC<SidebarProps> = ({
     localStorage.setItem('bookmarkManagerExpandedFolders', JSON.stringify(expandedFolders));
   }, [expandedFolders]);
 
-  /**
-   * Toggles the expanded state of a specified section.
-   *
-   * This function updates the state of expanded sections by inverting the current
-   * value of the specified section. It is typically used in UI components to show
-   * or hide content based on user interaction.
-   *
-   * @param {keyof typeof expandedSections} section - The key representing the section
-   * to be toggled. This should match one of the keys defined in the expandedSections object.
-   *
-   * @returns {void} This function does not return a value.
-   *
-   * @throws {Error} Throws an error if the provided section key does not exist in
-   * expandedSections.
-   */
   const toggleSection = (section: keyof typeof expandedSections) => {
     setExpandedSections(prev => ({
       ...prev,
@@ -90,23 +69,47 @@ const Sidebar: React.FC<SidebarProps> = ({
     }));
   };
 
-  /**
-   * Toggles the expanded state of a folder identified by its ID.
-   *
-   * This function updates the state of expanded folders by inverting the current
-   * expanded state for the specified folder. If the folder is currently expanded,
-   * it will be collapsed, and vice versa.
-   *
-   * @param {string} folderId - The unique identifier of the folder to toggle.
-   * @returns {void} This function does not return a value.
-   *
-   * @throws {Error} Throws an error if the folderId is not a valid string.
-   */
   const toggleFolder = (folderId: string) => {
     setExpandedFolders(prev => ({
       ...prev,
       [folderId]: !prev[folderId],
     }));
+  };
+
+  const startEditing = (folder: FolderType, e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (!isAuthenticated) return;
+    setEditingFolderId(folder.id);
+    setEditingFolderName(folder.name);
+  };
+
+  const saveEditing = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (editingFolderId && editingFolderName.trim()) {
+      onUpdateFolder(editingFolderId, editingFolderName.trim());
+      setEditingFolderId(null);
+      setEditingFolderName('');
+    }
+  };
+
+  const cancelEditing = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setEditingFolderId(null);
+    setEditingFolderName('');
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      if (editingFolderId && editingFolderName.trim()) {
+        onUpdateFolder(editingFolderId, editingFolderName.trim());
+        setEditingFolderId(null);
+        setEditingFolderName('');
+      }
+    } else if (e.key === 'Escape') {
+      setEditingFolderId(null);
+      setEditingFolderName('');
+    }
   };
 
   const allTags = Array.from(new Set(bookmarks.flatMap(bookmark => bookmark.tags)));
@@ -117,18 +120,6 @@ const Sidebar: React.FC<SidebarProps> = ({
     return folders.filter(folder => folder.parentId === parentId);
   };
 
-  /**
-   * Counts the total number of bookmarks within a specified folder, including bookmarks in its subfolders.
-   *
-   * This function first counts the direct bookmarks that belong to the specified folder.
-   * It then retrieves all subfolder IDs that are children of the specified folder and recursively counts
-   * the bookmarks in each of those subfolders.
-   *
-   * @param {string} folderId - The unique identifier of the folder for which to count bookmarks.
-   * @returns {number} The total number of bookmarks found in the specified folder and its subfolders.
-   *
-   * @throws {Error} Throws an error if the folderId is invalid or does not exist.
-   */
   const countFolderBookmarks = (folderId: string): number => {
     const directBookmarks = bookmarks.filter(b => b.folderId === folderId).length;
     const subfolderIds = folders.filter(f => f.parentId === folderId).map(f => f.id);
@@ -139,25 +130,12 @@ const Sidebar: React.FC<SidebarProps> = ({
     return directBookmarks + subfolderBookmarks;
   };
 
-  /**
-   * Renders a folder and its subfolders recursively.
-   *
-   * This function generates a visual representation of a folder, including its name,
-   * a button to toggle the visibility of its subfolders, and a count of bookmarks within
-   * the folder. If the folder contains subfolders, it will render them based on the current
-   * expansion state.
-   *
-   * @param {FolderType} folder - The folder object to render.
-   * @param {number} [depth=0] - The current depth of the folder in the hierarchy, used for indentation.
-   * @returns {JSX.Element} A JSX element representing the folder and its contents.
-   *
-   * @throws {Error} Throws an error if the folder is invalid or cannot be rendered.
-   */
   const renderFolder = (folder: FolderType, depth: number = 0) => {
     const subfolders = getSubfolders(folder.id);
     const hasSubfolders = subfolders.length > 0;
     const isExpanded = expandedFolders[folder.id] || false;
     const folderBookmarksCount = countFolderBookmarks(folder.id);
+    const isEditing = editingFolderId === folder.id;
 
     return (
       <div key={folder.id} className="mb-1">
@@ -165,7 +143,7 @@ const Sidebar: React.FC<SidebarProps> = ({
           {hasSubfolders ? (
             <button
               onClick={() => toggleFolder(folder.id)}
-              className="p-1 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md mr-1"
+              className="p-1 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md mr-1 cursor-pointer"
             >
               {isExpanded ? (
                 <ChevronDown className="h-3 w-3 text-gray-500" />
@@ -177,21 +155,63 @@ const Sidebar: React.FC<SidebarProps> = ({
             <div className="w-5" />
           )}
 
-          <button
-            className={`flex-1 flex items-center justify-between p-2 rounded-md ${
+          <div
+            className={`group flex-1 flex items-center p-2 rounded-md cursor-pointer ${
               selectedFolder === folder.id
                 ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300'
                 : 'hover:bg-gray-100 dark:hover:bg-gray-700'
             }`}
-            onClick={() => onSelectFolder(folder.id)}
+            onClick={() => !isEditing && onSelectFolder(folder.id)}
           >
-            <span className="truncate">{folder.name}</span>
-            {folderBookmarksCount > 0 && (
-              <span className="text-xs bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 px-2 py-1 rounded-full">
-                {folderBookmarksCount}
-              </span>
-            )}
-          </button>
+            <div className="flex-1 min-w-0 flex items-center">
+              {isEditing ? (
+                <div className="flex items-center w-full pr-1">
+                  <input
+                    type="text"
+                    value={editingFolderName}
+                    onChange={e => setEditingFolderName(e.target.value)}
+                    onKeyDown={handleKeyDown}
+                    className="min-w-0 w-[calc(100%-4rem)] px-2 py-1 bg-white dark:bg-gray-700 border border-blue-500 rounded-sm focus:outline-hidden focus:ring-2 focus:ring-blue-500"
+                    autoFocus
+                    onClick={e => e.stopPropagation()}
+                  />
+                  <div className="flex items-center ml-1 shrink-0">
+                    <button
+                      onClick={saveEditing}
+                      className="p-1 hover:bg-blue-200 dark:hover:bg-blue-800 rounded-full cursor-pointer"
+                    >
+                      <Check className="h-4 w-4 text-green-600 dark:text-green-400" />
+                    </button>
+                    <button
+                      onClick={cancelEditing}
+                      className="p-1 hover:bg-red-200 dark:hover:bg-red-800 rounded-full ml-1 cursor-pointer"
+                    >
+                      <X className="h-4 w-4 text-red-600 dark:text-red-400" />
+                    </button>
+                  </div>
+                </div>
+              ) : (
+                <div className="flex-1 flex items-center justify-between min-w-0">
+                  <span className="truncate">{folder.name}</span>
+                  <div className="flex items-center space-x-2 ml-2">
+                    {isAuthenticated && (
+                      <button
+                        onClick={e => startEditing(folder, e)}
+                        className="p-1 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"
+                      >
+                        <Edit2 className="h-4 w-4 text-gray-500" />
+                      </button>
+                    )}
+                    {folderBookmarksCount > 0 && (
+                      <span className="text-xs bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 px-2 py-1 rounded-full">
+                        {folderBookmarksCount}
+                      </span>
+                    )}
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
         </div>
 
         {hasSubfolders && isExpanded && (
@@ -215,8 +235,8 @@ const Sidebar: React.FC<SidebarProps> = ({
 
         <div className="mb-6">
           <button
-            className={`w-full flex items-center justify-between p-2 rounded-md ${
-              selectedFolder === 'all'
+            className={`w-full flex items-center justify-between p-2 rounded-md cursor-pointer ${
+              selectedFolder === 'all' && !selectedTag
                 ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300'
                 : 'hover:bg-gray-100 dark:hover:bg-gray-700'
             }`}
@@ -251,8 +271,8 @@ const Sidebar: React.FC<SidebarProps> = ({
           {expandedSections.favorites && (
             <div className="ml-4 mt-2">
               <button
-                className={`w-full flex items-center justify-between p-2 rounded-md ${
-                  selectedFolder === 'favorites'
+                className={`w-full flex items-center justify-between p-2 rounded-md cursor-pointer ${
+                  selectedFolder === 'favorites' && !selectedTag
                     ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300'
                     : 'hover:bg-gray-100 dark:hover:bg-gray-700'
                 }`}
@@ -279,7 +299,7 @@ const Sidebar: React.FC<SidebarProps> = ({
             <div className="flex items-center">
               {isAuthenticated && (
                 <button
-                  className="p-1 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 mr-1"
+                  className="p-1 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 mr-1 cursor-pointer"
                   aria-label="Add folder"
                   onClick={e => {
                     e.stopPropagation();
@@ -326,15 +346,26 @@ const Sidebar: React.FC<SidebarProps> = ({
                 {allTags.map(tag => {
                   const tagCount = bookmarks.filter(b => b.tags.includes(tag)).length;
                   return (
-                    <div
+                    <button
                       key={tag}
-                      className="flex items-center bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-300 px-2 py-1 rounded-sm text-xs"
+                      onClick={() => onSelectTag(selectedTag === tag ? null : tag)}
+                      className={`flex items-center ${
+                        selectedTag === tag
+                          ? 'bg-blue-500 text-white'
+                          : 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-300'
+                      } px-2 py-1 rounded text-xs cursor-pointer hover:opacity-90`}
                     >
                       <span>{tag}</span>
-                      <span className="ml-1 bg-blue-200 dark:bg-blue-800 px-1.5 py-0.5 rounded-full text-xs">
+                      <span
+                        className={`ml-1 ${
+                          selectedTag === tag
+                            ? 'bg-blue-600'
+                            : 'bg-blue-200 dark:bg-blue-800'
+                        } px-1.5 py-0.5 rounded-full text-xs`}
+                      >
                         {tagCount}
                       </span>
-                    </div>
+                    </button>
                   );
                 })}
               </div>

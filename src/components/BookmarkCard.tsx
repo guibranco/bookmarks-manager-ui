@@ -9,19 +9,6 @@ interface BookmarkCardProps {
   isAuthenticated: boolean;
 }
 
-/**
- * A functional component that renders a bookmark card displaying the bookmark's details.
- *
- * @param {Object} props - The properties for the BookmarkCard component.
- * @param {Bookmark} props.bookmark - The bookmark object containing details such as title, url, thumbnail, description, and tags.
- * @param {Function} props.onClick - Callback function to handle click events on the card.
- * @param {Function} props.onToggleFavorite - Callback function to toggle the favorite status of the bookmark.
- * @param {boolean} props.isAuthenticated - Indicates whether the user is authenticated.
- *
- * @returns {JSX.Element} The rendered bookmark card component.
- *
- * @throws {Error} Throws an error if the URL provided for favicon extraction is invalid.
- */
 const BookmarkCard: React.FC<BookmarkCardProps> = ({
   bookmark,
   onClick,
@@ -29,17 +16,6 @@ const BookmarkCard: React.FC<BookmarkCardProps> = ({
   isAuthenticated,
 }) => {
   // Extract domain for favicon
-  /**
-   * Retrieves the favicon URL for a given website URL.
-   *
-   * This function takes a URL as input, extracts the hostname, and constructs a URL to fetch the favicon
-   * from Google's favicon service. If the input URL is invalid, it returns null.
-   *
-   * @param {string} url - The website URL from which to extract the favicon.
-   * @returns {string | null} The URL of the favicon or null if the input URL is invalid.
-   *
-   * @throws {Error} Throws an error if the URL cannot be parsed.
-   */
   const getFaviconUrl = (url: string) => {
     try {
       const domain = new URL(url).hostname;
