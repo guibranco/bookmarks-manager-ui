@@ -8,8 +8,13 @@ export function useSelectedFolder(folders: Folder[]) {
     const params = new URLSearchParams(window.location.search);
     const folderParam = params.get('folder');
     
-    if (folderParam === 'favorites') return 'favorites';
-    if (folderParam === 'all') return 'all';
+    if (folderParam === 'favorites') {
+      return 'favorites';
+    }
+    
+    if (folderParam === 'all') {
+      return 'all';
+    }
     
     if (folderParam && folders.some(f => f.id === folderParam)) {
       return folderParam;
