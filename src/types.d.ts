@@ -21,6 +21,7 @@ export interface AppConfig {
   darkMode: boolean;
   showSidebar: boolean;
   viewMode: 'grid' | 'list';
+  flattenSubfolders: boolean;
   apiKey: string;
 }
 

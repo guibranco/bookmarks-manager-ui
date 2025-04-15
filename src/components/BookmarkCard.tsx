@@ -9,19 +9,6 @@ interface BookmarkCardProps {
   isAuthenticated: boolean;
 }
 
-/**
- * A functional component that renders a bookmark card displaying the bookmark's details.
- *
- * @param {Object} props - The properties for the BookmarkCard component.
- * @param {Bookmark} props.bookmark - The bookmark object containing details such as title, url, thumbnail, description, and tags.
- * @param {Function} props.onClick - Callback function to handle click events on the card.
- * @param {Function} props.onToggleFavorite - Callback function to toggle the favorite status of the bookmark.
- * @param {boolean} props.isAuthenticated - Indicates whether the user is authenticated.
- *
- * @returns {JSX.Element} The rendered bookmark card component.
- *
- * @throws {Error} Throws an error if the URL provided for favicon extraction is invalid.
- */
 const BookmarkCard: React.FC<BookmarkCardProps> = ({
   bookmark,
   onClick,
@@ -29,17 +16,6 @@ const BookmarkCard: React.FC<BookmarkCardProps> = ({
   isAuthenticated,
 }) => {
   // Extract domain for favicon
-  /**
-   * Retrieves the favicon URL for a given website URL.
-   *
-   * This function takes a URL as input, extracts the hostname, and constructs a URL to fetch the favicon
-   * from Google's favicon service. If the input URL is invalid, it returns null.
-   *
-   * @param {string} url - The website URL from which to extract the favicon.
-   * @returns {string | null} The URL of the favicon or null if the input URL is invalid.
-   *
-   * @throws {Error} Throws an error if the URL cannot be parsed.
-   */
   const getFaviconUrl = (url: string) => {
     try {
       const domain = new URL(url).hostname;
@@ -110,7 +86,7 @@ const BookmarkCard: React.FC<BookmarkCardProps> = ({
             target="_blank"
             rel="noopener noreferrer"
             onClick={e => e.stopPropagation()}
-            className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 ml-2 shrink-0"
+            className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 ml-2 flex-shrink-0"
             aria-label="Open link"
           >
             <ExternalLink className="h-4 w-4" />
@@ -125,13 +101,13 @@ const BookmarkCard: React.FC<BookmarkCardProps> = ({
           {bookmark.tags.slice(0, 3).map(tag => (
             <span
               key={tag}
-              className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-300 text-xs px-2 py-1 rounded-sm"
+              className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-300 text-xs px-2 py-1 rounded"
             >
               {tag}
             </span>
           ))}
           {bookmark.tags.length > 3 && (
-            <span className="inline-block bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-300 text-xs px-2 py-1 rounded-sm">
+            <span className="inline-block bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-300 text-xs px-2 py-1 rounded">
               +{bookmark.tags.length - 3}
             </span>
           )}

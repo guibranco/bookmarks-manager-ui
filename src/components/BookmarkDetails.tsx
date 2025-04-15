@@ -11,22 +11,6 @@ interface BookmarkDetailsProps {
   isAuthenticated: boolean;
 }
 
-/**
- * A functional component that displays and manages the details of a bookmark.
- * It allows users to edit bookmark properties, add/remove tags, and organize bookmarks into folders.
- *
- * @param {Object} props - The component props.
- * @param {Bookmark} props.bookmark - The bookmark object containing details to be displayed and edited.
- * @param {Folder[]} props.folders - An array of folder objects for organizing bookmarks.
- * @param {Function} props.onClose - Callback function to close the bookmark details view.
- * @param {Function} props.onUpdate - Callback function to update the bookmark with edited details.
- * @param {Function} props.onDelete - Callback function to delete the bookmark.
- * @param {boolean} props.isAuthenticated - Indicates if the user is authenticated and can edit bookmarks.
- *
- * @returns {JSX.Element} The rendered component.
- *
- * @throws {Error} Throws an error if the bookmark cannot be updated or deleted due to authentication issues.
- */
 const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
   bookmark,
   folders,
@@ -42,15 +26,6 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
     setEditedBookmark({ ...bookmark });
   }, [bookmark]);
 
-  /**
-   * Handles the change event for input elements, including text inputs, text areas, and select elements.
-   * Updates the state of the edited bookmark with the new value from the event target.
-   *
-   * @param {React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>} e - The change event triggered by the input element.
-   * @returns {void} This function does not return a value.
-   *
-   * @throws {Error} Throws an error if the event target does not have a valid name or value.
-   */
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
@@ -61,19 +36,6 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
     });
   };
 
-  /**
-   * Handles the addition of a new tag to the edited bookmark.
-   * This function checks if the tag input is not empty and if the tag
-   * is not already included in the existing tags of the bookmark.
-   * If both conditions are met, it updates the bookmark by adding
-   * the new tag and resets the tag input field.
-   *
-   * @function handleTagAdd
-   * @returns {void} This function does not return a value.
-   *
-   * @throws {Error} Throws an error if there is an issue with updating
-   * the bookmark state.
-   */
   const handleTagAdd = () => {
     if (tagInput.trim() && !editedBookmark.tags.includes(tagInput.trim())) {
       setEditedBookmark({
@@ -84,18 +46,6 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
     }
   };
 
-  /**
-   * Removes a specified tag from the edited bookmark's tags.
-   *
-   * This function updates the state of the edited bookmark by filtering out
-   * the tag that matches the provided `tagToRemove`. It ensures that the
-   * edited bookmark retains all other tags except the one being removed.
-   *
-   * @param {string} tagToRemove - The tag that needs to be removed from the bookmark.
-   * @throws {Error} Throws an error if `tagToRemove` is not a string.
-   *
-   * @returns {void} This function does not return a value.
-   */
   const handleTagRemove = (tagToRemove: string) => {
     setEditedBookmark({
       ...editedBookmark,
@@ -115,27 +65,9 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
   };
 
   // Organize folders into a hierarchical structure for the dropdown
-  /**
-   * Retrieves a list of folder options for rendering in a dropdown.
-   * The options are generated based on the folder hierarchy, starting from root folders.
-   * Each option represents a folder and includes its name prefixed by dashes to indicate depth.
-   *
-   * @returns {JSX.Element[]} An array of JSX elements representing the folder options.
-   * Each option element contains the folder's ID as the value and the folder's name as the display text.
-   */
   const getFolderOptions = () => {
     const rootFolders = folders.filter(folder => folder.parentId === null);
 
-    /**
-     * Recursively generates a list of option elements for a dropdown,
-     * representing a hierarchical structure of folders.
-     *
-     * @param {Folder[]} folderList - An array of Folder objects to be rendered.
-     * @param {number} [depth=0] - The current depth in the folder hierarchy, used for indentation.
-     * @returns {JSX.Element[]} An array of JSX option elements representing the folders and their subfolders.
-     *
-     * @throws {Error} Throws an error if folderList is not an array or if any folder does not have a valid id.
-     */
     const renderOptions = (folderList: Folder[], depth: number = 0) => {
       return folderList.flatMap(folder => {
         const subfolders = folders.filter(f => f.parentId === folder.id);
@@ -154,7 +86,7 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
   };
 
   return (
-    <div className="w-80 border-l border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 overflow-y-auto shrink-0">
+    <div className="w-80 border-l border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 overflow-y-auto flex-shrink-0">
       <div className="p-4">
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-lg font-medium">Bookmark Details</h3>
@@ -188,7 +120,7 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
               name="title"
               value={editedBookmark.title}
               onChange={handleChange}
-              className={`w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-xs focus:outline-hidden focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 ${!isAuthenticated ? 'opacity-75 cursor-not-allowed' : ''}`}
+              className={`w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 ${!isAuthenticated ? 'opacity-75 cursor-not-allowed' : ''}`}
               disabled={!isAuthenticated}
             />
           </div>
@@ -207,7 +139,7 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
                 name="url"
                 value={editedBookmark.url}
                 onChange={handleChange}
-                className={`flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-l-md shadow-xs focus:outline-hidden focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 ${!isAuthenticated ? 'opacity-75 cursor-not-allowed' : ''}`}
+                className={`flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-l-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 ${!isAuthenticated ? 'opacity-75 cursor-not-allowed' : ''}`}
                 disabled={!isAuthenticated}
               />
               <a
@@ -234,7 +166,7 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
               rows={3}
               value={editedBookmark.description}
               onChange={handleChange}
-              className={`w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-xs focus:outline-hidden focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 ${!isAuthenticated ? 'opacity-75 cursor-not-allowed' : ''}`}
+              className={`w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 ${!isAuthenticated ? 'opacity-75 cursor-not-allowed' : ''}`}
               disabled={!isAuthenticated}
             />
           </div>
@@ -252,11 +184,11 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
               name="thumbnail"
               value={editedBookmark.thumbnail}
               onChange={handleChange}
-              className={`w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-xs focus:outline-hidden focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 ${!isAuthenticated ? 'opacity-75 cursor-not-allowed' : ''}`}
+              className={`w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 ${!isAuthenticated ? 'opacity-75 cursor-not-allowed' : ''}`}
               disabled={!isAuthenticated}
             />
             {editedBookmark.thumbnail && (
-              <div className="mt-2 h-32 bg-gray-200 dark:bg-gray-700 rounded-sm overflow-hidden">
+              <div className="mt-2 h-32 bg-gray-200 dark:bg-gray-700 rounded overflow-hidden">
                 <img
                   src={editedBookmark.thumbnail}
                   alt="Thumbnail preview"
@@ -282,7 +214,7 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
               name="folderId"
               value={editedBookmark.folderId || ''}
               onChange={handleChange}
-              className={`w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-xs focus:outline-hidden focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 ${!isAuthenticated ? 'opacity-75 cursor-not-allowed' : ''}`}
+              className={`w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 ${!isAuthenticated ? 'opacity-75 cursor-not-allowed' : ''}`}
               disabled={!isAuthenticated}
             >
               <option value="">No Folder</option>
@@ -305,7 +237,7 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
                 onChange={e => setTagInput(e.target.value)}
                 onKeyDown={handleTagKeyDown}
                 placeholder="Add a tag"
-                className={`flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-l-md shadow-xs focus:outline-hidden focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 ${!isAuthenticated ? 'opacity-75 cursor-not-allowed' : ''}`}
+                className={`flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-l-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 ${!isAuthenticated ? 'opacity-75 cursor-not-allowed' : ''}`}
                 disabled={!isAuthenticated}
               />
               <button
@@ -325,7 +257,7 @@ const BookmarkDetails: React.FC<BookmarkDetailsProps> = ({
               {editedBookmark.tags.map(tag => (
                 <div
                   key={tag}
-                  className="flex items-center bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-300 px-2 py-1 rounded-sm text-sm"
+                  className="flex items-center bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-300 px-2 py-1 rounded text-sm"
                 >
                   <span>{tag}</span>
                   {isAuthenticated && (
