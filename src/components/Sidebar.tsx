@@ -171,11 +171,11 @@ const Sidebar: React.FC<SidebarProps> = ({
                     value={editingFolderName}
                     onChange={e => setEditingFolderName(e.target.value)}
                     onKeyDown={handleKeyDown}
-                    className="min-w-0 w-[calc(100%-4rem)] px-2 py-1 bg-white dark:bg-gray-700 border border-blue-500 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="min-w-0 w-[calc(100%-4rem)] px-2 py-1 bg-white dark:bg-gray-700 border border-blue-500 rounded-sm focus:outline-hidden focus:ring-2 focus:ring-blue-500"
                     autoFocus
                     onClick={e => e.stopPropagation()}
                   />
-                  <div className="flex items-center ml-1 flex-shrink-0">
+                  <div className="flex items-center ml-1 shrink-0">
                     <button
                       onClick={saveEditing}
                       className="p-1 hover:bg-blue-200 dark:hover:bg-blue-800 rounded-full cursor-pointer"

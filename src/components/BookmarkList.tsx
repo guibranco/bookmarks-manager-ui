@@ -26,7 +26,7 @@ const BookmarkList: React.FC<BookmarkListProps> = ({
   };
 
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden">
+    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden">
       {/* Large screens - Table view */}
       <div className="hidden sm:block">
         <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
@@ -70,10 +70,10 @@ const BookmarkList: React.FC<BookmarkListProps> = ({
               >
                 <td className="px-4 sm:px-6 py-4">
                   <div className="flex items-center">
-                    <div className="h-10 w-10 flex-shrink-0 mr-3">
+                    <div className="h-10 w-10 shrink-0 mr-3">
                       {bookmark.thumbnail ? (
                         <img
-                          className="h-10 w-10 rounded object-cover"
+                          className="h-10 w-10 rounded-sm object-cover"
                           src={bookmark.thumbnail}
                           alt=""
                           onError={e => {
@@ -81,7 +81,7 @@ const BookmarkList: React.FC<BookmarkListProps> = ({
                             if (favicon) {
                               (e.target as HTMLImageElement).src = favicon;
                               (e.target as HTMLImageElement).className =
-                                'h-10 w-10 rounded object-contain p-1 bg-white dark:bg-gray-700';
+                                'h-10 w-10 rounded-sm object-contain p-1 bg-white dark:bg-gray-700';
                             }
                           }}
                         />
@@ -89,12 +89,12 @@ const BookmarkList: React.FC<BookmarkListProps> = ({
                         <img
                           src={getFaviconUrl(bookmark.url) || ''}
                           alt=""
-                          className="h-10 w-10 rounded object-contain p-1 bg-white dark:bg-gray-700"
+                          className="h-10 w-10 rounded-sm object-contain p-1 bg-white dark:bg-gray-700"
                           onError={e => {
                             (e.target as HTMLImageElement).src =
                               'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"%3E%3Cpath d="m19 21-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"%3E%3C/path%3E%3C/svg%3E';
                             (e.target as HTMLImageElement).className =
-                              'h-10 w-10 rounded object-contain p-2 opacity-20';
+                              'h-10 w-10 rounded-sm object-contain p-2 opacity-20';
                           }}
                         />
                       )}
@@ -116,7 +116,7 @@ const BookmarkList: React.FC<BookmarkListProps> = ({
                     {bookmark.tags.slice(0, 2).map(tag => (
                       <span
                         key={tag}
-                        className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-300 text-xs px-2 py-1 rounded"
+                        className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-300 text-xs px-2 py-1 rounded-sm"
                         onClick={e => e.stopPropagation()}
                       >
                         {tag}
@@ -124,7 +124,7 @@ const BookmarkList: React.FC<BookmarkListProps> = ({
                     ))}
                     {bookmark.tags.length > 2 && (
                       <span
-                        className="inline-block bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-300 text-xs px-2 py-1 rounded"
+                        className="inline-block bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-300 text-xs px-2 py-1 rounded-sm"
                         onClick={e => e.stopPropagation()}
                       >
                         +{bookmark.tags.length - 2}
@@ -186,10 +186,10 @@ const BookmarkList: React.FC<BookmarkListProps> = ({
               onClick={() => onBookmarkClick(bookmark)}
             >
               <div className="flex items-start space-x-4">
-                <div className="h-12 w-12 flex-shrink-0">
+                <div className="h-12 w-12 shrink-0">
                   {bookmark.thumbnail ? (
                     <img
-                      className="h-12 w-12 rounded object-cover"
+                      className="h-12 w-12 rounded-sm object-cover"
                       src={bookmark.thumbnail}
                       alt=""
                       onError={e => {
@@ -197,7 +197,7 @@ const BookmarkList: React.FC<BookmarkListProps> = ({
                         if (favicon) {
                           (e.target as HTMLImageElement).src = favicon;
                           (e.target as HTMLImageElement).className =
-                            'h-12 w-12 rounded object-contain p-2 bg-white dark:bg-gray-700';
+                            'h-12 w-12 rounded-sm object-contain p-2 bg-white dark:bg-gray-700';
                         }
                       }}
                     />
@@ -205,12 +205,12 @@ const BookmarkList: React.FC<BookmarkListProps> = ({
                     <img
                       src={getFaviconUrl(bookmark.url) || ''}
                       alt=""
-                      className="h-12 w-12 rounded object-contain p-2 bg-white dark:bg-gray-700"
+                      className="h-12 w-12 rounded-sm object-contain p-2 bg-white dark:bg-gray-700"
                       onError={e => {
                         (e.target as HTMLImageElement).src =
                           'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"%3E%3Cpath d="m19 21-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"%3E%3C/path%3E%3C/svg%3E';
                         (e.target as HTMLImageElement).className =
-                          'h-12 w-12 rounded object-contain p-3 opacity-20';
+                          'h-12 w-12 rounded-sm object-contain p-3 opacity-20';
                       }}
                     />
                   )}
@@ -264,7 +264,7 @@ const BookmarkList: React.FC<BookmarkListProps> = ({
                       {bookmark.tags.slice(0, 2).map(tag => (
                         <span
                           key={tag}
-                          className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-300 text-xs px-2 py-0.5 rounded"
+                          className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-300 text-xs px-2 py-0.5 rounded-sm"
                           onClick={e => e.stopPropagation()}
                         >
                           {tag}
@@ -272,7 +272,7 @@ const BookmarkList: React.FC<BookmarkListProps> = ({
                       ))}
                       {bookmark.tags.length > 2 && (
                         <span
-                          className="inline-block bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-300 text-xs px-2 py-0.5 rounded"
+                          className="inline-block bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-300 text-xs px-2 py-0.5 rounded-sm"
                           onClick={e => e.stopPropagation()}
                         >
                           +{bookmark.tags.length - 2}

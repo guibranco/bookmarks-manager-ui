@@ -119,7 +119,7 @@ const MainContent: React.FC<MainContentProps> = ({
                 <Share2 className="h-5 w-5" />
               </button>
               {showShareTooltip && (
-                <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 px-3 py-1 bg-gray-900 dark:bg-gray-700 text-white text-sm rounded shadow-lg whitespace-nowrap">
+                <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 px-3 py-1 bg-gray-900 dark:bg-gray-700 text-white text-sm rounded-sm shadow-lg whitespace-nowrap">
                   Link copied to clipboard!
                   <div className="absolute left-1/2 -translate-x-1/2 top-full -mt-1">
                     <div className="border-4 border-transparent border-t-gray-900 dark:border-t-gray-700" />
@@ -132,7 +132,7 @@ const MainContent: React.FC<MainContentProps> = ({
             {selectedFolder !== 'all' && selectedFolder !== 'favorites' && !selectedTag && isAuthenticated && (
               <button
                 onClick={() => onAddFolder(selectedFolder)}
-                className="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer"
+                className="p-2 rounded-sm hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer"
                 aria-label="Add subfolder"
               >
                 <FolderPlus className="h-5 w-5" />
@@ -140,14 +140,14 @@ const MainContent: React.FC<MainContentProps> = ({
             )}
             <button
               onClick={() => onToggleView('grid')}
-              className={`p-2 rounded cursor-pointer ${config.viewMode === 'grid' ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400' : 'hover:bg-gray-200 dark:hover:bg-gray-700'}`}
+              className={`p-2 rounded-sm cursor-pointer ${config.viewMode === 'grid' ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400' : 'hover:bg-gray-200 dark:hover:bg-gray-700'}`}
               aria-label="Grid view"
             >
               <Grid className="h-5 w-5" />
             </button>
             <button
               onClick={() => onToggleView('list')}
-              className={`p-2 rounded cursor-pointer ${config.viewMode === 'list' ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400' : 'hover:bg-gray-200 dark:hover:bg-gray-700'}`}
+              className={`p-2 rounded-sm cursor-pointer ${config.viewMode === 'list' ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400' : 'hover:bg-gray-200 dark:hover:bg-gray-700'}`}
               aria-label="List view"
             >
               <List className="h-5 w-5" />
@@ -164,21 +164,21 @@ const MainContent: React.FC<MainContentProps> = ({
               {subfolders.map(folder => (
                 <div
                   key={folder.id}
-                  className="group bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-md transition-shadow cursor-pointer"
+                  className="group bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-pointer"
                 >
                   <div
                     className="flex items-center justify-between p-4 cursor-pointer"
                     onClick={() => !editingFolderId && onSelectFolder(folder.id)}
                   >
                     <div className="flex items-center flex-1 min-w-0">
-                      <FolderPlus className="h-5 w-5 mr-2 text-blue-500 flex-shrink-0" />
+                      <FolderPlus className="h-5 w-5 mr-2 text-blue-500 shrink-0" />
                       {editingFolderId === folder.id ? (
                         <input
                           type="text"
                           value={editingFolderName}
                           onChange={e => setEditingFolderName(e.target.value)}
                           onKeyDown={handleKeyDown}
-                          className="flex-1 px-2 py-1 bg-white dark:bg-gray-700 border border-blue-500 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                          className="flex-1 px-2 py-1 bg-white dark:bg-gray-700 border border-blue-500 rounded-sm focus:outline-hidden focus:ring-2 focus:ring-blue-500"
                           autoFocus
                           onClick={e => e.stopPropagation()}
                         />
