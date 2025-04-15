@@ -5,8 +5,8 @@ export function useSelectedTag() {
 
   function getInitialTag(): string | null {
     const params = new URLSearchParams(window.location.search);
-    const tagParam = params.get('tag');
-    return tagParam;
+    return params.get('tag');
+
   }
 
   useEffect(() => {
