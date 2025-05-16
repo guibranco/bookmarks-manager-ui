@@ -112,7 +112,8 @@ const Sidebar: React.FC<SidebarProps> = ({
     }
   };
 
-  const allTags = Array.from(new Set(bookmarks.flatMap(bookmark => bookmark.tags)));
+  // Create a Set of unique tags and convert back to array
+  const allTags = Array.from(new Set(bookmarks.flatMap(bookmark => bookmark.tags))).sort();
   const favoritesCount = bookmarks.filter(bookmark => bookmark.favorite).length;
   const rootFolders = folders.filter(folder => folder.parentId === null);
 
@@ -343,11 +344,11 @@ const Sidebar: React.FC<SidebarProps> = ({
           {expandedSections.tags && (
             <div className="ml-4 mt-2">
               <div className="flex flex-wrap gap-2">
-                {allTags.map(tag => {
+                {allTags.map((tag, index) => {
                   const tagCount = bookmarks.filter(b => b.tags.includes(tag)).length;
                   return (
                     <button
-                      key={tag}
+                      key={`${tag}-${index}`}
                       onClick={() => onSelectTag(selectedTag === tag ? null : tag)}
                       className={`flex items-center ${
                         selectedTag === tag
