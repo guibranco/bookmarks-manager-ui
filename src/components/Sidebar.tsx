@@ -344,11 +344,11 @@ const Sidebar: React.FC<SidebarProps> = ({
           {expandedSections.tags && (
             <div className="ml-4 mt-2">
               <div className="flex flex-wrap gap-2">
-                {allTags.map((tag, index) => {
+                {allTags.map(tag => {
                   const tagCount = bookmarks.filter(b => b.tags.includes(tag)).length;
                   return (
                     <button
-                      key={`${tag}-${index}`}
+                      key={`tag-${tag}`}
                       onClick={() => onSelectTag(selectedTag === tag ? null : tag)}
                       className={`flex items-center ${
                         selectedTag === tag
