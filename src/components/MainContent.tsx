@@ -90,10 +90,21 @@ const MainContent: React.FC<MainContentProps> = ({
     
     try {
       if (navigator.share) {
-        await navigator.share({
-          title: `Bookmarks - ${folderPath}`,
-          url: url.toString(),
-        });
+        try {
+          await navigator.share({
+            title: `Bookmarks - ${folderPath}`,
+            url: url.toString(),
+          });
+        } catch (error: any) {
+          console.warn('Share API error:', error);
+          if (error.name === 'SecurityError' || error.message.includes('Permission denied')) {
+            await navigator.clipboard.writeText(url.toString());
+            setShowShareTooltip(true);
+            setTimeout(() => setShowShareTooltip(false), 2000);
+          } else {
+            throw error;
+          }
+        }
       } else {
         await navigator.clipboard.writeText(url.toString());
         setShowShareTooltip(true);
