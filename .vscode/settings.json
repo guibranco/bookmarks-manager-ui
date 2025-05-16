@@ -1,7 +1,0 @@
-{
-    "sonarlint.connectedMode.project": {
-        "connectionId": "guilhermestracini",
-        "projectKey": "guibranco_bookmarks-manager-ui"
-    },
-    "sarif-viewer.connectToGithubCodeScanning": "on"
-}
