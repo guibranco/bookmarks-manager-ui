@@ -4,9 +4,6 @@
 
 @theme {
   --color-gray-750: #2d3748;
-  --color-slate-850: #1a2234;
-  --color-slate-900: #0f172a;
-  --color-slate-950: #080c17;
 }
 
 /*
@@ -24,23 +21,5 @@
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-200, currentcolor);
-  }
-
-  .dark {
-    --tw-bg-opacity: 1;
-    background-color: var(--color-slate-950);
-    color: var(--color-gray-100);
-  }
-
-  .dark .dark\:bg-gray-800 {
-    background-color: var(--color-slate-900);
-  }
-
-  .dark .dark\:bg-gray-900 {
-    background-color: var(--color-slate-950);
-  }
-
-  .dark .dark\:border-gray-700 {
-    border-color: var(--color-slate-850);
   }
 }
