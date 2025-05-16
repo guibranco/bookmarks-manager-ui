@@ -7,6 +7,7 @@
   --color-slate-850: #1a2234;
   --color-slate-900: #0f172a;
   --color-slate-950: #080c17;
+  --color-lime-500: #93cd3f;
 }
 
 /*
@@ -26,6 +27,16 @@
     border-color: var(--color-gray-200, currentcolor);
   }
 
+  /* Light theme customizations */
+  .bg-white {
+    border-left: 4px solid var(--color-lime-500);
+  }
+
+  .bg-gray-50 {
+    background-color: #f8faf3;
+  }
+
+  /* Dark theme customizations */
   .dark {
     --tw-bg-opacity: 1;
     background-color: var(--color-slate-950);
