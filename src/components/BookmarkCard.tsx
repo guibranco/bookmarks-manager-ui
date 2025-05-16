@@ -26,7 +26,7 @@ const BookmarkCard: React.FC<BookmarkCardProps> = ({
   };
 
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-200 flex flex-col">
+    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow flex flex-col">
       <div className="h-32 bg-gray-200 dark:bg-gray-700 relative cursor-pointer" onClick={onClick}>
         {bookmark.thumbnail ? (
           <img
@@ -86,7 +86,7 @@ const BookmarkCard: React.FC<BookmarkCardProps> = ({
             target="_blank"
             rel="noopener noreferrer"
             onClick={e => e.stopPropagation()}
-            className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 ml-2 shrink-0"
+            className="text-secondary dark:text-secondary-light hover:text-secondary-dark dark:hover:text-secondary ml-2 shrink-0"
             aria-label="Open link"
           >
             <ExternalLink className="h-4 w-4" />
@@ -101,7 +101,7 @@ const BookmarkCard: React.FC<BookmarkCardProps> = ({
           {bookmark.tags.slice(0, 3).map(tag => (
             <span
               key={tag}
-              className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-300 text-xs px-2 py-1 rounded-sm"
+              className="inline-block bg-primary/10 dark:bg-primary/20 text-primary-dark dark:text-primary-light text-xs px-2 py-1 rounded-sm"
             >
               {tag}
             </span>

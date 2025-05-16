@@ -159,7 +159,7 @@ const Sidebar: React.FC<SidebarProps> = ({
           <div
             className={`group flex-1 flex items-center p-2 rounded-md cursor-pointer ${
               selectedFolder === folder.id
-                ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300'
+                ? 'bg-primary/10 dark:bg-primary/20 text-primary-dark dark:text-primary-light'
                 : 'hover:bg-gray-100 dark:hover:bg-gray-700'
             }`}
             onClick={() => !isEditing && onSelectFolder(folder.id)}
@@ -172,16 +172,16 @@ const Sidebar: React.FC<SidebarProps> = ({
                     value={editingFolderName}
                     onChange={e => setEditingFolderName(e.target.value)}
                     onKeyDown={handleKeyDown}
-                    className="min-w-0 w-[calc(100%-4rem)] px-2 py-1 bg-white dark:bg-gray-700 border border-blue-500 rounded-sm focus:outline-hidden focus:ring-2 focus:ring-blue-500"
+                    className="min-w-0 w-[calc(100%-4rem)] px-2 py-1 bg-white dark:bg-gray-700 border border-primary rounded-sm focus:outline-hidden focus:ring-2 focus:ring-primary"
                     autoFocus
                     onClick={e => e.stopPropagation()}
                   />
                   <div className="flex items-center ml-1 shrink-0">
                     <button
                       onClick={saveEditing}
-                      className="p-1 hover:bg-blue-200 dark:hover:bg-blue-800 rounded-full cursor-pointer"
+                      className="p-1 hover:bg-primary/20 dark:hover:bg-primary/30 rounded-full cursor-pointer"
                     >
-                      <Check className="h-4 w-4 text-green-600 dark:text-green-400" />
+                      <Check className="h-4 w-4 text-primary dark:text-primary-light" />
                     </button>
                     <button
                       onClick={cancelEditing}
@@ -238,7 +238,7 @@ const Sidebar: React.FC<SidebarProps> = ({
           <button
             className={`w-full flex items-center justify-between p-2 rounded-md cursor-pointer ${
               selectedFolder === 'all' && !selectedTag
-                ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300'
+                ? 'bg-primary/10 dark:bg-primary/20 text-primary-dark dark:text-primary-light'
                 : 'hover:bg-gray-100 dark:hover:bg-gray-700'
             }`}
             onClick={() => onSelectFolder('all')}
@@ -274,7 +274,7 @@ const Sidebar: React.FC<SidebarProps> = ({
               <button
                 className={`w-full flex items-center justify-between p-2 rounded-md cursor-pointer ${
                   selectedFolder === 'favorites' && !selectedTag
-                    ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300'
+                    ? 'bg-primary/10 dark:bg-primary/20 text-primary-dark dark:text-primary-light'
                     : 'hover:bg-gray-100 dark:hover:bg-gray-700'
                 }`}
                 onClick={() => onSelectFolder('favorites')}
@@ -294,7 +294,7 @@ const Sidebar: React.FC<SidebarProps> = ({
             onClick={() => toggleSection('folders')}
           >
             <div className="flex items-center">
-              <Folder className="h-5 w-5 mr-2 text-blue-500" />
+              <Folder className="h-5 w-5 mr-2 text-primary" />
               <span className="font-medium">Folders</span>
             </div>
             <div className="flex items-center">
@@ -307,7 +307,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                     onAddFolder(null);
                   }}
                 >
-                  <Plus className="h-4 w-4 text-gray-500" />
+                  <Plus className="h-4 w-4 text-secondary" />
                 </button>
               )}
               {expandedSections.folders ? (
@@ -331,7 +331,7 @@ const Sidebar: React.FC<SidebarProps> = ({
             onClick={() => toggleSection('tags')}
           >
             <div className="flex items-center">
-              <Tag className="h-5 w-5 mr-2 text-green-500" />
+              <Tag className="h-5 w-5 mr-2 text-primary" />
               <span className="font-medium">Tags</span>
             </div>
             {expandedSections.tags ? (
@@ -352,16 +352,16 @@ const Sidebar: React.FC<SidebarProps> = ({
                       onClick={() => onSelectTag(selectedTag === tag ? null : tag)}
                       className={`flex items-center ${
                         selectedTag === tag
-                          ? 'bg-blue-500 text-white'
-                          : 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-300'
+                          ? 'bg-primary text-white'
+                          : 'bg-primary/10 dark:bg-primary/20 text-primary-dark dark:text-primary-light'
                       } px-2 py-1 rounded text-xs cursor-pointer hover:opacity-90`}
                     >
                       <span>{tag}</span>
                       <span
                         className={`ml-1 ${
                           selectedTag === tag
-                            ? 'bg-blue-600'
-                            : 'bg-blue-200 dark:bg-blue-800'
+                            ? 'bg-primary-dark'
+                            : 'bg-primary/20 dark:bg-primary/30'
                         } px-1.5 py-0.5 rounded-full text-xs`}
                       >
                         {tagCount}
