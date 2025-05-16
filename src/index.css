@@ -4,6 +4,12 @@
 
 @theme {
   --color-gray-750: #2d3748;
+  --color-primary: #93cd3f;
+  --color-primary-dark: #7ab32f;
+  --color-primary-light: #a8d95f;
+  --color-secondary: #79378b;
+  --color-secondary-dark: #612d70;
+  --color-secondary-light: #8f42a5;
 }
 
 /*
@@ -21,5 +27,15 @@
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-[#93cd3f] hover:bg-[#7ab32f] text-white;
+  }
+  
+  .btn-secondary {
+    @apply bg-[#79378b] hover:bg-[#612d70] text-white;
   }
 }

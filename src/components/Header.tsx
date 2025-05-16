@@ -36,8 +36,8 @@ const Header: React.FC<HeaderProps> = ({
           >
             <Menu className="h-5 w-5" />
           </button>
-          <Bookmark className="h-6 w-6 text-blue-600 dark:text-blue-400" />
-          <h1 className="text-xl font-bold hidden sm:block">Bookmark Manager</h1>
+          <Bookmark className="h-6 w-6 text-primary dark:text-primary-light" />
+          <h1 className="text-xl font-bold hidden sm:block text-primary dark:text-primary-light">Bookmark Manager</h1>
         </div>
 
         <div className="flex-1 max-w-xl mx-4">
@@ -48,7 +48,7 @@ const Header: React.FC<HeaderProps> = ({
             <input
               type="text"
               placeholder="Search bookmarks..."
-              className="block w-full pl-10 pr-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-700 focus:outline-hidden focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400"
+              className="block w-full pl-10 pr-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-700 focus:outline-hidden focus:ring-2 focus:ring-primary dark:focus:ring-primary-light"
               value={searchQuery}
               onChange={e => onSearchChange(e.target.value)}
             />
@@ -63,9 +63,9 @@ const Header: React.FC<HeaderProps> = ({
             title={config.flattenSubfolders ? 'Switch to hierarchical view' : 'Switch to flat view'}
           >
             {config.flattenSubfolders ? (
-              <FolderTree className="h-5 w-5" />
+              <FolderTree className="h-5 w-5 text-primary dark:text-primary-light" />
             ) : (
-              <Folder className="h-5 w-5" />
+              <Folder className="h-5 w-5 text-primary dark:text-primary-light" />
             )}
           </button>
           <button
@@ -75,7 +75,7 @@ const Header: React.FC<HeaderProps> = ({
             title={authState.isAuthenticated ? 'Authenticated' : 'Not authenticated'}
           >
             {authState.isAuthenticated ? (
-              <Unlock className="h-5 w-5 text-green-500" />
+              <Unlock className="h-5 w-5 text-primary" />
             ) : (
               <Lock className="h-5 w-5 text-red-500" />
             )}
@@ -85,7 +85,11 @@ const Header: React.FC<HeaderProps> = ({
             className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
             aria-label="Toggle dark mode"
           >
-            {config.darkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+            {config.darkMode ? (
+              <Sun className="h-5 w-5 text-primary dark:text-primary-light" />
+            ) : (
+              <Moon className="h-5 w-5 text-primary" />
+            )}
           </button>
           <button
             onClick={onAddBookmark}
@@ -101,14 +105,14 @@ const Header: React.FC<HeaderProps> = ({
                 : 'Authentication required to add bookmarks'
             }
           >
-            <Plus className="h-5 w-5" />
+            <Plus className={`h-5 w-5 ${authState.isAuthenticated ? 'text-secondary' : ''}`} />
           </button>
           <button
             onClick={onOpenSettings}
             className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
             aria-label="Settings"
           >
-            <Settings className="h-5 w-5" />
+            <Settings className="h-5 w-5 text-primary dark:text-primary-light" />
           </button>
         </div>
       </div>
