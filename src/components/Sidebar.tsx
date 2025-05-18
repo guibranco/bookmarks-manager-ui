@@ -113,7 +113,7 @@ const Sidebar: React.FC<SidebarProps> = ({
   };
 
   // Create a Set of unique tags and convert back to array
-  const allTags = Array.from(new Set(bookmarks.flatMap(bookmark => bookmark.tags))).sort();
+  const allTags = Array.from(new Set(bookmarks.flatMap(bookmark => bookmark.tags))).sort((a, b) => a.localeCompare(b));
   const favoritesCount = bookmarks.filter(bookmark => bookmark.favorite).length;
   const rootFolders = folders.filter(folder => folder.parentId === null);
 
