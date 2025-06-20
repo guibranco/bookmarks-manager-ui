@@ -3569,7 +3569,7 @@
       "dateAdded": "2024-03-05T23:30:33.000Z"
     },
     {
-      "id": "am-i-unique-",
+      "id": "am-i-unique",
       "title": "Am I unique ?",
       "url": "https://amiunique.org/",
       "description": "",
@@ -4548,7 +4548,7 @@
       "dateAdded": "2022-01-14T09:45:45.000Z"
     },
     {
-      "id": "um-modelo-para-trilha-de-carreira-em-design-de-produto--by-leonardo-lohmann--ux-collective-",
+      "id": "um-modelo-para-trilha-de-carreira-em-design-de-produto--by-leonardo-lohmann--ux-collective",
       "title": "Um modelo para trilha de carreira em Design de Produto | by Leonardo Lohmann | UX Collective 🇧🇷",
       "url": "https://brasil.uxdesign.cc/um-modelo-para-trilha-de-carreira-em-design-de-produto-38ab0e1077ad",
       "description": "",
@@ -5384,8 +5384,8 @@
       "dateAdded": "2023-06-27T16:24:09.000Z"
     },
     {
-      "id": "learn-how-to-exploit-multiple-cores-for-better-performance-and-scalability---high-scalability--",
-      "title": "Learn How to Exploit Multiple Cores for Better Performance and Scalability - High Scalability -",
+      "id": "learn-how-to-exploit-multiple-cores-for-better-performance-and-scalability---high-scalability",
+      "title": "Learn How to Exploit Multiple Cores for Better Performance and Scalability - High Scalability",
       "url": "http://highscalability.com/learn-how-exploit-multiple-cores-better-performance-and-scalability",
       "description": "",
       "thumbnail": "",
@@ -5505,8 +5505,8 @@
       "dateAdded": "2023-08-15T17:01:05.000Z"
     },
     {
-      "id": "stack-overflow-architecture---high-scalability--",
-      "title": "Stack Overflow Architecture - High Scalability -",
+      "id": "stack-overflow-architecture---high-scalability",
+      "title": "Stack Overflow Architecture - High Scalability",
       "url": "http://highscalability.com/stack-overflow-architecture",
       "description": "",
       "thumbnail": "",
@@ -10994,7 +10994,7 @@
       "dateAdded": "2023-06-19T12:11:29.000Z"
     },
     {
-      "id": "net-pay-calculator-and-salaries-in-tech---sweden-",
+      "id": "net-pay-calculator-and-salaries-in-tech---sweden",
       "title": "Net Pay Calculator and Salaries in Tech - Sweden 🇸🇪",
       "url": "https://relocate.me/net-pay-calculators/sweden",
       "description": "",
@@ -11441,7 +11441,7 @@
       "thumbnail": "",
       "tags": [],
       "folderId": "github-apps",
-      "favorite": false,
+      "favorite": true,
       "dateAdded": "2024-07-09T18:33:49.000Z"
     },
     {
@@ -11474,7 +11474,7 @@
       "thumbnail": "",
       "tags": [],
       "folderId": "github-pages",
-      "favorite": false,
+      "favorite": true,
       "dateAdded": "2025-04-08T21:15:07.000Z"
     },
     {
@@ -11485,7 +11485,7 @@
       "thumbnail": "",
       "tags": [],
       "folderId": "github-pages",
-      "favorite": false,
+      "favorite": true,
       "dateAdded": "2025-05-16T01:35:55.000Z"
     },
     {
@@ -11507,7 +11507,7 @@
       "thumbnail": "",
       "tags": [],
       "folderId": "github-pages",
-      "favorite": false,
+      "favorite": true,
       "dateAdded": "2025-05-16T01:36:05.000Z"
     },
     {
@@ -11518,7 +11518,7 @@
       "thumbnail": "",
       "tags": [],
       "folderId": "github-pages",
-      "favorite": false,
+      "favorite": true,
       "dateAdded": "2025-03-09T16:33:55.000Z"
     },
     {
@@ -11533,14 +11533,14 @@
       "dateAdded": "2021-02-24T14:10:21.000Z"
     },
     {
-      "id": "blog-",
-      "title": "Blog ",
+      "id": "blog",
+      "title": "Blog",
       "url": "https://blog.guilhermebranco.com.br/",
       "description": "",
       "thumbnail": "",
       "tags": [],
       "folderId": "portfolio",
-      "favorite": false,
+      "favorite": true,
       "dateAdded": "2024-02-21T19:40:28.000Z"
     },
     {
@@ -11575,17 +11575,6 @@
       "folderId": "portfolio",
       "favorite": false,
       "dateAdded": "2025-04-27T02:48:22.000Z"
-    },
-    {
-      "id": "guilherme-branco-stracini--projects",
-      "title": "Guilherme Branco Stracini | Projects",
-      "url": "https://zube.io/guibranco",
-      "description": "",
-      "thumbnail": "",
-      "tags": [],
-      "folderId": "portfolio",
-      "favorite": false,
-      "dateAdded": "2024-01-25T17:34:45.000Z"
     },
     {
       "id": "guilherme-branco-stracinis-github-repositories",
@@ -13922,7 +13911,7 @@
     {
       "id": "rabbitmq--part-1--ensuring-robust-and-efficient-messaging-with-rabbitmq--by-darshana-mihiran-edirisinghe--jun-2024--devopsdev",
       "title": "RabbitMQ : Part 1 : Ensuring Robust and Efficient Messaging with RabbitMQ | by Darshana Mihiran Edirisinghe | Jun, 2024 | DevOps.dev",
-      "url": "https://blog.devops.dev/rabbitmq-part-1-ensuring-robust-and-efficient-messaging-with-rabbitmq-cbc6c434523e?source=post_page-----234c9fe1c1d5--------------------------------",
+      "url": "https://blog.devops.dev/rabbitmq-part-1-ensuring-robust-and-efficient-messaging-with-rabbitmq-cbc6c434523e",
       "description": "",
       "thumbnail": "",
       "tags": [],
