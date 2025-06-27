@@ -753,116 +753,6 @@
   ],
   "bookmarks": [
     {
-      "id": "bookmark-1",
-      "title": "GitHub",
-      "url": "https://github.com",
-      "description": "Where the world builds software",
-      "thumbnail": "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      "tags": ["development", "code", "git"],
-      "folderId": "2---tech",
-      "favorite": true,
-      "dateAdded": "2023-01-15T12:00:00Z"
-    },
-    {
-      "id": "bookmark-2",
-      "title": "Stack Overflow",
-      "url": "https://stackoverflow.com",
-      "description": "Where developers learn, share, & build careers",
-      "thumbnail": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      "tags": ["development", "questions", "answers"],
-      "folderId": "2---tech",
-      "favorite": false,
-      "dateAdded": "2023-02-10T14:30:00Z"
-    },
-    {
-      "id": "bookmark-3",
-      "title": "Netflix",
-      "url": "https://netflix.com",
-      "description": "Watch TV shows and movies online",
-      "thumbnail": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      "tags": ["entertainment", "streaming", "movies"],
-      "folderId": "entertainment",
-      "favorite": true,
-      "dateAdded": "2023-03-05T18:45:00Z"
-    },
-    {
-      "id": "bookmark-4",
-      "title": "Coursera",
-      "url": "https://coursera.org",
-      "description": "Learn without limits",
-      "thumbnail": "https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      "tags": ["education", "courses", "learning"],
-      "folderId": "2---tech",
-      "favorite": false,
-      "dateAdded": "2023-04-20T09:15:00Z"
-    },
-    {
-      "id": "bookmark-5",
-      "title": "Amazon",
-      "url": "https://amazon.com",
-      "description": "Online shopping from the earth\\'s biggest selection",
-      "thumbnail": "https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      "tags": ["shopping", "retail", "ecommerce"],
-      "folderId": "buy",
-      "favorite": false,
-      "dateAdded": "2023-05-12T11:30:00Z"
-    },
-    {
-      "id": "bookmark-6",
-      "title": "YouTube",
-      "url": "https://youtube.com",
-      "description": "Enjoy the videos and music you love",
-      "thumbnail": "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      "tags": ["video", "entertainment", "streaming"],
-      "folderId": "entertainment",
-      "favorite": true,
-      "dateAdded": "2023-06-08T16:20:00Z"
-    },
-    {
-      "id": "bookmark-7",
-      "title": "MDN Web Docs",
-      "url": "https://developer.mozilla.org",
-      "description": "Resources for developers, by developers",
-      "thumbnail": "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      "tags": ["development", "documentation", "web"],
-      "folderId": "2---tech",
-      "favorite": false,
-      "dateAdded": "2023-07-25T13:45:00Z"
-    },
-    {
-      "id": "bookmark-8",
-      "title": "Mint",
-      "url": "https://mint.intuit.com",
-      "description": "Personal finance management",
-      "thumbnail": "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      "tags": ["finance", "budgeting", "money"],
-      "folderId": "1---personal",
-      "favorite": false,
-      "dateAdded": "2023-08-17T10:10:00Z"
-    },
-    {
-      "id": "bookmark-9",
-      "title": "Duolingo",
-      "url": "https://duolingo.com",
-      "description": "Learn languages for free",
-      "thumbnail": "https://images.unsplash.com/photo-1610484826967-09c5720778c7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      "tags": ["language", "learning", "education"],
-      "folderId": "1---personal",
-      "favorite": true,
-      "dateAdded": "2023-09-05T08:30:00Z"
-    },
-    {
-      "id": "bookmark-10",
-      "title": "Spotify",
-      "url": "https://spotify.com",
-      "description": "Music for everyone",
-      "thumbnail": "https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      "tags": ["music", "streaming", "entertainment"],
-      "folderId": "entertainment",
-      "favorite": false,
-      "dateAdded": "2023-10-12T14:20:00Z"
-    },
-    {
       "id": "best-seller-clothing-for-men",
       "title": "Best Seller Clothing For Men",
       "url": "https://www.cotosen.com/activity/best-seller-f-6811/?tspu=SP22040218CR,SP76NL4U71U,SP220308N3CV,SP211224U0VO,SP2202252EBQ,SP2203110L9D,SP220517S5QN,SPWUL2OGSM3&utm_source=google&utm_medium=7223384835&utm_campaign=15798102638~[U2164]~&utm_adset=134424598760&utm_content=599879747709&utm_term=U2164&gclid=CjwKCAjwtIaVBhBkEiwAsr7-c_G73ZoGRVULAwV9vWV_aA_yZgrWuw6q-KoTwwzwsYqk96SVSoY2WBoCBRQQAvD_BwE",
@@ -3569,7 +3459,7 @@
       "dateAdded": "2024-03-05T23:30:33.000Z"
     },
     {
-      "id": "am-i-unique",
+      "id": "am-i-unique-",
       "title": "Am I unique ?",
       "url": "https://amiunique.org/",
       "description": "",
@@ -4548,7 +4438,7 @@
       "dateAdded": "2022-01-14T09:45:45.000Z"
     },
     {
-      "id": "um-modelo-para-trilha-de-carreira-em-design-de-produto--by-leonardo-lohmann--ux-collective",
+      "id": "um-modelo-para-trilha-de-carreira-em-design-de-produto--by-leonardo-lohmann--ux-collective-",
       "title": "Um modelo para trilha de carreira em Design de Produto | by Leonardo Lohmann | UX Collective 🇧🇷",
       "url": "https://brasil.uxdesign.cc/um-modelo-para-trilha-de-carreira-em-design-de-produto-38ab0e1077ad",
       "description": "",
@@ -9674,6 +9564,17 @@
       "dateAdded": "2023-12-12T11:19:26.000Z"
     },
     {
+      "id": "90-best-devops-tools-updated-for-2024--by-usamashafique--jan-2024--medium",
+      "title": "90+ Best DevOps Tools [Updated for 2024] | by Usamashafique | Jan, 2024 | Medium",
+      "url": "https://medium.com/@usamashafique00786/90-best-devops-tools-updated-for-2024-9c1c92287ef3",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "cicd",
+      "favorite": false,
+      "dateAdded": "2024-02-06T14:15:26.000Z"
+    },
+    {
       "id": "cron--keda",
       "title": "Cron | KEDA",
       "url": "https://keda.sh/docs/2.12/scalers/cron/",
@@ -10169,6 +10070,17 @@
       "dateAdded": "2021-02-24T14:34:30.000Z"
     },
     {
+      "id": "redis-roadmap",
+      "title": "Redis Roadmap",
+      "url": "https://roadmap.sh/redis",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "redis",
+      "favorite": false,
+      "dateAdded": "2024-10-01T15:20:58.000Z"
+    },
+    {
       "id": "version-control-branching-strategies--by-david-mosyan--dec-2023--medium",
       "title": "Version Control Branching Strategies | by David Mosyan | Dec, 2023 | Medium",
       "url": "https://medium.com/@dmosyan/version-control-branching-strategies-e68e8d5ef1e0",
@@ -10279,6 +10191,61 @@
       "dateAdded": "2024-02-06T14:25:12.000Z"
     },
     {
+      "id": "15-ways-to-harden-the-security-of-your-linux-system--by-bytecook--jul-2024--level-up-coding",
+      "title": "15 Ways To Harden the Security of Your Linux System | by ByteCook | Jul, 2024 | Level Up Coding",
+      "url": "https://levelup.gitconnected.com/15-ways-to-harden-the-security-of-your-linux-system-8040e08e9659",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "security-1",
+      "favorite": false,
+      "dateAdded": "2024-08-14T09:36:13.000Z"
+    },
+    {
+      "id": "how-to-protect-ssh-with-fail2ban-on-ubuntu-2204--digitalocean",
+      "title": "How To Protect SSH with Fail2Ban on Ubuntu 22.04 | DigitalOcean",
+      "url": "https://www.digitalocean.com/community/tutorials/how-to-protect-ssh-with-fail2ban-on-ubuntu-22-04",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "security-1",
+      "favorite": false,
+      "dateAdded": "2024-07-22T17:42:20.000Z"
+    },
+    {
+      "id": "how-to-set-up-a-firewall-with-ufw-on-ubuntu--digitalocean",
+      "title": "How to Set Up a Firewall with UFW on Ubuntu | DigitalOcean",
+      "url": "https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "security-1",
+      "favorite": false,
+      "dateAdded": "2024-07-22T17:42:23.000Z"
+    },
+    {
+      "id": "how-to-add-linux-ssh-key-user--factory-information-systems-center",
+      "title": "How to Add Linux SSH Key User – Factory Information Systems Center",
+      "url": "https://www.fis.gatech.edu/how-to-add-linux-ssh-key-user/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "security-1",
+      "favorite": false,
+      "dateAdded": "2024-09-19T21:25:29.000Z"
+    },
+    {
+      "id": "how-to-show-all-banned-ip-with-fail2ban---server-fault",
+      "title": "How to show all banned IP with fail2ban? - Server Fault",
+      "url": "https://serverfault.com/questions/841183/how-to-show-all-banned-ip-with-fail2ban",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "security-1",
+      "favorite": false,
+      "dateAdded": "2024-09-19T22:31:21.000Z"
+    },
+    {
       "id": "50-essential-linux-commands-for-devops-explained-with-examples--by-gurpreet-singh--medium",
       "title": "50 Essential Linux Commands for DevOps: Explained with Examples | by Gurpreet Singh | Medium",
       "url": "https://medium.com/@gurpreet.singh_89/50-essential-linux-commands-for-devops-explained-with-examples-1e92690440ec",
@@ -10367,61 +10334,6 @@
       "dateAdded": "2021-02-24T14:34:30.000Z"
     },
     {
-      "id": "15-ways-to-harden-the-security-of-your-linux-system--by-bytecook--jul-2024--level-up-coding",
-      "title": "15 Ways To Harden the Security of Your Linux System | by ByteCook | Jul, 2024 | Level Up Coding",
-      "url": "https://levelup.gitconnected.com/15-ways-to-harden-the-security-of-your-linux-system-8040e08e9659",
-      "description": "",
-      "thumbnail": "",
-      "tags": [],
-      "folderId": "security-1",
-      "favorite": false,
-      "dateAdded": "2024-08-14T09:36:13.000Z"
-    },
-    {
-      "id": "how-to-protect-ssh-with-fail2ban-on-ubuntu-2204--digitalocean",
-      "title": "How To Protect SSH with Fail2Ban on Ubuntu 22.04 | DigitalOcean",
-      "url": "https://www.digitalocean.com/community/tutorials/how-to-protect-ssh-with-fail2ban-on-ubuntu-22-04",
-      "description": "",
-      "thumbnail": "",
-      "tags": [],
-      "folderId": "security-1",
-      "favorite": false,
-      "dateAdded": "2024-07-22T17:42:20.000Z"
-    },
-    {
-      "id": "how-to-set-up-a-firewall-with-ufw-on-ubuntu--digitalocean",
-      "title": "How to Set Up a Firewall with UFW on Ubuntu | DigitalOcean",
-      "url": "https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu",
-      "description": "",
-      "thumbnail": "",
-      "tags": [],
-      "folderId": "security-1",
-      "favorite": false,
-      "dateAdded": "2024-07-22T17:42:23.000Z"
-    },
-    {
-      "id": "how-to-add-linux-ssh-key-user--factory-information-systems-center",
-      "title": "How to Add Linux SSH Key User – Factory Information Systems Center",
-      "url": "https://www.fis.gatech.edu/how-to-add-linux-ssh-key-user/",
-      "description": "",
-      "thumbnail": "",
-      "tags": [],
-      "folderId": "security-1",
-      "favorite": false,
-      "dateAdded": "2024-09-19T21:25:29.000Z"
-    },
-    {
-      "id": "how-to-show-all-banned-ip-with-fail2ban---server-fault",
-      "title": "How to show all banned IP with fail2ban? - Server Fault",
-      "url": "https://serverfault.com/questions/841183/how-to-show-all-banned-ip-with-fail2ban",
-      "description": "",
-      "thumbnail": "",
-      "tags": [],
-      "folderId": "security-1",
-      "favorite": false,
-      "dateAdded": "2024-09-19T22:31:21.000Z"
-    },
-    {
       "id": "loki---promtail--grafana-for-system-logs--mike-polinowski",
       "title": "Loki - Promtail & Grafana for System Logs. | Mike Polinowski",
       "url": "https://mpolinowski.github.io/docs/DevOps/Provisioning/2021-04-07--loki-prometheus-grafana/2021-04-07/",
@@ -10497,6 +10409,17 @@
       "folderId": "graylog",
       "favorite": false,
       "dateAdded": "2023-05-31T15:24:33.000Z"
+    },
+    {
+      "id": "how-to-monitor-whos-connected-to-your-wireguard-vpn--pro-custodibus",
+      "title": "How to Monitor Who’s Connected to Your WireGuard VPN | Pro Custodibus",
+      "url": "https://www.procustodibus.com/blog/2021/01/how-to-monitor-wireguard-activity/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "o11y",
+      "favorite": false,
+      "dateAdded": "2024-03-22T12:16:17.000Z"
     },
     {
       "id": "caprover--free-and-open-source-paas",
@@ -10873,39 +10796,6 @@
       "dateAdded": "2024-06-13T22:45:58.000Z"
     },
     {
-      "id": "90-best-devops-tools-updated-for-2024--by-usamashafique--jan-2024--medium",
-      "title": "90+ Best DevOps Tools [Updated for 2024] | by Usamashafique | Jan, 2024 | Medium",
-      "url": "https://medium.com/@usamashafique00786/90-best-devops-tools-updated-for-2024-9c1c92287ef3",
-      "description": "",
-      "thumbnail": "",
-      "tags": [],
-      "folderId": "infrastructure",
-      "favorite": false,
-      "dateAdded": "2024-02-06T14:15:26.000Z"
-    },
-    {
-      "id": "how-to-monitor-whos-connected-to-your-wireguard-vpn--pro-custodibus",
-      "title": "How to Monitor Who’s Connected to Your WireGuard VPN | Pro Custodibus",
-      "url": "https://www.procustodibus.com/blog/2021/01/how-to-monitor-wireguard-activity/",
-      "description": "",
-      "thumbnail": "",
-      "tags": [],
-      "folderId": "infrastructure",
-      "favorite": false,
-      "dateAdded": "2024-03-22T12:16:17.000Z"
-    },
-    {
-      "id": "how-to-validate-addresses-using-usps-api-in-aspnet-a-step-by-step-guide--by-ibrahim-emre-polat--jun-2024--medium",
-      "title": "How to Validate Addresses Using USPS API in ASP.NET: A Step-by-Step Guide | by İbrahim Emre POLAT | Jun, 2024 | Medium",
-      "url": "https://medium.com/@ieplt/how-to-validate-addresses-using-usps-api-in-asp-net-a-step-by-step-guide-f48a38ebd0f5",
-      "description": "",
-      "thumbnail": "",
-      "tags": [],
-      "folderId": "infrastructure",
-      "favorite": false,
-      "dateAdded": "2024-06-26T13:46:17.000Z"
-    },
-    {
       "id": "raspberry-pi-how-to-expose-web-services-in-private-to-public-with-cloudflare-tunnel--dns-routing--by-life-is-short--so--enjoy-it--feb-2024--medium",
       "title": "Raspberry Pi: How to expose Web Services in Private to Public with Cloudflare Tunnel — DNS routing | by Life-is-short--so--enjoy-it | Feb, 2024 | Medium",
       "url": "https://medium.com/@life-is-short-so-enjoy-it/raspberry-pi-how-to-expose-web-services-in-private-to-public-with-cloudflare-tunnel-dns-routing-000e8792cff2",
@@ -10915,17 +10805,6 @@
       "folderId": "infrastructure",
       "favorite": false,
       "dateAdded": "2024-04-03T11:31:34.000Z"
-    },
-    {
-      "id": "redis-roadmap",
-      "title": "Redis Roadmap",
-      "url": "https://roadmap.sh/redis",
-      "description": "",
-      "thumbnail": "",
-      "tags": [],
-      "folderId": "infrastructure",
-      "favorite": false,
-      "dateAdded": "2024-10-01T15:20:58.000Z"
     },
     {
       "id": "calculate-salary-after-taxes-net-pay---sweden-tax-calculator",
@@ -10994,7 +10873,7 @@
       "dateAdded": "2023-06-19T12:11:29.000Z"
     },
     {
-      "id": "net-pay-calculator-and-salaries-in-tech---sweden",
+      "id": "net-pay-calculator-and-salaries-in-tech---sweden-",
       "title": "Net Pay Calculator and Salaries in Tech - Sweden 🇸🇪",
       "url": "https://relocate.me/net-pay-calculators/sweden",
       "description": "",
@@ -11441,7 +11320,7 @@
       "thumbnail": "",
       "tags": [],
       "folderId": "github-apps",
-      "favorite": true,
+      "favorite": false,
       "dateAdded": "2024-07-09T18:33:49.000Z"
     },
     {
@@ -11474,7 +11353,7 @@
       "thumbnail": "",
       "tags": [],
       "folderId": "github-pages",
-      "favorite": true,
+      "favorite": false,
       "dateAdded": "2025-04-08T21:15:07.000Z"
     },
     {
@@ -11485,7 +11364,7 @@
       "thumbnail": "",
       "tags": [],
       "folderId": "github-pages",
-      "favorite": true,
+      "favorite": false,
       "dateAdded": "2025-05-16T01:35:55.000Z"
     },
     {
@@ -11507,8 +11386,19 @@
       "thumbnail": "",
       "tags": [],
       "folderId": "github-pages",
-      "favorite": true,
+      "favorite": false,
       "dateAdded": "2025-05-16T01:36:05.000Z"
+    },
+    {
+      "id": "projects-monitor",
+      "title": "Projects Monitor",
+      "url": "https://guilherme.stracini.com.br/projects-monitor-ui/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "github-pages",
+      "favorite": false,
+      "dateAdded": "2025-06-22T23:12:12.000Z"
     },
     {
       "id": "pull-request-flow-viewer",
@@ -11518,7 +11408,7 @@
       "thumbnail": "",
       "tags": [],
       "folderId": "github-pages",
-      "favorite": true,
+      "favorite": false,
       "dateAdded": "2025-03-09T16:33:55.000Z"
     },
     {
@@ -11540,7 +11430,7 @@
       "thumbnail": "",
       "tags": [],
       "folderId": "portfolio",
-      "favorite": true,
+      "favorite": false,
       "dateAdded": "2024-02-21T19:40:28.000Z"
     },
     {
@@ -11608,6 +11498,226 @@
       "folderId": "portfolio",
       "favorite": false,
       "dateAdded": "2024-07-13T23:56:24.000Z"
+    },
+    {
+      "id": "appveyor",
+      "title": "AppVeyor",
+      "url": "https://ci.appveyor.com/projects",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2024-02-14T00:30:17.000Z"
+    },
+    {
+      "id": "cloudamqp",
+      "title": "CloudAMQP",
+      "url": "https://customer.cloudamqp.com/instance",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2024-02-01T23:48:40.000Z"
+    },
+    {
+      "id": "cpanel---site-quality-monitoring---zerocoolcombr",
+      "title": "cPanel - Site Quality Monitoring - zerocool.com.br",
+      "url": "https://site-quality-monitoring.com/100431/206713/overview/overview",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2024-08-15T09:25:32.000Z"
+    },
+    {
+      "id": "cpanel---zero-cool",
+      "title": "CPanel - Zero Cool",
+      "url": "https://cpanel.zerocool.com.br/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2025-05-09T17:50:05.000Z"
+    },
+    {
+      "id": "github--issues",
+      "title": "GitHub · Issues",
+      "url": "https://github.com/issues?q=is%3Aopen%20AND%20is%3Aissue%20AND%20archived%3Afalse%20AND%20(user%3Aguibranco%20OR%20user%3AApiBR%20OR%20user%3AGuilhermeStracini%20OR%20user%3AInovacaoMediaBrasil%20)",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2025-04-09T00:56:20.000Z"
+    },
+    {
+      "id": "github--issues--not-pixeebot",
+      "title": "GitHub · Issues · Not Pixeebot",
+      "url": "https://github.com/issues?q=is%3Aopen%20AND%20is%3Aissue%20AND%20archived%3Afalse%20AND%20(user%3Aguibranco%20OR%20user%3AApiBR%20OR%20user%3AGuilhermeStracini%20OR%20user%3AInovacaoMediaBrasil%20)%20%20AND%20-author%3Aapp%2Fpixeebot",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2025-05-09T21:50:33.000Z"
+    },
+    {
+      "id": "github--pull-requests",
+      "title": "GitHub · Pull requests",
+      "url": "https://github.com/pulls?q=is%3Apr+archived%3Afalse+user%3Aguibranco+user%3AApiBR+user%3Arustdevbr+user%3Abackend-ao+user%3Abackend-pt+user%3Adotnetdevbr+user%3Afrontend-ao+user%3Afrontend-pt+user%3AGuilhermeStracini+user%3AInovacaoMediaBrasil+user%3Apydevbr+is%3Aopen+user%3AdevelopersRJ+user%3Anodejsdevbr+user%3Arubydevbr+sort%3Aupdated-desc",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2023-09-22T10:18:33.000Z"
+    },
+    {
+      "id": "github--pull-requests--not-blocked",
+      "title": "GitHub · Pull requests · Not Blocked",
+      "url": "https://github.com/pulls?q=is%3Apr+archived%3Afalse+user%3Aguibranco+user%3AApiBR+user%3Arustdevbr+user%3Abackend-ao+user%3Abackend-pt+user%3Adotnetdevbr+user%3Afrontend-ao+user%3Afrontend-pt+user%3AGuilhermeStracini+user%3AInovacaoMediaBrasil+user%3Apydevbr+is%3Aopen+user%3AdevelopersRJ+user%3Anodejsdevbr+user%3Arubydevbr+sort%3Aupdated-desc+-label%3A%22%F0%9F%9A%B7+blocked%22+",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2024-09-19T16:28:46.000Z"
+    },
+    {
+      "id": "github--pull-requests--not-gitauto",
+      "title": "GitHub · Pull requests · Not GitAuto",
+      "url": "https://github.com/pulls?q=is%3Apr+archived%3Afalse+user%3Aguibranco+user%3AApiBR+user%3Arustdevbr+user%3Abackend-ao+user%3Abackend-pt+user%3Adotnetdevbr+user%3Afrontend-ao+user%3Afrontend-pt+user%3AGuilhermeStracini+user%3AInovacaoMediaBrasil+user%3Apydevbr+is%3Aopen+user%3AdevelopersRJ+user%3Anodejsdevbr+user%3Arubydevbr+sort%3Aupdated-desc+-label%3A%22gitauto%22+",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2024-11-06T14:25:28.000Z"
+    },
+    {
+      "id": "healthchecksio",
+      "title": "Healthchecks.io",
+      "url": "https://healthchecks.io/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2023-10-23T22:59:21.000Z"
+    },
+    {
+      "id": "holori---home",
+      "title": "Holori - Home",
+      "url": "https://app.holori.com/dashboard/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2024-03-05T23:32:46.000Z"
+    },
+    {
+      "id": "monitors--uptimerobot",
+      "title": "Monitors | UptimeRobot",
+      "url": "https://dashboard.uptimerobot.com/monitors",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2024-10-11T10:35:13.000Z"
+    },
+    {
+      "id": "nginx-ui--vinhedo-2",
+      "title": "Nginx UI | Vinhedo 2",
+      "url": "https://nginxui.vinhedo2.apibr.com/#/dashboard",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2025-01-30T17:37:39.000Z"
+    },
+    {
+      "id": "nuvem-hospedagem",
+      "title": "Nuvem Hospedagem",
+      "url": "https://cliente.nuvemhospedagem.com.br/clientarea.php?action=productdetails&id=6303",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2023-10-22T18:52:24.000Z"
+    },
+    {
+      "id": "oracle-cloud-infrastructure-1",
+      "title": "Oracle Cloud Infrastructure",
+      "url": "https://cloud.oracle.com/?region=sa-saopaulo-1&tenant=oracle2867&provider=OracleIdentityCloudService",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2024-03-03T21:11:22.000Z"
+    },
+    {
+      "id": "ovhcloud",
+      "title": "OVHcloud",
+      "url": "https://www.ovh.com/manager/#/hub",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2023-10-31T15:52:15.000Z"
+    },
+    {
+      "id": "pixee-platform",
+      "title": "Pixee Platform",
+      "url": "https://app.pixee.ai/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2025-04-09T00:50:15.000Z"
+    },
+    {
+      "id": "projects-monitor-1",
+      "title": "Projects Monitor",
+      "url": "https://guilherme.straccini.com/projects-monitor/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2024-08-12T18:07:24.000Z"
+    },
+    {
+      "id": "vercel",
+      "title": "Vercel",
+      "url": "https://vercel.com/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2024-02-16T02:06:42.000Z"
+    },
+    {
+      "id": "webmail---zero-cool",
+      "title": "Webmail - Zero Cool",
+      "url": "https://webmail.zerocool.com.br/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2025-05-09T17:50:44.000Z"
     },
     {
       "id": "net---is-it-possible-to-set-the-targetframework-on-the-commandline-with-dotnet-build--restore---stack-overflow",
@@ -12006,6 +12116,17 @@
       "dateAdded": "2024-08-14T09:42:50.000Z"
     },
     {
+      "id": "bluewave-labscheckmate-checkmate-is-an-open-source-self-hosted-tool-designed-to-track-and-monitor-server-hardware-uptime-response-times-and-incidents-in-real-time-with-beautiful-visualizations",
+      "title": "bluewave-labs/Checkmate: Checkmate is an open-source, self-hosted tool designed to track and monitor server hardware, uptime, response times, and incidents in real-time with beautiful visualizations.",
+      "url": "https://github.com/bluewave-labs/Checkmate?tab=readme-ov-file",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "linux-1",
+      "favorite": false,
+      "dateAdded": "2025-02-12T01:08:50.000Z"
+    },
+    {
       "id": "creating-a-linux-service-with-systemd--by-benjamin-morel--medium",
       "title": "Creating a Linux service with systemd | by Benjamin Morel | Medium",
       "url": "https://medium.com/@benmorel/creating-a-linux-service-with-systemd-611b5c8b91d6",
@@ -12114,17 +12235,6 @@
       "folderId": "linux-1",
       "favorite": false,
       "dateAdded": "2024-12-02T10:20:14.000Z"
-    },
-    {
-      "id": "bluewave-labscheckmate-checkmate-is-an-open-source-self-hosted-tool-designed-to-track-and-monitor-server-hardware-uptime-response-times-and-incidents-in-real-time-with-beautiful-visualizations",
-      "title": "bluewave-labs/Checkmate: Checkmate is an open-source, self-hosted tool designed to track and monitor server hardware, uptime, response times, and incidents in real-time with beautiful visualizations.",
-      "url": "https://github.com/bluewave-labs/Checkmate?tab=readme-ov-file",
-      "description": "",
-      "thumbnail": "",
-      "tags": [],
-      "folderId": "5---gstraccini-bot",
-      "favorite": false,
-      "dateAdded": "2025-02-12T01:08:50.000Z"
     },
     {
       "id": "how-to-use-appveyor-to-build-and-deploy-python-wheels-from-cc-code--dynamsoft-developers-blog",
@@ -14677,6 +14787,17 @@
       "folderId": "7---work-on-it",
       "favorite": false,
       "dateAdded": "2024-12-26T14:49:50.000Z"
+    },
+    {
+      "id": "how-to-validate-addresses-using-usps-api-in-aspnet-a-step-by-step-guide--by-ibrahim-emre-polat--jun-2024--medium",
+      "title": "How to Validate Addresses Using USPS API in ASP.NET: A Step-by-Step Guide | by İbrahim Emre POLAT | Jun, 2024 | Medium",
+      "url": "https://medium.com/@ieplt/how-to-validate-addresses-using-usps-api-in-asp-net-a-step-by-step-guide-f48a38ebd0f5",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "7---work-on-it",
+      "favorite": false,
+      "dateAdded": "2024-06-26T13:46:17.000Z"
     }
   ]
 }
