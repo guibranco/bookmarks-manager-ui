@@ -1,5 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { Folder, Star, Tag, ChevronDown, ChevronRight, Bookmark, Plus, Lock, Edit2, Check, X } from 'lucide-react';
+import {
+  Folder,
+  Star,
+  Tag,
+  ChevronDown,
+  ChevronRight,
+  Bookmark,
+  Plus,
+  Lock,
+  Edit2,
+  Check,
+  X,
+} from 'lucide-react';
 import { Folder as FolderType, Bookmark as BookmarkType } from '../types';
 
 interface SidebarProps {
@@ -113,7 +125,9 @@ const Sidebar: React.FC<SidebarProps> = ({
   };
 
   // Create a Set of unique tags and convert back to array
-  const allTags = Array.from(new Set(bookmarks.flatMap(bookmark => bookmark.tags))).sort((a, b) => a.localeCompare(b));
+  const allTags = Array.from(new Set(bookmarks.flatMap(bookmark => bookmark.tags))).sort((a, b) =>
+    a.localeCompare(b)
+  );
   const favoritesCount = bookmarks.filter(bookmark => bookmark.favorite).length;
   const rootFolders = folders.filter(folder => folder.parentId === null);
 
