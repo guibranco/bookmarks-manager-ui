@@ -34,7 +34,7 @@
   .btn-primary {
     @apply bg-[#93cd3f] hover:bg-[#7ab32f] text-white;
   }
-  
+
   .btn-secondary {
     @apply bg-[#79378b] hover:bg-[#612d70] text-white;
   }

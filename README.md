@@ -3,6 +3,7 @@
 A modern, web-based **bookmark manager** built with **Vite, React, and TypeScript**, allowing users to organize bookmarks into folders and topics with a clean and intuitive UI.
 
 ## 🚀 Features
+
 - 📂 **Organize Bookmarks** – Categorize bookmarks into folders/topics.
 - 🔍 **Search Functionality** – Quickly find bookmarks by title or tags.
 - 📌 **Grid/List View** – Switch between different layouts for better visualization.
@@ -11,6 +12,7 @@ A modern, web-based **bookmark manager** built with **Vite, React, and TypeScrip
 - ⚡ **Built with Vite** – Super-fast development experience.
 
 ## 🛠 Tech Stack
+
 - **Frontend**: React, TypeScript, TailwindCSS
 - **Backend**: [Bookmarks Manager API](https://github.com/guibranco/bookmarks-manager-api)
 - **Build Tool**: Vite
@@ -69,9 +71,9 @@ npm run preview
 ![Preview Light Theme - Tree Structure](docs/preview-light-tree-structure.png)
 
 ## 📜 License
+
 This project is licensed under the [MIT License](LICENSE).
 
 ---
 
 💡 **Contributions are welcome!** Feel free to submit issues or pull requests to improve the project. 🚀
-

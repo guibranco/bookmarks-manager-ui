@@ -1,5 +1,14 @@
 import React, { useState } from 'react';
-import { Grid, List, Bookmark as BookmarkIcon, FolderPlus, Edit2, Check, X, Share2 } from 'lucide-react';
+import {
+  Grid,
+  List,
+  Bookmark as BookmarkIcon,
+  FolderPlus,
+  Edit2,
+  Check,
+  X,
+  Share2,
+} from 'lucide-react';
 import { Bookmark, AppConfig, Folder } from '../types.d.ts';
 import BookmarkCard from './BookmarkCard';
 import BookmarkList from './BookmarkList';
@@ -87,7 +96,7 @@ const MainContent: React.FC<MainContentProps> = ({
     } else if (selectedFolder) {
       url.searchParams.set('folder', selectedFolder);
     }
-    
+
     try {
       if (navigator.share) {
         try {
@@ -140,15 +149,18 @@ const MainContent: React.FC<MainContentProps> = ({
             </div>
           </div>
           <div className="flex items-center space-x-2">
-            {selectedFolder !== 'all' && selectedFolder !== 'favorites' && !selectedTag && isAuthenticated && (
-              <button
-                onClick={() => onAddFolder(selectedFolder)}
-                className="p-2 rounded-sm hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer"
-                aria-label="Add subfolder"
-              >
-                <FolderPlus className="h-5 w-5" />
-              </button>
-            )}
+            {selectedFolder !== 'all' &&
+              selectedFolder !== 'favorites' &&
+              !selectedTag &&
+              isAuthenticated && (
+                <button
+                  onClick={() => onAddFolder(selectedFolder)}
+                  className="p-2 rounded-sm hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer"
+                  aria-label="Add subfolder"
+                >
+                  <FolderPlus className="h-5 w-5" />
+                </button>
+              )}
             <button
               onClick={() => onToggleView('grid')}
               className={`p-2 rounded-sm cursor-pointer ${config.viewMode === 'grid' ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400' : 'hover:bg-gray-200 dark:hover:bg-gray-700'}`}
@@ -239,7 +251,11 @@ const MainContent: React.FC<MainContentProps> = ({
         ) : (
           <>
             {filteredBookmarks.length > 0 && (
-              <div className={!config.flattenSubfolders && subfolders.length > 0 && !selectedTag ? 'mt-6' : ''}>
+              <div
+                className={
+                  !config.flattenSubfolders && subfolders.length > 0 && !selectedTag ? 'mt-6' : ''
+                }
+              >
                 {!config.flattenSubfolders && subfolders.length > 0 && !selectedTag && (
                   <h3 className="text-lg font-medium mb-3">Bookmarks</h3>
                 )}

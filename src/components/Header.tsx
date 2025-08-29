@@ -1,5 +1,17 @@
 import React from 'react';
-import { Menu, Bookmark, Search, Lock, Unlock, Sun, Moon, Plus, Settings, FolderTree, Folder } from 'lucide-react';
+import {
+  Menu,
+  Bookmark,
+  Search,
+  Lock,
+  Unlock,
+  Sun,
+  Moon,
+  Plus,
+  Settings,
+  FolderTree,
+  Folder,
+} from 'lucide-react';
 import { AppConfig, AuthState } from '../types';
 
 interface HeaderProps {
@@ -37,7 +49,9 @@ const Header: React.FC<HeaderProps> = ({
             <Menu className="h-5 w-5" />
           </button>
           <Bookmark className="h-6 w-6 text-primary dark:text-primary-light" />
-          <h1 className="text-xl font-bold hidden sm:block text-primary dark:text-primary-light">Bookmark Manager</h1>
+          <h1 className="text-xl font-bold hidden sm:block text-primary dark:text-primary-light">
+            Bookmark Manager
+          </h1>
         </div>
 
         <div className="flex-1 max-w-xl mx-4">
@@ -59,7 +73,9 @@ const Header: React.FC<HeaderProps> = ({
           <button
             onClick={onToggleFlatten}
             className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-            aria-label={config.flattenSubfolders ? 'Switch to hierarchical view' : 'Switch to flat view'}
+            aria-label={
+              config.flattenSubfolders ? 'Switch to hierarchical view' : 'Switch to flat view'
+            }
             title={config.flattenSubfolders ? 'Switch to hierarchical view' : 'Switch to flat view'}
           >
             {config.flattenSubfolders ? (

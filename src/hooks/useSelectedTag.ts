@@ -6,13 +6,12 @@ export function useSelectedTag() {
   function getInitialTag(): string | null {
     const params = new URLSearchParams(window.location.search);
     return params.get('tag');
-
   }
 
   useEffect(() => {
     const url = new URL(window.location.href);
     const currentTag = url.searchParams.get('tag');
-    
+
     if (selectedTag && selectedTag !== currentTag) {
       url.searchParams.set('tag', selectedTag);
       url.searchParams.delete('folder'); // Clear folder when selecting tag
@@ -28,7 +27,7 @@ export function useSelectedTag() {
     const handlePopState = (event: PopStateEvent) => {
       const params = new URLSearchParams(window.location.search);
       const tagParam = params.get('tag');
-      
+
       if ((!event.state || event.state.type === 'tag') && tagParam !== selectedTag) {
         setSelectedTag(tagParam);
       }
