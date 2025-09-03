@@ -80,7 +80,7 @@ jobs:
         uses: actions/configure-pages@v5
         
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: './dist'
           
@@ -96,7 +96,7 @@ jobs:
 
     steps:
       - name: Create Release
-        uses: ncipollo/release-action@v1.18.0
+        uses: ncipollo/release-action@v1.19.1
         with:
           skipIfReleaseExists: true
           allowUpdates: false
