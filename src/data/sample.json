@@ -61,11 +61,6 @@
       "parentId": "1---personal"
     },
     {
-      "id": "properties",
-      "name": "Properties",
-      "parentId": "1---personal"
-    },
-    {
       "id": "trips",
       "name": "Trips",
       "parentId": "1---personal"
@@ -768,116 +763,6 @@
   ],
   "bookmarks": [
     {
-      "id": "bookmark-1",
-      "title": "GitHub",
-      "url": "https://github.com",
-      "description": "Where the world builds software",
-      "thumbnail": "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      "tags": ["development", "code", "git"],
-      "folderId": "2---tech",
-      "favorite": true,
-      "dateAdded": "2023-01-15T12:00:00Z"
-    },
-    {
-      "id": "bookmark-2",
-      "title": "Stack Overflow",
-      "url": "https://stackoverflow.com",
-      "description": "Where developers learn, share, & build careers",
-      "thumbnail": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      "tags": ["development", "questions", "answers"],
-      "folderId": "2---tech",
-      "favorite": false,
-      "dateAdded": "2023-02-10T14:30:00Z"
-    },
-    {
-      "id": "bookmark-3",
-      "title": "Netflix",
-      "url": "https://netflix.com",
-      "description": "Watch TV shows and movies online",
-      "thumbnail": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      "tags": ["entertainment", "streaming", "movies"],
-      "folderId": "entertainment",
-      "favorite": true,
-      "dateAdded": "2023-03-05T18:45:00Z"
-    },
-    {
-      "id": "bookmark-4",
-      "title": "Coursera",
-      "url": "https://coursera.org",
-      "description": "Learn without limits",
-      "thumbnail": "https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      "tags": ["education", "courses", "learning"],
-      "folderId": "2---tech",
-      "favorite": false,
-      "dateAdded": "2023-04-20T09:15:00Z"
-    },
-    {
-      "id": "bookmark-5",
-      "title": "Amazon",
-      "url": "https://amazon.com",
-      "description": "Online shopping from the earth\\'s biggest selection",
-      "thumbnail": "https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      "tags": ["shopping", "retail", "ecommerce"],
-      "folderId": "buy",
-      "favorite": false,
-      "dateAdded": "2023-05-12T11:30:00Z"
-    },
-    {
-      "id": "bookmark-6",
-      "title": "YouTube",
-      "url": "https://youtube.com",
-      "description": "Enjoy the videos and music you love",
-      "thumbnail": "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      "tags": ["video", "entertainment", "streaming"],
-      "folderId": "entertainment",
-      "favorite": true,
-      "dateAdded": "2023-06-08T16:20:00Z"
-    },
-    {
-      "id": "bookmark-7",
-      "title": "MDN Web Docs",
-      "url": "https://developer.mozilla.org",
-      "description": "Resources for developers, by developers",
-      "thumbnail": "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      "tags": ["development", "documentation", "web"],
-      "folderId": "2---tech",
-      "favorite": false,
-      "dateAdded": "2023-07-25T13:45:00Z"
-    },
-    {
-      "id": "bookmark-8",
-      "title": "Mint",
-      "url": "https://mint.intuit.com",
-      "description": "Personal finance management",
-      "thumbnail": "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      "tags": ["finance", "budgeting", "money"],
-      "folderId": "1---personal",
-      "favorite": false,
-      "dateAdded": "2023-08-17T10:10:00Z"
-    },
-    {
-      "id": "bookmark-9",
-      "title": "Duolingo",
-      "url": "https://duolingo.com",
-      "description": "Learn languages for free",
-      "thumbnail": "https://images.unsplash.com/photo-1610484826967-09c5720778c7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      "tags": ["language", "learning", "education"],
-      "folderId": "1---personal",
-      "favorite": true,
-      "dateAdded": "2023-09-05T08:30:00Z"
-    },
-    {
-      "id": "bookmark-10",
-      "title": "Spotify",
-      "url": "https://spotify.com",
-      "description": "Music for everyone",
-      "thumbnail": "https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      "tags": ["music", "streaming", "entertainment"],
-      "folderId": "entertainment",
-      "favorite": false,
-      "dateAdded": "2023-10-12T14:20:00Z"
-    },
-    {
       "id": "best-seller-clothing-for-men",
       "title": "Best Seller Clothing For Men",
       "url": "https://www.cotosen.com/activity/best-seller-f-6811/?tspu=SP22040218CR,SP76NL4U71U,SP220308N3CV,SP211224U0VO,SP2202252EBQ,SP2203110L9D,SP220517S5QN,SPWUL2OGSM3&utm_source=google&utm_medium=7223384835&utm_campaign=15798102638~[U2164]~&utm_adset=134424598760&utm_content=599879747709&utm_term=U2164&gclid=CjwKCAjwtIaVBhBkEiwAsr7-c_G73ZoGRVULAwV9vWV_aA_yZgrWuw6q-KoTwwzwsYqk96SVSoY2WBoCBRQQAvD_BwE",
@@ -1283,17 +1168,6 @@
       "folderId": "entertainment",
       "favorite": false,
       "dateAdded": "2023-12-19T21:09:06.000Z"
-    },
-    {
-      "id": "multicanais-oficial--futebol-ao-vivo-grtis-em-hd",
-      "title": "Multicanais Oficial | Futebol Ao Vivo Grátis em HD",
-      "url": "https://multicanais.casa/",
-      "description": "",
-      "thumbnail": "",
-      "tags": [],
-      "folderId": "entertainment",
-      "favorite": false,
-      "dateAdded": "2025-06-02T12:53:31.000Z"
     },
     {
       "id": "super-tv-ao-vivo",
@@ -2218,28 +2092,6 @@
       "folderId": "movies",
       "favorite": false,
       "dateAdded": "2023-09-20T15:31:10.000Z"
-    },
-    {
-      "id": "merit-santa-cruz-studio-nr-e-resid---winker",
-      "title": "MERIT SANTA CRUZ STUDIO NR E RESID - Winker",
-      "url": "https://app.winker.com.br/",
-      "description": "",
-      "thumbnail": "",
-      "tags": [],
-      "folderId": "properties",
-      "favorite": false,
-      "dateAdded": "2024-06-25T19:52:47.000Z"
-    },
-    {
-      "id": "portal-do-cliente---dialogo-engenharia",
-      "title": "Portal do Cliente - Dialogo Engenharia",
-      "url": "https://portaldocliente.dialogo.com.br/home.aspx",
-      "description": "",
-      "thumbnail": "",
-      "tags": [],
-      "folderId": "properties",
-      "favorite": false,
-      "dateAdded": "2024-06-25T20:42:53.000Z"
     },
     {
       "id": "processo-reserva---hotis-decameron",
@@ -4189,6 +4041,17 @@
       "dateAdded": "2023-07-17T18:09:54.000Z"
     },
     {
+      "id": "musings-of-a-strange-loop",
+      "title": "Musings of a Strange Loop",
+      "url": "https://vainolo.com/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "blogs",
+      "favorite": false,
+      "dateAdded": "2025-08-01T11:13:06.000Z"
+    },
+    {
       "id": "my-tech-ramblings--a-blog-for-writing-about-my-techie-ramblings",
       "title": "my tech ramblings — A blog for writing about my techie ramblings",
       "url": "https://www.mytechramblings.com/",
@@ -4253,6 +4116,17 @@
       "folderId": "blogs",
       "favorite": false,
       "dateAdded": "2023-12-07T18:20:16.000Z"
+    },
+    {
+      "id": "developer-ramblings-of-kevin-smith",
+      "title": "Developer Ramblings of Kevin Smith",
+      "url": "https://kevsoft.net/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "blogs",
+      "favorite": false,
+      "dateAdded": "2025-08-05T17:53:51.000Z"
     },
     {
       "id": "11-books-every-net-developer-should-read--by-abnoan-muniz--medium",
@@ -11489,7 +11363,7 @@
       "thumbnail": "",
       "tags": [],
       "folderId": "github-pages",
-      "favorite": true,
+      "favorite": false,
       "dateAdded": "2025-04-08T21:15:07.000Z"
     },
     {
@@ -11500,7 +11374,7 @@
       "thumbnail": "",
       "tags": [],
       "folderId": "github-pages",
-      "favorite": true,
+      "favorite": false,
       "dateAdded": "2025-05-16T01:35:55.000Z"
     },
     {
@@ -11515,14 +11389,14 @@
       "dateAdded": "2025-05-16T01:36:08.000Z"
     },
     {
-      "id": "payment-schedule-simulator-1",
+      "id": "payment-schedule-simulator",
       "title": "Payment Schedule Simulator",
       "url": "https://guilherme.stracini.com.br/payment-schedule-simulator/",
       "description": "",
       "thumbnail": "",
       "tags": [],
       "folderId": "github-pages",
-      "favorite": true,
+      "favorite": false,
       "dateAdded": "2025-05-16T01:36:05.000Z"
     },
     {
@@ -11533,7 +11407,7 @@
       "thumbnail": "",
       "tags": [],
       "folderId": "github-pages",
-      "favorite": true,
+      "favorite": false,
       "dateAdded": "2025-06-22T23:12:12.000Z"
     },
     {
@@ -11544,7 +11418,7 @@
       "thumbnail": "",
       "tags": [],
       "folderId": "github-pages",
-      "favorite": true,
+      "favorite": false,
       "dateAdded": "2025-03-09T16:33:55.000Z"
     },
     {
@@ -11566,7 +11440,7 @@
       "thumbnail": "",
       "tags": [],
       "folderId": "portfolio",
-      "favorite": true,
+      "favorite": false,
       "dateAdded": "2024-02-21T19:40:28.000Z"
     },
     {
@@ -11577,7 +11451,7 @@
       "thumbnail": "",
       "tags": [],
       "folderId": "portfolio",
-      "favorite": true,
+      "favorite": false,
       "dateAdded": "2024-01-30T23:54:21.000Z"
     },
     {
@@ -11599,7 +11473,7 @@
       "thumbnail": "",
       "tags": [],
       "folderId": "portfolio",
-      "favorite": true,
+      "favorite": false,
       "dateAdded": "2025-04-27T02:48:22.000Z"
     },
     {
@@ -11610,7 +11484,7 @@
       "thumbnail": "",
       "tags": [],
       "folderId": "portfolio",
-      "favorite": true,
+      "favorite": false,
       "dateAdded": "2025-04-27T02:48:18.000Z"
     },
     {
@@ -11632,8 +11506,239 @@
       "thumbnail": "",
       "tags": [],
       "folderId": "portfolio",
-      "favorite": true,
+      "favorite": false,
       "dateAdded": "2024-07-13T23:56:24.000Z"
+    },
+    {
+      "id": "appveyor",
+      "title": "AppVeyor",
+      "url": "https://ci.appveyor.com/projects",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2024-02-14T00:30:17.000Z"
+    },
+    {
+      "id": "cloud-sign-in---guistracini",
+      "title": "Cloud Sign In - guistracini",
+      "url": "https://idcs-08b4b4b4a52040d4899afac9829daefb.identity.oraclecloud.com/ui/v1/signin",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2025-09-12T09:04:25.000Z"
+    },
+    {
+      "id": "cloud-sign-in---oracle2867",
+      "title": "Cloud Sign In - oracle2867",
+      "url": "https://idcs-fcb285d292e04a189df2becc718a0782.identity.oraclecloud.com/ui/v1/signin",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2025-09-12T09:04:55.000Z"
+    },
+    {
+      "id": "cloudamqp",
+      "title": "CloudAMQP",
+      "url": "https://customer.cloudamqp.com/instance",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2024-02-01T23:48:40.000Z"
+    },
+    {
+      "id": "cpanel---site-quality-monitoring---zerocoolcombr",
+      "title": "cPanel - Site Quality Monitoring - zerocool.com.br",
+      "url": "https://site-quality-monitoring.com/100431/206713/overview/overview",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2024-08-15T09:25:32.000Z"
+    },
+    {
+      "id": "cpanel---zero-cool",
+      "title": "CPanel - Zero Cool",
+      "url": "https://cpanel.zerocool.com.br/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2025-05-09T17:50:05.000Z"
+    },
+    {
+      "id": "github--issues",
+      "title": "GitHub · Issues",
+      "url": "https://github.com/issues?q=is%3Aopen%20AND%20is%3Aissue%20AND%20archived%3Afalse%20AND%20(user%3Aguibranco%20OR%20user%3AApiBR%20OR%20user%3AGuilhermeStracini%20OR%20user%3AInovacaoMediaBrasil%20)",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2025-04-09T00:56:20.000Z"
+    },
+    {
+      "id": "github--pull-requests",
+      "title": "GitHub · Pull requests",
+      "url": "https://github.com/pulls?q=is%3Apr+archived%3Afalse+user%3Aguibranco+user%3AApiBR+user%3Arustdevbr+user%3Abackend-ao+user%3Abackend-pt+user%3Adotnetdevbr+user%3Afrontend-ao+user%3Afrontend-pt+user%3AGuilhermeStracini+user%3AInovacaoMediaBrasil+user%3Apydevbr+is%3Aopen+user%3AdevelopersRJ+user%3Anodejsdevbr+user%3Arubydevbr+sort%3Aupdated-desc",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2023-09-22T10:18:33.000Z"
+    },
+    {
+      "id": "github--pull-requests--not-blocked",
+      "title": "GitHub · Pull requests · Not Blocked",
+      "url": "https://github.com/pulls?q=is%3Apr+archived%3Afalse+user%3Aguibranco+user%3AApiBR+user%3Arustdevbr+user%3Abackend-ao+user%3Abackend-pt+user%3Adotnetdevbr+user%3Afrontend-ao+user%3Afrontend-pt+user%3AGuilhermeStracini+user%3AInovacaoMediaBrasil+user%3Apydevbr+is%3Aopen+user%3AdevelopersRJ+user%3Anodejsdevbr+user%3Arubydevbr+sort%3Aupdated-desc+-label%3A%22%F0%9F%9A%B7+blocked%22+",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2024-09-19T16:28:46.000Z"
+    },
+    {
+      "id": "github--pull-requests--not-gitauto",
+      "title": "GitHub · Pull requests · Not GitAuto",
+      "url": "https://github.com/pulls?q=is%3Apr+archived%3Afalse+user%3Aguibranco+user%3AApiBR+user%3Arustdevbr+user%3Abackend-ao+user%3Abackend-pt+user%3Adotnetdevbr+user%3Afrontend-ao+user%3Afrontend-pt+user%3AGuilhermeStracini+user%3AInovacaoMediaBrasil+user%3Apydevbr+is%3Aopen+user%3AdevelopersRJ+user%3Anodejsdevbr+user%3Arubydevbr+sort%3Aupdated-desc+-label%3A%22gitauto%22+",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2024-11-06T14:25:28.000Z"
+    },
+    {
+      "id": "gstraccini-bot--playground",
+      "title": "GStraccini-bot | Playground",
+      "url": "https://straccini.com/bot-playground/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2025-07-04T17:28:33.000Z"
+    },
+    {
+      "id": "healthchecksio",
+      "title": "Healthchecks.io",
+      "url": "https://healthchecks.io/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2023-10-23T22:59:21.000Z"
+    },
+    {
+      "id": "holori---home",
+      "title": "Holori - Home",
+      "url": "https://app.holori.com/dashboard/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2024-03-05T23:32:46.000Z"
+    },
+    {
+      "id": "monitors--uptimerobot",
+      "title": "Monitors | UptimeRobot",
+      "url": "https://dashboard.uptimerobot.com/monitors",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2024-10-11T10:35:13.000Z"
+    },
+    {
+      "id": "nuvem-hospedagem",
+      "title": "Nuvem Hospedagem",
+      "url": "https://cliente.nuvemhospedagem.com.br/clientarea.php?action=productdetails&id=6303",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2023-10-22T18:52:24.000Z"
+    },
+    {
+      "id": "ovhcloud",
+      "title": "OVHcloud",
+      "url": "https://www.ovh.com/manager/#/hub",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2023-10-31T15:52:15.000Z"
+    },
+    {
+      "id": "pixee-platform",
+      "title": "Pixee Platform",
+      "url": "https://app.pixee.ai/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2025-04-09T00:50:15.000Z"
+    },
+    {
+      "id": "projects-monitor-1",
+      "title": "Projects Monitor",
+      "url": "https://guilherme.straccini.com/projects-monitor/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2024-08-12T18:07:24.000Z"
+    },
+    {
+      "id": "vercel",
+      "title": "Vercel",
+      "url": "https://vercel.com/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2024-02-16T02:06:42.000Z"
+    },
+    {
+      "id": "webhooks-handler---swagger",
+      "title": "Webhooks Handler - Swagger",
+      "url": "https://webhooks.straccini.com/swagger/index.html",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2025-07-01T10:41:11.000Z"
+    },
+    {
+      "id": "webmail---zero-cool",
+      "title": "Webmail - Zero Cool",
+      "url": "https://webmail.zerocool.com.br/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2025-05-09T17:50:44.000Z"
     },
     {
       "id": "net---is-it-possible-to-set-the-targetframework-on-the-commandline-with-dotnet-build--restore---stack-overflow",
@@ -12659,6 +12764,17 @@
       "dateAdded": "2024-06-12T08:57:36.000Z"
     },
     {
+      "id": "building-high-performance-net-apps-with-c-channels--by-anton-martyniuk--aug-2025--medium",
+      "title": "Building High-Performance .NET Apps With C# Channels | by Anton Martyniuk | Aug, 2025 | Medium",
+      "url": "https://medium.com/@anton.martyniuk/building-high-performance-net-apps-with-c-channels-4c1f8e83b22d",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "6---pending-read",
+      "favorite": false,
+      "dateAdded": "2025-08-06T09:20:31.000Z"
+    },
+    {
       "id": "building-reactive-systems-with-example-in-c-net--codenx",
       "title": "Building Reactive Systems with Example in C# .NET | CodeNx",
       "url": "https://medium.com/codenx/reactive-systems-in-c-net-5aba12d087e0",
@@ -13163,6 +13279,17 @@
       "folderId": "6---pending-read",
       "favorite": false,
       "dateAdded": "2023-11-22T17:21:46.000Z"
+    },
+    {
+      "id": "history",
+      "title": "History",
+      "url": "chrome://history/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "6---pending-read",
+      "favorite": false,
+      "dateAdded": "2025-08-11T16:21:30.000Z"
     },
     {
       "id": "hmmm-task-or-valuetask-as-a-software-engineer-working-in-the--by-mabrouk-mahdhi--nov-2023--medium",
@@ -14551,6 +14678,17 @@
       "dateAdded": "2024-07-10T16:56:38.000Z"
     },
     {
+      "id": "20x-faster-logging-in-net--but-you-need-to-sweat-for-it--by-viktor-ponamarev--jul-2025--medium",
+      "title": "20x faster logging in .NET — but you need to sweat for it | by Viktor Ponamarev | Jul, 2025 | Medium",
+      "url": "https://medium.com/@vikpoca/20x-faster-logging-in-net-but-you-need-to-sweat-for-it-3ddfdf7db988",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "7---must-work-on-it",
+      "favorite": false,
+      "dateAdded": "2025-08-14T15:31:33.000Z"
+    },
+    {
       "id": "5-fun-projects-to-learn-aws-introduction--by-bubu-tripathy--medium",
       "title": "5 Fun Projects to learn AWS. Introduction | by Bubu Tripathy | Medium",
       "url": "https://medium.com/@bubu.tripathy/5-fun-projects-to-learn-aws-e5884400dc89",
@@ -14694,6 +14832,17 @@
       "dateAdded": "2025-02-12T01:08:33.000Z"
     },
     {
+      "id": "microservice-dapr-dapper-and-postgresql-net-10--by-engr-md-hasan-monsur--jul-2025--medium",
+      "title": "Microservice: Dapr, Dapper, and PostgreSQL (.NET 10) | by Engr. Md. Hasan Monsur | Jul, 2025 | Medium",
+      "url": "https://medium.com/@hasanmcse/microservice-dapr-dapper-and-postgresql-net-10-66597c0fa6ad",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "7---must-work-on-it",
+      "favorite": false,
+      "dateAdded": "2025-08-14T15:31:27.000Z"
+    },
+    {
       "id": "swintonscreenshot-website-cameraflash-a-github-action-to-capture-screenshots-of-a-website-across-windows-mac-and-linux",
       "title": "swinton/screenshot-website: :camera_flash: A GitHub Action to capture screenshots of a website, across Windows, Mac, and Linux",
       "url": "https://github.com/swinton/screenshot-website",
@@ -14703,6 +14852,17 @@
       "folderId": "7---must-work-on-it",
       "favorite": false,
       "dateAdded": "2025-02-12T01:09:07.000Z"
+    },
+    {
+      "id": "the-ultimate-guide-to-net-api-logs-in-grafana-with-serilog--by-nagaraj--jun-2025--level-up-coding",
+      "title": "The Ultimate Guide to .NET API Logs in Grafana with Serilog | by Nagaraj | Jun, 2025 | Level Up Coding",
+      "url": "https://levelup.gitconnected.com/the-ultimate-guide-to-net-api-logs-in-grafana-with-serilog-4f49eaf4d798",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "7---must-work-on-it",
+      "favorite": false,
+      "dateAdded": "2025-08-06T09:20:20.000Z"
     },
     {
       "id": "update-screenshot-websitejs--axolstudioscreenshot-website6906eb6",
