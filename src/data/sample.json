@@ -61,11 +61,6 @@
       "parentId": "1---personal"
     },
     {
-      "id": "properties",
-      "name": "Properties",
-      "parentId": "1---personal"
-    },
-    {
       "id": "trips",
       "name": "Trips",
       "parentId": "1---personal"
@@ -1285,17 +1280,6 @@
       "dateAdded": "2023-12-19T21:09:06.000Z"
     },
     {
-      "id": "multicanais-oficial--futebol-ao-vivo-grtis-em-hd",
-      "title": "Multicanais Oficial | Futebol Ao Vivo Grátis em HD",
-      "url": "https://multicanais.casa/",
-      "description": "",
-      "thumbnail": "",
-      "tags": [],
-      "folderId": "entertainment",
-      "favorite": false,
-      "dateAdded": "2025-06-02T12:53:31.000Z"
-    },
-    {
       "id": "super-tv-ao-vivo",
       "title": "SUPER TV AO VIVO",
       "url": "https://supertvaovivo.fan/",
@@ -2218,28 +2202,6 @@
       "folderId": "movies",
       "favorite": false,
       "dateAdded": "2023-09-20T15:31:10.000Z"
-    },
-    {
-      "id": "merit-santa-cruz-studio-nr-e-resid---winker",
-      "title": "MERIT SANTA CRUZ STUDIO NR E RESID - Winker",
-      "url": "https://app.winker.com.br/",
-      "description": "",
-      "thumbnail": "",
-      "tags": [],
-      "folderId": "properties",
-      "favorite": false,
-      "dateAdded": "2024-06-25T19:52:47.000Z"
-    },
-    {
-      "id": "portal-do-cliente---dialogo-engenharia",
-      "title": "Portal do Cliente - Dialogo Engenharia",
-      "url": "https://portaldocliente.dialogo.com.br/home.aspx",
-      "description": "",
-      "thumbnail": "",
-      "tags": [],
-      "folderId": "properties",
-      "favorite": false,
-      "dateAdded": "2024-06-25T20:42:53.000Z"
     },
     {
       "id": "processo-reserva---hotis-decameron",
@@ -4189,6 +4151,17 @@
       "dateAdded": "2023-07-17T18:09:54.000Z"
     },
     {
+      "id": "musings-of-a-strange-loop",
+      "title": "Musings of a Strange Loop",
+      "url": "https://vainolo.com/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "blogs",
+      "favorite": false,
+      "dateAdded": "2025-08-01T11:13:06.000Z"
+    },
+    {
       "id": "my-tech-ramblings--a-blog-for-writing-about-my-techie-ramblings",
       "title": "my tech ramblings — A blog for writing about my techie ramblings",
       "url": "https://www.mytechramblings.com/",
@@ -4253,6 +4226,17 @@
       "folderId": "blogs",
       "favorite": false,
       "dateAdded": "2023-12-07T18:20:16.000Z"
+    },
+    {
+      "id": "developer-ramblings-of-kevin-smith",
+      "title": "Developer Ramblings of Kevin Smith",
+      "url": "https://kevsoft.net/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "blogs",
+      "favorite": false,
+      "dateAdded": "2025-08-05T17:53:51.000Z"
     },
     {
       "id": "11-books-every-net-developer-should-read--by-abnoan-muniz--medium",
@@ -11478,7 +11462,7 @@
       "thumbnail": "",
       "tags": [],
       "folderId": "github-pages",
-      "favorite": false,
+      "favorite": true,
       "dateAdded": "2025-03-12T14:05:10.000Z"
     },
     {
@@ -11511,11 +11495,11 @@
       "thumbnail": "",
       "tags": [],
       "folderId": "github-pages",
-      "favorite": false,
+      "favorite": true,
       "dateAdded": "2025-05-16T01:36:08.000Z"
     },
     {
-      "id": "payment-schedule-simulator-1",
+      "id": "payment-schedule-simulator",
       "title": "Payment Schedule Simulator",
       "url": "https://guilherme.stracini.com.br/payment-schedule-simulator/",
       "description": "",
@@ -11555,7 +11539,7 @@
       "thumbnail": "",
       "tags": [],
       "folderId": "portfolio",
-      "favorite": false,
+      "favorite": true,
       "dateAdded": "2021-02-24T14:10:21.000Z"
     },
     {
@@ -11594,7 +11578,7 @@
     {
       "id": "guilherme-branco-stracini---senior-software-engineer",
       "title": "Guilherme Branco Stracini - Senior Software Engineer",
-      "url": "https://guilherme.stracini.com.br/?utm_campaign=custom_domain&utm_media=redirect&utm_source=guilhermebranco.com.br#/about-me",
+      "url": "https://guilherme.stracini.com.br/",
       "description": "",
       "thumbnail": "",
       "tags": [],
@@ -11627,13 +11611,24 @@
     {
       "id": "zero-cool",
       "title": "Zero Cool",
-      "url": "https://zerocool.com.br/portfolio/?utm_campaign=custom_domain&utm_media=redirect&utm_source=zerocool.com.br",
+      "url": "https://zerocool.com.br/portfolio/",
       "description": "",
       "thumbnail": "",
       "tags": [],
       "folderId": "portfolio",
       "favorite": true,
       "dateAdded": "2024-07-13T23:56:24.000Z"
+    },
+    {
+      "id": "appveyor",
+      "title": "AppVeyor",
+      "url": "https://ci.appveyor.com/projects",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2024-02-14T00:30:17.000Z"
     },
     {
       "id": "net---is-it-possible-to-set-the-targetframework-on-the-commandline-with-dotnet-build--restore---stack-overflow",
@@ -12659,6 +12654,17 @@
       "dateAdded": "2024-06-12T08:57:36.000Z"
     },
     {
+      "id": "building-high-performance-net-apps-with-c-channels--by-anton-martyniuk--aug-2025--medium",
+      "title": "Building High-Performance .NET Apps With C# Channels | by Anton Martyniuk | Aug, 2025 | Medium",
+      "url": "https://medium.com/@anton.martyniuk/building-high-performance-net-apps-with-c-channels-4c1f8e83b22d",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "6---pending-read",
+      "favorite": false,
+      "dateAdded": "2025-08-06T09:20:31.000Z"
+    },
+    {
       "id": "building-reactive-systems-with-example-in-c-net--codenx",
       "title": "Building Reactive Systems with Example in C# .NET | CodeNx",
       "url": "https://medium.com/codenx/reactive-systems-in-c-net-5aba12d087e0",
@@ -13163,6 +13169,17 @@
       "folderId": "6---pending-read",
       "favorite": false,
       "dateAdded": "2023-11-22T17:21:46.000Z"
+    },
+    {
+      "id": "history",
+      "title": "History",
+      "url": "chrome://history/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "6---pending-read",
+      "favorite": false,
+      "dateAdded": "2025-08-11T16:21:30.000Z"
     },
     {
       "id": "hmmm-task-or-valuetask-as-a-software-engineer-working-in-the--by-mabrouk-mahdhi--nov-2023--medium",
@@ -14551,6 +14568,17 @@
       "dateAdded": "2024-07-10T16:56:38.000Z"
     },
     {
+      "id": "20x-faster-logging-in-net--but-you-need-to-sweat-for-it--by-viktor-ponamarev--jul-2025--medium",
+      "title": "20x faster logging in .NET — but you need to sweat for it | by Viktor Ponamarev | Jul, 2025 | Medium",
+      "url": "https://medium.com/@vikpoca/20x-faster-logging-in-net-but-you-need-to-sweat-for-it-3ddfdf7db988",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "7---must-work-on-it",
+      "favorite": false,
+      "dateAdded": "2025-08-14T15:31:33.000Z"
+    },
+    {
       "id": "5-fun-projects-to-learn-aws-introduction--by-bubu-tripathy--medium",
       "title": "5 Fun Projects to learn AWS. Introduction | by Bubu Tripathy | Medium",
       "url": "https://medium.com/@bubu.tripathy/5-fun-projects-to-learn-aws-e5884400dc89",
@@ -14694,6 +14722,17 @@
       "dateAdded": "2025-02-12T01:08:33.000Z"
     },
     {
+      "id": "microservice-dapr-dapper-and-postgresql-net-10--by-engr-md-hasan-monsur--jul-2025--medium",
+      "title": "Microservice: Dapr, Dapper, and PostgreSQL (.NET 10) | by Engr. Md. Hasan Monsur | Jul, 2025 | Medium",
+      "url": "https://medium.com/@hasanmcse/microservice-dapr-dapper-and-postgresql-net-10-66597c0fa6ad",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "7---must-work-on-it",
+      "favorite": false,
+      "dateAdded": "2025-08-14T15:31:27.000Z"
+    },
+    {
       "id": "swintonscreenshot-website-cameraflash-a-github-action-to-capture-screenshots-of-a-website-across-windows-mac-and-linux",
       "title": "swinton/screenshot-website: :camera_flash: A GitHub Action to capture screenshots of a website, across Windows, Mac, and Linux",
       "url": "https://github.com/swinton/screenshot-website",
@@ -14703,6 +14742,17 @@
       "folderId": "7---must-work-on-it",
       "favorite": false,
       "dateAdded": "2025-02-12T01:09:07.000Z"
+    },
+    {
+      "id": "the-ultimate-guide-to-net-api-logs-in-grafana-with-serilog--by-nagaraj--jun-2025--level-up-coding",
+      "title": "The Ultimate Guide to .NET API Logs in Grafana with Serilog | by Nagaraj | Jun, 2025 | Level Up Coding",
+      "url": "https://levelup.gitconnected.com/the-ultimate-guide-to-net-api-logs-in-grafana-with-serilog-4f49eaf4d798",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "7---must-work-on-it",
+      "favorite": false,
+      "dateAdded": "2025-08-06T09:20:20.000Z"
     },
     {
       "id": "update-screenshot-websitejs--axolstudioscreenshot-website6906eb6",
