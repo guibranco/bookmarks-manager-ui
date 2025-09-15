@@ -763,6 +763,116 @@
   ],
   "bookmarks": [
     {
+      "id": "bookmark-1",
+      "title": "GitHub",
+      "url": "https://github.com",
+      "description": "Where the world builds software",
+      "thumbnail": "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "tags": ["development", "code", "git"],
+      "folderId": "2---tech",
+      "favorite": true,
+      "dateAdded": "2023-01-15T12:00:00Z"
+    },
+    {
+      "id": "bookmark-2",
+      "title": "Stack Overflow",
+      "url": "https://stackoverflow.com",
+      "description": "Where developers learn, share, & build careers",
+      "thumbnail": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "tags": ["development", "questions", "answers"],
+      "folderId": "2---tech",
+      "favorite": false,
+      "dateAdded": "2023-02-10T14:30:00Z"
+    },
+    {
+      "id": "bookmark-3",
+      "title": "Netflix",
+      "url": "https://netflix.com",
+      "description": "Watch TV shows and movies online",
+      "thumbnail": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "tags": ["entertainment", "streaming", "movies"],
+      "folderId": "entertainment",
+      "favorite": true,
+      "dateAdded": "2023-03-05T18:45:00Z"
+    },
+    {
+      "id": "bookmark-4",
+      "title": "Coursera",
+      "url": "https://coursera.org",
+      "description": "Learn without limits",
+      "thumbnail": "https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "tags": ["education", "courses", "learning"],
+      "folderId": "2---tech",
+      "favorite": false,
+      "dateAdded": "2023-04-20T09:15:00Z"
+    },
+    {
+      "id": "bookmark-5",
+      "title": "Amazon",
+      "url": "https://amazon.com",
+      "description": "Online shopping from the earth\\'s biggest selection",
+      "thumbnail": "https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "tags": ["shopping", "retail", "ecommerce"],
+      "folderId": "buy",
+      "favorite": false,
+      "dateAdded": "2023-05-12T11:30:00Z"
+    },
+    {
+      "id": "bookmark-6",
+      "title": "YouTube",
+      "url": "https://youtube.com",
+      "description": "Enjoy the videos and music you love",
+      "thumbnail": "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "tags": ["video", "entertainment", "streaming"],
+      "folderId": "entertainment",
+      "favorite": true,
+      "dateAdded": "2023-06-08T16:20:00Z"
+    },
+    {
+      "id": "bookmark-7",
+      "title": "MDN Web Docs",
+      "url": "https://developer.mozilla.org",
+      "description": "Resources for developers, by developers",
+      "thumbnail": "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "tags": ["development", "documentation", "web"],
+      "folderId": "2---tech",
+      "favorite": false,
+      "dateAdded": "2023-07-25T13:45:00Z"
+    },
+    {
+      "id": "bookmark-8",
+      "title": "Mint",
+      "url": "https://mint.intuit.com",
+      "description": "Personal finance management",
+      "thumbnail": "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "tags": ["finance", "budgeting", "money"],
+      "folderId": "1---personal",
+      "favorite": false,
+      "dateAdded": "2023-08-17T10:10:00Z"
+    },
+    {
+      "id": "bookmark-9",
+      "title": "Duolingo",
+      "url": "https://duolingo.com",
+      "description": "Learn languages for free",
+      "thumbnail": "https://images.unsplash.com/photo-1610484826967-09c5720778c7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "tags": ["language", "learning", "education"],
+      "folderId": "1---personal",
+      "favorite": true,
+      "dateAdded": "2023-09-05T08:30:00Z"
+    },
+    {
+      "id": "bookmark-10",
+      "title": "Spotify",
+      "url": "https://spotify.com",
+      "description": "Music for everyone",
+      "thumbnail": "https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "tags": ["music", "streaming", "entertainment"],
+      "folderId": "entertainment",
+      "favorite": false,
+      "dateAdded": "2023-10-12T14:20:00Z"
+    },
+    {
       "id": "best-seller-clothing-for-men",
       "title": "Best Seller Clothing For Men",
       "url": "https://www.cotosen.com/activity/best-seller-f-6811/?tspu=SP22040218CR,SP76NL4U71U,SP220308N3CV,SP211224U0VO,SP2202252EBQ,SP2203110L9D,SP220517S5QN,SPWUL2OGSM3&utm_source=google&utm_medium=7223384835&utm_campaign=15798102638~[U2164]~&utm_adset=134424598760&utm_content=599879747709&utm_term=U2164&gclid=CjwKCAjwtIaVBhBkEiwAsr7-c_G73ZoGRVULAwV9vWV_aA_yZgrWuw6q-KoTwwzwsYqk96SVSoY2WBoCBRQQAvD_BwE",
