@@ -11539,7 +11539,7 @@
       "thumbnail": "",
       "tags": [],
       "folderId": "portfolio",
-      "favorite": false,
+      "favorite": true,
       "dateAdded": "2021-02-24T14:10:21.000Z"
     },
     {
@@ -11550,7 +11550,7 @@
       "thumbnail": "",
       "tags": [],
       "folderId": "portfolio",
-      "favorite": false,
+      "favorite": true,
       "dateAdded": "2024-02-21T19:40:28.000Z"
     },
     {
@@ -11561,7 +11561,7 @@
       "thumbnail": "",
       "tags": [],
       "folderId": "portfolio",
-      "favorite": false,
+      "favorite": true,
       "dateAdded": "2024-01-30T23:54:21.000Z"
     },
     {
@@ -11578,12 +11578,12 @@
     {
       "id": "guilherme-branco-stracini---senior-software-engineer",
       "title": "Guilherme Branco Stracini - Senior Software Engineer",
-      "url": "https://guilherme.stracini.com.br/?utm_campaign=custom_domain&utm_media=redirect&utm_source=guilhermebranco.com.br#/about-me",
+      "url": "https://guilherme.stracini.com.br/",
       "description": "",
       "thumbnail": "",
       "tags": [],
       "folderId": "portfolio",
-      "favorite": false,
+      "favorite": true,
       "dateAdded": "2025-04-27T02:48:22.000Z"
     },
     {
@@ -11594,7 +11594,7 @@
       "thumbnail": "",
       "tags": [],
       "folderId": "portfolio",
-      "favorite": false,
+      "favorite": true,
       "dateAdded": "2025-04-27T02:48:18.000Z"
     },
     {
@@ -11611,12 +11611,12 @@
     {
       "id": "zero-cool",
       "title": "Zero Cool",
-      "url": "https://zerocool.com.br/portfolio/?utm_campaign=custom_domain&utm_media=redirect&utm_source=zerocool.com.br",
+      "url": "https://zerocool.com.br/portfolio/",
       "description": "",
       "thumbnail": "",
       "tags": [],
       "folderId": "portfolio",
-      "favorite": false,
+      "favorite": true,
       "dateAdded": "2024-07-13T23:56:24.000Z"
     },
     {
