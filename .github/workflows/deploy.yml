@@ -28,13 +28,13 @@ jobs:
           fetch-depth: 0
 
       - name: Install GitVersion
-        uses: gittools/actions/gitversion/setup@v4.3.3
+        uses: gittools/actions/gitversion/setup@v4.4.1
         with:
           versionSpec: "6.x"
 
       - name: Determine Version
         id: gitversion
-        uses: gittools/actions/gitversion/execute@v4.3.3
+        uses: gittools/actions/gitversion/execute@v4.4.1
 
       - name: Set up Node.js
         uses: actions/setup-node@v6
@@ -49,7 +49,7 @@ jobs:
         run: npm run build
 
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: build-output
           path: dist/
@@ -59,7 +59,7 @@ jobs:
 
       # - name: Upload test results
       #   if: always()
-      #   uses: actions/upload-artifact@v6
+      #   uses: actions/upload-artifact@v7
       #   with:
       #     name: test-results
       #     path: test-results.json
@@ -71,7 +71,7 @@ jobs:
 
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           name: build-output
           path: ./dist
@@ -96,7 +96,7 @@ jobs:
 
     steps:
       - name: Create Release
-        uses: ncipollo/release-action@v1.20.0
+        uses: ncipollo/release-action@v1.21.0
         with:
           skipIfReleaseExists: true
           allowUpdates: false
