@@ -768,7 +768,11 @@
       "url": "https://github.com",
       "description": "Where the world builds software",
       "thumbnail": "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      "tags": ["development", "code", "git"],
+      "tags": [
+        "development",
+        "code",
+        "git"
+      ],
       "folderId": "2---tech",
       "favorite": true,
       "dateAdded": "2023-01-15T12:00:00Z"
@@ -779,7 +783,11 @@
       "url": "https://stackoverflow.com",
       "description": "Where developers learn, share, & build careers",
       "thumbnail": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      "tags": ["development", "questions", "answers"],
+      "tags": [
+        "development",
+        "questions",
+        "answers"
+      ],
       "folderId": "2---tech",
       "favorite": false,
       "dateAdded": "2023-02-10T14:30:00Z"
@@ -790,7 +798,11 @@
       "url": "https://netflix.com",
       "description": "Watch TV shows and movies online",
       "thumbnail": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      "tags": ["entertainment", "streaming", "movies"],
+      "tags": [
+        "entertainment",
+        "streaming",
+        "movies"
+      ],
       "folderId": "entertainment",
       "favorite": true,
       "dateAdded": "2023-03-05T18:45:00Z"
@@ -801,7 +813,11 @@
       "url": "https://coursera.org",
       "description": "Learn without limits",
       "thumbnail": "https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      "tags": ["education", "courses", "learning"],
+      "tags": [
+        "education",
+        "courses",
+        "learning"
+      ],
       "folderId": "2---tech",
       "favorite": false,
       "dateAdded": "2023-04-20T09:15:00Z"
@@ -812,7 +828,11 @@
       "url": "https://amazon.com",
       "description": "Online shopping from the earth\\'s biggest selection",
       "thumbnail": "https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      "tags": ["shopping", "retail", "ecommerce"],
+      "tags": [
+        "shopping",
+        "retail",
+        "ecommerce"
+      ],
       "folderId": "buy",
       "favorite": false,
       "dateAdded": "2023-05-12T11:30:00Z"
@@ -823,7 +843,11 @@
       "url": "https://youtube.com",
       "description": "Enjoy the videos and music you love",
       "thumbnail": "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      "tags": ["video", "entertainment", "streaming"],
+      "tags": [
+        "video",
+        "entertainment",
+        "streaming"
+      ],
       "folderId": "entertainment",
       "favorite": true,
       "dateAdded": "2023-06-08T16:20:00Z"
@@ -834,7 +858,11 @@
       "url": "https://developer.mozilla.org",
       "description": "Resources for developers, by developers",
       "thumbnail": "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      "tags": ["development", "documentation", "web"],
+      "tags": [
+        "development",
+        "documentation",
+        "web"
+      ],
       "folderId": "2---tech",
       "favorite": false,
       "dateAdded": "2023-07-25T13:45:00Z"
@@ -845,7 +873,11 @@
       "url": "https://mint.intuit.com",
       "description": "Personal finance management",
       "thumbnail": "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      "tags": ["finance", "budgeting", "money"],
+      "tags": [
+        "finance",
+        "budgeting",
+        "money"
+      ],
       "folderId": "1---personal",
       "favorite": false,
       "dateAdded": "2023-08-17T10:10:00Z"
@@ -856,7 +888,11 @@
       "url": "https://duolingo.com",
       "description": "Learn languages for free",
       "thumbnail": "https://images.unsplash.com/photo-1610484826967-09c5720778c7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      "tags": ["language", "learning", "education"],
+      "tags": [
+        "language",
+        "learning",
+        "education"
+      ],
       "folderId": "1---personal",
       "favorite": true,
       "dateAdded": "2023-09-05T08:30:00Z"
@@ -867,7 +903,11 @@
       "url": "https://spotify.com",
       "description": "Music for everyone",
       "thumbnail": "https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      "tags": ["music", "streaming", "entertainment"],
+      "tags": [
+        "music",
+        "streaming",
+        "entertainment"
+      ],
       "folderId": "entertainment",
       "favorite": false,
       "dateAdded": "2023-10-12T14:20:00Z"
@@ -14775,6 +14815,369 @@
       "folderId": "7---must-work-on-it",
       "favorite": false,
       "dateAdded": "2024-12-26T14:49:50.000Z"
+    },
+    {
+      "id": "build--google-ai-studio",
+      "title": "Build | Google AI Studio",
+      "url": "https://aistudio.google.com/apps",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "productivity",
+      "favorite": false,
+      "dateAdded": "2026-04-16T23:05:51.000Z"
+    },
+    {
+      "id": "gigacode---ferramentas-para-desenvolvedores",
+      "title": "GigaCode - Ferramentas para desenvolvedores",
+      "url": "https://gigacode.com.br/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "productivity",
+      "favorite": false,
+      "dateAdded": "2026-04-03T10:56:54.000Z"
+    },
+    {
+      "id": "stitch---design-with-ai",
+      "title": "Stitch - Design with AI",
+      "url": "https://stitch.withgoogle.com/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "productivity",
+      "favorite": false,
+      "dateAdded": "2026-04-09T09:00:56.000Z"
+    },
+    {
+      "id": "hacktoberfest-2025",
+      "title": "Hacktoberfest 2025",
+      "url": "https://hacktoberfest.com/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "apis--services--tools",
+      "favorite": false,
+      "dateAdded": "2025-10-16T14:22:34.000Z"
+    },
+    {
+      "id": "gstraccini-bot--portal",
+      "title": "GStraccini-bot | Portal",
+      "url": "https://guilherme.stracini.com.br/gstraccini-bot-portal/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "github-pages",
+      "favorite": false,
+      "dateAdded": "2025-09-17T17:48:04.000Z"
+    },
+    {
+      "id": "cloud-sign-in",
+      "title": "Cloud Sign In",
+      "url": "https://www.oracle.com/cloud/sign-in.html",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2025-11-12T15:21:13.000Z"
+    },
+    {
+      "id": "cloudamqp",
+      "title": "CloudAMQP",
+      "url": "https://customer.cloudamqp.com/instance",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2024-02-01T23:48:40.000Z"
+    },
+    {
+      "id": "cpanel---site-quality-monitoring---zerocoolcombr",
+      "title": "cPanel - Site Quality Monitoring - zerocool.com.br",
+      "url": "https://site-quality-monitoring.com/100431/206713/overview/overview",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2024-08-15T09:25:32.000Z"
+    },
+    {
+      "id": "cpanel---zero-cool",
+      "title": "CPanel - Zero Cool",
+      "url": "https://cpanel.zerocool.com.br/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2025-05-09T17:50:05.000Z"
+    },
+    {
+      "id": "github--issues",
+      "title": "GitHub · Issues",
+      "url": "https://github.com/issues?q=is%3Aopen%20AND%20is%3Aissue%20AND%20archived%3Afalse%20AND%20(user%3Aguibranco%20OR%20user%3AApiBR%20OR%20user%3AGuilhermeStracini%20OR%20user%3AInovacaoMediaBrasil%20)",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2025-04-09T00:56:20.000Z"
+    },
+    {
+      "id": "github--pull-requests",
+      "title": "GitHub · Pull requests",
+      "url": "https://github.com/pulls?q=is%3Apr+archived%3Afalse+user%3Aguibranco+user%3AApiBR+user%3Arustdevbr+user%3Abackend-ao+user%3Abackend-pt+user%3Adotnetdevbr+user%3Afrontend-ao+user%3Afrontend-pt+user%3AGuilhermeStracini+user%3AInovacaoMediaBrasil+user%3Apydevbr+is%3Aopen+user%3AdevelopersRJ+user%3Anodejsdevbr+user%3Arubydevbr+sort%3Aupdated-desc",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2023-09-22T10:18:33.000Z"
+    },
+    {
+      "id": "gstraccini-bot--playground",
+      "title": "GStraccini-bot | Playground",
+      "url": "https://straccini.com/bot-playground/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2025-07-04T17:28:33.000Z"
+    },
+    {
+      "id": "healthchecksio",
+      "title": "Healthchecks.io",
+      "url": "https://healthchecks.io/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2023-10-23T22:59:21.000Z"
+    },
+    {
+      "id": "holori---home",
+      "title": "Holori - Home",
+      "url": "https://app.holori.com/dashboard/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2024-03-05T23:32:46.000Z"
+    },
+    {
+      "id": "logstream-server--api-docs",
+      "title": "LogStream-server — API Docs",
+      "url": "https://logs.straccini.com/docs#/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2026-04-01T08:58:45.000Z"
+    },
+    {
+      "id": "monitors--uptimerobot",
+      "title": "Monitors | UptimeRobot",
+      "url": "https://dashboard.uptimerobot.com/monitors",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2024-10-11T10:35:13.000Z"
+    },
+    {
+      "id": "nuvem-hospedagem",
+      "title": "Nuvem Hospedagem",
+      "url": "https://cliente.nuvemhospedagem.com.br/clientarea.php?action=productdetails&id=6303",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2023-10-22T18:52:24.000Z"
+    },
+    {
+      "id": "ovhcloud",
+      "title": "OVHcloud",
+      "url": "https://www.ovh.com/manager/#/hub",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2023-10-31T15:52:15.000Z"
+    },
+    {
+      "id": "pixee-platform",
+      "title": "Pixee Platform",
+      "url": "https://app.pixee.ai/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2025-04-09T00:50:15.000Z"
+    },
+    {
+      "id": "projects-monitor-1",
+      "title": "Projects Monitor",
+      "url": "https://guilherme.straccini.com/projects-monitor/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2024-08-12T18:07:24.000Z"
+    },
+    {
+      "id": "vercel",
+      "title": "Vercel",
+      "url": "https://vercel.com/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2024-02-16T02:06:42.000Z"
+    },
+    {
+      "id": "webhooks-handler---swagger",
+      "title": "Webhooks Handler - Swagger",
+      "url": "https://webhooks.straccini.com/swagger/index.html",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2025-07-01T10:41:11.000Z"
+    },
+    {
+      "id": "webmail---zero-cool",
+      "title": "Webmail - Zero Cool",
+      "url": "https://webmail.zerocool.com.br/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2025-05-09T17:50:44.000Z"
+    },
+    {
+      "id": "documentao-da-api--feriados-api",
+      "title": "Documentação da API | Feriados API",
+      "url": "https://www.feriadosapi.com/docs",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "bookmarks-bar",
+      "favorite": false,
+      "dateAdded": "2026-02-03T18:55:17.000Z"
+    },
+    {
+      "id": "fitted-caps---sleek--stylish--hatstoreie",
+      "title": "Fitted Caps - Sleek & Stylish | Hatstore.ie",
+      "url": "https://hatstore.ie/fitted/?facets=brand%3ANew+Era%7Ccustom.team%3ANew+York+Yankees&sort=popular",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "bookmarks-bar",
+      "favorite": false,
+      "dateAdded": "2025-10-16T11:04:06.000Z"
+    },
+    {
+      "id": "how-much-can-i-save---cyclescheme-ie",
+      "title": "How much can I save? - Cyclescheme IE",
+      "url": "https://www.cyclescheme.ie/calculator",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "bookmarks-bar",
+      "favorite": false,
+      "dateAdded": "2026-03-06T18:53:40.000Z"
+    },
+    {
+      "id": "json-editor-online-edit-json-format-json-query-json",
+      "title": "JSON Editor Online: edit JSON, format JSON, query JSON",
+      "url": "https://jsoneditoronline.org/#left=local.bokovu&right=local.jivamo",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "bookmarks-bar",
+      "favorite": false,
+      "dateAdded": "2026-02-04T11:17:58.000Z"
+    },
+    {
+      "id": "mastering-background-jobs-in-net-9-with-worker-services-and-channels--by-vahid-bakhtiary--nov-2025--medium",
+      "title": "Mastering Background Jobs in .NET 9 with Worker Services and Channels | by Vahid Bakhtiary | Nov, 2025 | Medium",
+      "url": "https://medium.com/@vahidbakhtiaryinfo/mastering-background-jobs-in-net-9-with-worker-services-and-channels-a5766475e869",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "bookmarks-bar",
+      "favorite": false,
+      "dateAdded": "2025-11-19T11:38:56.000Z"
+    },
+    {
+      "id": "new-era-flat-brim-59fifty-essential-new-york-yankees-mlb-red-fitted-cap-caphuntersie",
+      "title": "New Era Flat Brim 59FIFTY Essential New York Yankees MLB Red Fitted Cap: Caphunters.ie",
+      "url": "https://caphunters.ie/caps/2943-new-era-flat-brim-59fifty-essential-new-york-yankees-mlb-red-fitted-cap.html",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "bookmarks-bar",
+      "favorite": false,
+      "dateAdded": "2025-10-16T11:04:40.000Z"
+    },
+    {
+      "id": "proton-pass-pricing--plans--proton",
+      "title": "Proton Pass: Pricing & Plans | Proton",
+      "url": "https://proton.me/pass/pricing",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "bookmarks-bar",
+      "favorite": false,
+      "dateAdded": "2025-11-11T12:59:02.000Z"
+    },
+    {
+      "id": "puskas-legend-store",
+      "title": "Puskas Legend Store",
+      "url": "https://puskaslegendstore.com/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "bookmarks-bar",
+      "favorite": false,
+      "dateAdded": "2025-11-28T12:23:58.000Z"
+    },
+    {
+      "id": "real-time-server-sent-events-in-aspnet-core-and-net-10--by-anton-martyniuk--codex--medium",
+      "title": "Real-Time Server-Sent Events in ASP.NET Core and .NET 10 | by Anton Martyniuk | CodeX | Medium",
+      "url": "https://medium.com/codex/real-time-server-sent-events-in-asp-net-core-and-net-10-edb8845b2f1c",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "bookmarks-bar",
+      "favorite": false,
+      "dateAdded": "2025-11-19T11:38:59.000Z"
+    },
+    {
+      "id": "strengthening-npm-security-important-changes-to-authentication-and-token-management---github-changelog",
+      "title": "Strengthening npm security: Important changes to authentication and token management - GitHub Changelog",
+      "url": "https://github.blog/changelog/2025-09-29-strengthening-npm-security-important-changes-to-authentication-and-token-management/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "bookmarks-bar",
+      "favorite": false,
+      "dateAdded": "2025-11-12T15:39:48.000Z"
     }
   ]
 }
