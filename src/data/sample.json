@@ -13855,6 +13855,17 @@
       "dateAdded": "2023-11-22T17:21:52.000Z"
     },
     {
+      "id": "mastering-the-ef-core-change-tracker-phantom-updates-detached-entities-and-soft-deletes--by-vlad-bayrak--apr-2026--medium",
+      "title": "Mastering the EF Core Change Tracker: Phantom Updates, Detached Entities, and Soft Deletes | by Vlad Bayrak | Apr, 2026 | Medium",
+      "url": "https://medium.com/@wbayrakvlad/mastering-the-ef-core-change-tracker-phantom-updates-detached-entities-and-soft-deletes-c69ee39debf4",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "6---pending-read",
+      "favorite": false,
+      "dateAdded": "2026-04-17T16:30:45.000Z"
+    },
+    {
       "id": "meeting-the-channels-in-net-once-upon-a-time-i-encountered-an--by-hanifi-yildirimdagi--medium",
       "title": "Meeting the Channels in .NET. Once upon a time, I encountered an… | by Hanifi Yildirimdagi | Medium",
       "url": "https://medium.com/@hanifi.yildirimdagi/meeting-the-channels-in-net-6432ccf072ef",
@@ -14889,6 +14900,17 @@
       "dateAdded": "2025-02-12T01:08:33.000Z"
     },
     {
+      "id": "mastering-background-jobs-in-net-9-with-worker-services-and-channels--by-vahid-bakhtiary--nov-2025--medium",
+      "title": "Mastering Background Jobs in .NET 9 with Worker Services and Channels | by Vahid Bakhtiary | Nov, 2025 | Medium",
+      "url": "https://medium.com/@vahidbakhtiaryinfo/mastering-background-jobs-in-net-9-with-worker-services-and-channels-a5766475e869",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "7---must-work-on-it",
+      "favorite": false,
+      "dateAdded": "2025-11-19T11:38:56.000Z"
+    },
+    {
       "id": "microservice-dapr-dapper-and-postgresql-net-10--by-engr-md-hasan-monsur--jul-2025--medium",
       "title": "Microservice: Dapr, Dapper, and PostgreSQL (.NET 10) | by Engr. Md. Hasan Monsur | Jul, 2025 | Medium",
       "url": "https://medium.com/@hasanmcse/microservice-dapr-dapper-and-postgresql-net-10-66597c0fa6ad",
@@ -14898,6 +14920,28 @@
       "folderId": "7---must-work-on-it",
       "favorite": false,
       "dateAdded": "2025-08-14T15:31:27.000Z"
+    },
+    {
+      "id": "real-time-server-sent-events-in-aspnet-core-and-net-10--by-anton-martyniuk--codex--medium",
+      "title": "Real-Time Server-Sent Events in ASP.NET Core and .NET 10 | by Anton Martyniuk | CodeX | Medium",
+      "url": "https://medium.com/codex/real-time-server-sent-events-in-asp-net-core-and-net-10-edb8845b2f1c",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "7---must-work-on-it",
+      "favorite": false,
+      "dateAdded": "2025-11-19T11:38:59.000Z"
+    },
+    {
+      "id": "strengthening-npm-security-important-changes-to-authentication-and-token-management---github-changelog",
+      "title": "Strengthening npm security: Important changes to authentication and token management - GitHub Changelog",
+      "url": "https://github.blog/changelog/2025-09-29-strengthening-npm-security-important-changes-to-authentication-and-token-management/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "7---must-work-on-it",
+      "favorite": false,
+      "dateAdded": "2025-11-12T15:39:48.000Z"
     },
     {
       "id": "swintonscreenshot-website-cameraflash-a-github-action-to-capture-screenshots-of-a-website-across-windows-mac-and-linux",
@@ -14942,39 +14986,6 @@
       "folderId": "7---must-work-on-it",
       "favorite": false,
       "dateAdded": "2024-12-26T14:49:50.000Z"
-    },
-    {
-      "id": "mastering-background-jobs-in-net-9-with-worker-services-and-channels--by-vahid-bakhtiary--nov-2025--medium",
-      "title": "Mastering Background Jobs in .NET 9 with Worker Services and Channels | by Vahid Bakhtiary | Nov, 2025 | Medium",
-      "url": "https://medium.com/@vahidbakhtiaryinfo/mastering-background-jobs-in-net-9-with-worker-services-and-channels-a5766475e869",
-      "description": "",
-      "thumbnail": "",
-      "tags": [],
-      "folderId": "7---must-work-on-it",
-      "favorite": false,
-      "dateAdded": "2025-11-19T11:38:56.000Z"
-    },
-    {
-      "id": "strengthening-npm-security-important-changes-to-authentication-and-token-management---github-changelog",
-      "title": "Strengthening npm security: Important changes to authentication and token management - GitHub Changelog",
-      "url": "https://github.blog/changelog/2025-09-29-strengthening-npm-security-important-changes-to-authentication-and-token-management/",
-      "description": "",
-      "thumbnail": "",
-      "tags": [],
-      "folderId": "7---must-work-on-it",
-      "favorite": false,
-      "dateAdded": "2025-11-12T15:39:48.000Z"
-    },
-    {
-      "id": "real-time-server-sent-events-in-aspnet-core-and-net-10--by-anton-martyniuk--codex--medium",
-      "title": "Real-Time Server-Sent Events in ASP.NET Core and .NET 10 | by Anton Martyniuk | CodeX | Medium",
-      "url": "https://medium.com/codex/real-time-server-sent-events-in-asp-net-core-and-net-10-edb8845b2f1c",
-      "description": "",
-      "thumbnail": "",
-      "tags": [],
-      "folderId": "7---must-work-on-it",
-      "favorite": false,
-      "dateAdded": "2025-11-19T11:38:59.000Z"
     }
   ]
 }
