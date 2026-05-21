@@ -701,11 +701,6 @@
       "parentId": "4---dashboards"
     },
     {
-      "id": "github-pages",
-      "name": "GitHub Pages",
-      "parentId": "4---dashboards"
-    },
-    {
       "id": "portfolio",
       "name": "Portfolio",
       "parentId": "4---dashboards"
@@ -2635,6 +2630,17 @@
       "dateAdded": "2025-03-13T10:50:41.000Z"
     },
     {
+      "id": "per-component-i18n-for-react-nextjs-vue-svelte--intlayer",
+      "title": "Per-component i18n for React, Next.js, Vue, Svelte | Intlayer",
+      "url": "https://intlayer.org/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "ai",
+      "favorite": false,
+      "dateAdded": "2026-05-20T11:31:04.000Z"
+    },
+    {
       "id": "12-top-free-and-fun-apis-every-developer-needs-for-side-projects--by-enigma-of-the-stack--jan-2024--towards-dev",
       "title": "12 Top Free and Fun APIs Every Developer Needs for Side Projects | by Enigma of the Stack | Jan, 2024 | Towards Dev",
       "url": "https://towardsdev.com/12-top-free-and-fun-apis-every-developer-needs-for-side-projects-677f0a96fc45",
@@ -3766,6 +3772,17 @@
       "folderId": "security",
       "favorite": false,
       "dateAdded": "2024-01-25T18:56:39.000Z"
+    },
+    {
+      "id": "scanrepo--scan-github-repos-for-malware--crypto-scams",
+      "title": "ScanRepo — Scan GitHub Repos for Malware & Crypto Scams",
+      "url": "https://www.scanrepo.dev/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "security",
+      "favorite": false,
+      "dateAdded": "2026-05-19T15:14:15.000Z"
     },
     {
       "id": "pipedream",
@@ -11611,94 +11628,6 @@
       "dateAdded": "2024-12-13T10:46:25.000Z"
     },
     {
-      "id": "bookmarks-manager",
-      "title": "Bookmarks Manager",
-      "url": "https://guilherme.stracini.com.br/bookmarks-manager-ui/",
-      "description": "",
-      "thumbnail": "",
-      "tags": [],
-      "folderId": "github-pages",
-      "favorite": true,
-      "dateAdded": "2025-03-12T14:05:10.000Z"
-    },
-    {
-      "id": "clean-cv-maker",
-      "title": "Clean CV Maker",
-      "url": "https://guilherme.stracini.com.br/clean-cv-maker/",
-      "description": "",
-      "thumbnail": "",
-      "tags": [],
-      "folderId": "github-pages",
-      "favorite": true,
-      "dateAdded": "2025-04-08T21:15:07.000Z"
-    },
-    {
-      "id": "deployment-notification-generator",
-      "title": "Deployment Notification Generator",
-      "url": "https://guilherme.stracini.com.br/deployment-notifier/",
-      "description": "",
-      "thumbnail": "",
-      "tags": [],
-      "folderId": "github-pages",
-      "favorite": true,
-      "dateAdded": "2025-05-16T01:35:55.000Z"
-    },
-    {
-      "id": "financial-dashboard",
-      "title": "Financial Dashboard",
-      "url": "https://guilherme.stracini.com.br/financial-dashboard/",
-      "description": "",
-      "thumbnail": "",
-      "tags": [],
-      "folderId": "github-pages",
-      "favorite": true,
-      "dateAdded": "2025-05-16T01:36:08.000Z"
-    },
-    {
-      "id": "gstraccini-bot-portal",
-      "title": "GStraccini-bot | Portal",
-      "url": "https://guilherme.stracini.com.br/gstraccini-bot-portal/",
-      "description": "",
-      "thumbnail": "",
-      "tags": [],
-      "folderId": "github-pages",
-      "favorite": true,
-      "dateAdded": "2025-09-17T17:48:04.000Z"
-    },
-    {
-      "id": "payment-schedule-simulator",
-      "title": "Payment Schedule Simulator",
-      "url": "https://guilherme.stracini.com.br/payment-schedule-simulator/",
-      "description": "",
-      "thumbnail": "",
-      "tags": [],
-      "folderId": "github-pages",
-      "favorite": true,
-      "dateAdded": "2025-05-16T01:36:05.000Z"
-    },
-    {
-      "id": "projects-monitor",
-      "title": "Projects Monitor",
-      "url": "https://guilherme.stracini.com.br/projects-monitor-ui/",
-      "description": "",
-      "thumbnail": "",
-      "tags": [],
-      "folderId": "github-pages",
-      "favorite": true,
-      "dateAdded": "2025-06-22T23:12:12.000Z"
-    },
-    {
-      "id": "pull-request-flow-viewer",
-      "title": "Pull Request Flow Viewer",
-      "url": "https://guilherme.stracini.com.br/pull-request-ui/",
-      "description": "",
-      "thumbnail": "",
-      "tags": [],
-      "folderId": "github-pages",
-      "favorite": true,
-      "dateAdded": "2025-03-09T16:33:55.000Z"
-    },
-    {
       "id": "astral",
       "title": "Astral",
       "url": "https://app.astralapp.com/dashboard",
@@ -11776,17 +11705,6 @@
       "dateAdded": "2023-01-24T12:08:29.000Z"
     },
     {
-      "id": "zero-cool",
-      "title": "Zero Cool",
-      "url": "https://zerocool.com.br/portfolio/",
-      "description": "",
-      "thumbnail": "",
-      "tags": [],
-      "folderId": "portfolio",
-      "favorite": true,
-      "dateAdded": "2024-07-13T23:56:24.000Z"
-    },
-    {
       "id": "tecnologia--viagens---blog",
       "title": "Tecnologia & Viagens - Blog",
       "url": "https://guilherme.stracini.com.br/blog/",
@@ -11796,6 +11714,17 @@
       "folderId": "portfolio",
       "favorite": true,
       "dateAdded": "2026-04-17T13:20:58.000Z"
+    },
+    {
+      "id": "zero-cool",
+      "title": "Zero Cool",
+      "url": "https://zerocool.com.br/portfolio/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "portfolio",
+      "favorite": true,
+      "dateAdded": "2024-07-13T23:56:24.000Z"
     },
     {
       "id": "net---is-it-possible-to-set-the-targetframework-on-the-commandline-with-dotnet-build--restore---stack-overflow",
@@ -13294,6 +13223,17 @@
       "dateAdded": "2024-08-19T11:37:41.000Z"
     },
     {
+      "id": "githubcopilot-cli-github-copilot-cli-brings-the-power-of-copilot-coding-agent-directly-to-your-terminal",
+      "title": "github/copilot-cli: GitHub Copilot CLI brings the power of Copilot coding agent directly to your terminal.",
+      "url": "https://github.com/github/copilot-cli?utm_source=email-cli-ga-repo-cta&utm_medium=email&utm_campaign=cli-ga-feb-2026",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "6---pending-read",
+      "favorite": false,
+      "dateAdded": "2026-05-08T08:35:18.000Z"
+    },
+    {
       "id": "hands-on-ddd-featuring-event-storming-cqrs-event-sourcing-in-net-using-clean-architecture--codenx",
       "title": "Hands-on DDD featuring Event Storming, CQRS, Event Sourcing in .NET using Clean Architecture | CodeNx",
       "url": "https://medium.com/codenx/hands-on-ddd-featuring-event-storming-cqrs-event-sourcing-in-net-8c99301f72d7",
@@ -14372,6 +14312,17 @@
       "dateAdded": "2024-01-26T11:15:53.000Z"
     },
     {
+      "id": "skillsskillsengineeringto-issuesskillmd-at-main--mattpocockskills",
+      "title": "skills/skills/engineering/to-issues/SKILL.md at main · mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills/blob/main/skills/engineering/to-issues/SKILL.md",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "6---pending-read",
+      "favorite": false,
+      "dateAdded": "2026-05-08T08:35:30.000Z"
+    },
+    {
       "id": "spring-boot-cicd-on-kubernetes-using-terraform-ansible-and-github-part-1--by-martin-hodges--medium",
       "title": "Spring Boot CI/CD on Kubernetes using Terraform, Ansible and GitHub: Part 1 | by Martin Hodges | Medium",
       "url": "https://medium.com/@martin.hodges/use-terraform-ansible-and-github-actions-to-automate-running-your-spring-boot-application-on-1fa20d795643",
@@ -14623,6 +14574,17 @@
       "folderId": "6---pending-read",
       "favorite": false,
       "dateAdded": "2023-11-08T18:17:50.000Z"
+    },
+    {
+      "id": "using-github-copilot-code-review---github-docs",
+      "title": "Using GitHub Copilot code review - GitHub Docs",
+      "url": "https://docs.github.com/en/copilot/how-tos/use-copilot-agents/request-a-code-review/use-code-review?tool=webui#requesting-a-review-from-copilot",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "6---pending-read",
+      "favorite": false,
+      "dateAdded": "2026-05-08T08:34:51.000Z"
     },
     {
       "id": "using-protocol-buffers-protobuf-in-net--by-lagu--jun-2024--medium",
