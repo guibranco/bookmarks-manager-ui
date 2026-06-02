@@ -11,7 +11,7 @@
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css,md,json}\" --config ./.prettierrc"
   },
   "dependencies": {
-    "lucide-react": "^1.16.0",
+    "lucide-react": "^1.17.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6"
   },
@@ -21,9 +21,9 @@
     "@types/react": "^19.2.15",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.2",
-    "eslint": "^10.4.0",
+    "eslint": "^10.4.1",
     "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-prettier": "^5.5.5",
+    "eslint-plugin-prettier": "^5.5.6",
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.6.0",
