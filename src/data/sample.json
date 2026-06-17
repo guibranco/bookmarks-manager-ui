@@ -731,6 +731,11 @@
       "parentId": "professional-life--carrer"
     },
     {
+      "id": "4---dashboards",
+      "name": "4 - Dashboards",
+      "parentId": "bookmarks-bar"
+    },
+    {
       "id": "portfolio",
       "name": "Portfolio",
       "parentId": "4---dashboards"
@@ -14640,6 +14645,149 @@
       "folderId": "portfolio",
       "favorite": false,
       "dateAdded": "2024-07-13T23:56:24.000Z"
+    },
+    {
+      "id": "api-br---catalog",
+      "title": "API BR - Catalog",
+      "url": "https://apibr.com/ui/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2025-01-20T10:16:47.000Z"
+    },
+    {
+      "id": "api-br---status-page---uptime-robot",
+      "title": "API BR - Status Page - Uptime Robot",
+      "url": "https://stats.uptimerobot.com/O7lYOCOP",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2024-10-11T10:35:40.000Z"
+    },
+    {
+      "id": "appveyor",
+      "title": "AppVeyor",
+      "url": "https://ci.appveyor.com/projects",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2024-02-14T00:30:17.000Z"
+    },
+    {
+      "id": "cloud-sign-in",
+      "title": "Cloud Sign In",
+      "url": "https://www.oracle.com/cloud/sign-in.html",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2025-11-12T15:21:13.000Z"
+    },
+    {
+      "id": "cloudamqp",
+      "title": "CloudAMQP",
+      "url": "https://customer.cloudamqp.com/instance",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2024-02-01T23:48:40.000Z"
+    },        
+    {
+      "id": "gstraccini-bot--playground",
+      "title": "GStraccini-bot | Playground",
+      "url": "https://straccini.com/bot-playground/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2025-07-04T17:28:33.000Z"
+    },
+    {
+      "id": "healthchecksio",
+      "title": "Healthchecks.io",
+      "url": "https://healthchecks.io/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2023-10-23T22:59:21.000Z"
+    },
+    {
+      "id": "holori---home",
+      "title": "Holori - Home",
+      "url": "https://app.holori.com/dashboard/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2024-03-05T23:32:46.000Z"
+    },
+    {
+      "id": "monitors--uptimerobot",
+      "title": "Monitors | UptimeRobot",
+      "url": "https://dashboard.uptimerobot.com/monitors",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2024-10-11T10:35:13.000Z"
+    },
+    {
+      "id": "ovhcloud",
+      "title": "OVHcloud",
+      "url": "https://www.ovh.com/manager/#/hub",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2023-10-31T15:52:15.000Z"
+    },
+    {
+      "id": "pixee-platform",
+      "title": "Pixee Platform",
+      "url": "https://app.pixee.ai/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2025-04-09T00:50:15.000Z"
+    },
+    {
+      "id": "projects-monitor",
+      "title": "Projects Monitor",
+      "url": "https://guilherme.straccini.com/projects-monitor/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2024-08-12T18:07:24.000Z"
+    },
+    {
+      "id": "vercel",
+      "title": "Vercel",
+      "url": "https://vercel.com/",
+      "description": "",
+      "thumbnail": "",
+      "tags": [],
+      "folderId": "4---dashboards",
+      "favorite": false,
+      "dateAdded": "2024-02-16T02:06:42.000Z"
     }
   ]
 }
