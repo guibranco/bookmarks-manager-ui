@@ -19,8 +19,9 @@ function App() {
   const { bookmarks, addBookmark, updateBookmark, deleteBookmark, toggleFavorite } = useBookmarks(
     authState.isAuthenticated
   );
-  const { folders, createFolder, updateFolder, getFolderPathName, getAllChildFolderIds } =
-    useFolders(authState.isAuthenticated);
+  const { folders, createFolder, updateFolder, getFolderPathName, getAllChildFolderIds } = useFolders(
+    authState.isAuthenticated
+  );
   const { selectedFolder, setSelectedFolder } = useSelectedFolder(folders);
   const { selectedTag, setSelectedTag } = useSelectedTag();
 
@@ -39,7 +40,7 @@ function App() {
 
       if (selectedFolder === 'all') return true;
       if (selectedFolder === 'favorites') return bookmark.favorite;
-
+      
       if (config.flattenSubfolders) {
         const folderIds = [selectedFolder, ...getAllChildFolderIds(selectedFolder!)];
         return folderIds.includes(bookmark.folderId!);
@@ -110,9 +111,7 @@ function App() {
         onSearchChange={setSearchQuery}
         onToggleSidebar={() => setConfig(prev => ({ ...prev, showSidebar: !prev.showSidebar }))}
         onToggleDarkMode={() => setConfig(prev => ({ ...prev, darkMode: !prev.darkMode }))}
-        onToggleFlatten={() =>
-          setConfig(prev => ({ ...prev, flattenSubfolders: !prev.flattenSubfolders }))
-        }
+        onToggleFlatten={() => setConfig(prev => ({ ...prev, flattenSubfolders: !prev.flattenSubfolders }))}
         onAddBookmark={handleAddBookmark}
         onOpenSettings={() => setShowConfigModal(true)}
       />
@@ -201,11 +200,7 @@ function App() {
         )}
 
         {showConfigModal && (
-          <ConfigModal
-            config={config}
-            onClose={() => setShowConfigModal(false)}
-            onSave={setConfig}
-          />
+          <ConfigModal config={config} onClose={() => setShowConfigModal(false)} onSave={setConfig} />
         )}
 
         {showFolderModal && (

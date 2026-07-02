@@ -23,21 +23,23 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v7
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: Install GitVersion
-        uses: gittools/actions/gitversion/setup@v4.6.0
+        uses: gittools/actions/gitversion/setup@v3.2.1
         with:
-          versionSpec: "6.x"
+          versionSpec: "6.0.5"
 
       - name: Determine Version
         id: gitversion
-        uses: gittools/actions/gitversion/execute@v4.6.0
+        uses: gittools/actions/gitversion/execute@v3.2.1
+        with:
+          useConfigFile: true
 
       - name: Set up Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: "npm"
@@ -49,7 +51,7 @@ jobs:
         run: npm run build
 
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@v4
         with:
           name: build-output
           path: dist/
@@ -59,7 +61,7 @@ jobs:
 
       # - name: Upload test results
       #   if: always()
-      #   uses: actions/upload-artifact@v7
+      #   uses: actions/upload-artifact@v4
       #   with:
       #     name: test-results
       #     path: test-results.json
@@ -71,21 +73,21 @@ jobs:
 
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@v8
+        uses: actions/download-artifact@v4
         with:
           name: build-output
           path: ./dist
       
       - name: Setup Pages
-        uses: actions/configure-pages@v6
+        uses: actions/configure-pages@v5
         
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v5
+        uses: actions/upload-pages-artifact@v3
         with:
           path: './dist'
           
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v5
+        uses: actions/deploy-pages@v4
   
   create_release:
     name: Create release
@@ -96,7 +98,7 @@ jobs:
 
     steps:
       - name: Create Release
-        uses: ncipollo/release-action@v1.21.0
+        uses: ncipollo/release-action@v1.16.0
         with:
           skipIfReleaseExists: true
           allowUpdates: false
