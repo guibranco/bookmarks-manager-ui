@@ -1,46 +1,99 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Bookmark } from '../types';
-import { sampleBookmarks } from '../data/sampleData';
+import { apiClient } from '../services/apiClient';
 
-export function useBookmarks(isAuthenticated: boolean) {
-  const [bookmarks, setBookmarks] = useState<Bookmark[]>(sampleBookmarks);
+export function useBookmarks(isAuthenticated: boolean, apiKey: string) {
+  const [bookmarks, setBookmarks] = useState<Bookmark[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const addBookmark = (selectedFolder: string | null) => {
+  useEffect(() => {
+    if (!isAuthenticated) {
+      setBookmarks([]);
+      setError(null);
+      return;
+    }
+
+    let cancelled = false;
+    setIsLoading(true);
+    setError(null);
+
+    apiClient
+      .getBookmarks(apiKey)
+      .then(data => {
+        if (!cancelled) setBookmarks(data);
+      })
+      .catch((err: unknown) => {
+        if (!cancelled) {
+          setError(err instanceof Error ? err.message : 'Failed to load bookmarks');
+        }
+      })
+      .finally(() => {
+        if (!cancelled) setIsLoading(false);
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [isAuthenticated, apiKey]);
+
+  const addBookmark = async (selectedFolder: string | null) => {
     if (!isAuthenticated) return null;
 
-    const newBookmark: Bookmark = {
-      id: `bookmark-${Date.now()}`,
-      title: 'New Bookmark',
-      url: 'https://example.com',
-      description: 'Add a description',
-      thumbnail: '',
-      tags: [],
-      folderId: selectedFolder === 'all' || selectedFolder === 'favorites' ? null : selectedFolder,
-      favorite: false,
-      dateAdded: new Date().toISOString(),
-    };
-
-    setBookmarks([...bookmarks, newBookmark]);
-    return newBookmark;
+    try {
+      const newBookmark = await apiClient.createBookmark(apiKey, {
+        title: 'New Bookmark',
+        url: '',
+        description: '',
+        thumbnail: '',
+        tags: [],
+        folderId:
+          selectedFolder === 'all' || selectedFolder === 'favorites' ? null : selectedFolder,
+        favorite: false,
+      });
+      setBookmarks(prev => [...prev, newBookmark]);
+      return newBookmark;
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to create bookmark');
+      return null;
+    }
   };
 
-  const updateBookmark = (updatedBookmark: Bookmark) => {
+  const updateBookmark = async (updatedBookmark: Bookmark) => {
     if (!isAuthenticated) return;
-    setBookmarks(bookmarks.map(b => (b.id === updatedBookmark.id ? updatedBookmark : b)));
+
+    try {
+      const saved = await apiClient.updateBookmark(apiKey, updatedBookmark);
+      setBookmarks(prev => prev.map(b => (b.id === saved.id ? saved : b)));
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to update bookmark');
+    }
   };
 
-  const deleteBookmark = (id: string) => {
+  const deleteBookmark = async (id: string) => {
     if (!isAuthenticated) return;
-    setBookmarks(bookmarks.filter(b => b.id !== id));
+
+    try {
+      await apiClient.deleteBookmark(apiKey, id);
+      setBookmarks(prev => prev.filter(b => b.id !== id));
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to delete bookmark');
+    }
   };
 
-  const toggleFavorite = (id: string) => {
+  const toggleFavorite = async (id: string) => {
     if (!isAuthenticated) return;
-    setBookmarks(bookmarks.map(b => (b.id === id ? { ...b, favorite: !b.favorite } : b)));
+
+    const bookmark = bookmarks.find(b => b.id === id);
+    if (!bookmark) return;
+
+    await updateBookmark({ ...bookmark, favorite: !bookmark.favorite });
   };
 
   return {
     bookmarks,
+    isLoading,
+    error,
     addBookmark,
     updateBookmark,
     deleteBookmark,
