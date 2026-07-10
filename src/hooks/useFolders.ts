@@ -8,7 +8,11 @@ export function useFolders(isAuthenticated: boolean, apiKey: string) {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    if (!isAuthenticated) return;
+    if (!isAuthenticated) {
+      setFolders([]);
+      setError(null);
+      return;
+    }
 
     let cancelled = false;
     setIsLoading(true);
@@ -83,9 +87,9 @@ export function useFolders(isAuthenticated: boolean, apiKey: string) {
   };
 
   return {
-    folders: isAuthenticated ? folders : [],
-    isLoading: isAuthenticated ? isLoading : false,
-    error: isAuthenticated ? error : null,
+    folders,
+    isLoading,
+    error,
     createFolder,
     updateFolder,
     getFolderPathName,
