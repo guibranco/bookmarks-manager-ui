@@ -17,6 +17,8 @@ import AuthWarning from './AuthWarning';
 interface MainContentProps {
   config: AppConfig;
   isAuthenticated: boolean;
+  isLoading: boolean;
+  error: string | null;
   selectedFolder: string | null;
   selectedTag: string | null;
   folders: Folder[];
@@ -34,6 +36,8 @@ interface MainContentProps {
 const MainContent: React.FC<MainContentProps> = ({
   config,
   isAuthenticated,
+  isLoading,
+  error,
   selectedFolder,
   selectedTag,
   folders,
@@ -180,106 +184,122 @@ const MainContent: React.FC<MainContentProps> = ({
 
         {!isAuthenticated && <AuthWarning onOpenSettings={onOpenSettings} />}
 
-        {!config.flattenSubfolders && subfolders.length > 0 && !selectedTag && (
-          <div className="mb-6">
-            <h3 className="text-lg font-medium mb-3">Subfolders</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {subfolders.map(folder => (
-                <div
-                  key={folder.id}
-                  className="group bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-pointer"
-                >
-                  <div
-                    className="flex items-center justify-between p-4 cursor-pointer"
-                    onClick={() => !editingFolderId && onSelectFolder(folder.id)}
-                  >
-                    <div className="flex items-center flex-1 min-w-0">
-                      <FolderPlus className="h-5 w-5 mr-2 text-blue-500 shrink-0" />
-                      {editingFolderId === folder.id ? (
-                        <input
-                          type="text"
-                          value={editingFolderName}
-                          onChange={e => setEditingFolderName(e.target.value)}
-                          onKeyDown={handleKeyDown}
-                          className="flex-1 px-2 py-1 bg-white dark:bg-gray-700 border border-blue-500 rounded-sm focus:outline-hidden focus:ring-2 focus:ring-blue-500"
-                          autoFocus
-                          onClick={e => e.stopPropagation()}
-                        />
-                      ) : (
-                        <h4 className="font-medium truncate">{folder.name}</h4>
-                      )}
-                    </div>
-                    <div className="flex items-center ml-2">
-                      {editingFolderId === folder.id ? (
-                        <>
-                          <button
-                            onClick={saveEditing}
-                            className="p-1 hover:bg-blue-200 dark:hover:bg-blue-800 rounded-full cursor-pointer"
-                          >
-                            <Check className="h-4 w-4 text-green-600 dark:text-green-400" />
-                          </button>
-                          <button
-                            onClick={cancelEditing}
-                            className="p-1 hover:bg-red-200 dark:hover:bg-red-800 rounded-full ml-1 cursor-pointer"
-                          >
-                            <X className="h-4 w-4 text-red-600 dark:text-red-400" />
-                          </button>
-                        </>
-                      ) : (
-                        isAuthenticated && (
-                          <button
-                            onClick={e => startEditing(folder, e)}
-                            className="p-1 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"
-                          >
-                            <Edit2 className="h-4 w-4 text-gray-500" />
-                          </button>
-                        )
-                      )}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
+        {error && (
+          <div className="mb-4 px-4 py-3 rounded-md bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400 text-sm">
+            {error}
           </div>
         )}
 
-        {filteredBookmarks.length === 0 && subfolders.length === 0 ? (
+        {isLoading ? (
           <div className="flex flex-col items-center justify-center h-64 text-gray-500 dark:text-gray-400">
-            <BookmarkIcon className="h-12 w-12 mb-2" />
-            <p className="text-lg">No bookmarks found</p>
+            <p className="text-lg">Loading bookmarks…</p>
           </div>
         ) : (
           <>
-            {filteredBookmarks.length > 0 && (
-              <div
-                className={
-                  !config.flattenSubfolders && subfolders.length > 0 && !selectedTag ? 'mt-6' : ''
-                }
-              >
-                {!config.flattenSubfolders && subfolders.length > 0 && !selectedTag && (
-                  <h3 className="text-lg font-medium mb-3">Bookmarks</h3>
-                )}
-                {config.viewMode === 'grid' ? (
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {filteredBookmarks.map(bookmark => (
-                      <BookmarkCard
-                        key={bookmark.id}
-                        bookmark={bookmark}
-                        onClick={() => onBookmarkClick(bookmark)}
-                        onToggleFavorite={() => onToggleFavorite(bookmark.id)}
+            {!config.flattenSubfolders && subfolders.length > 0 && !selectedTag && (
+              <div className="mb-6">
+                <h3 className="text-lg font-medium mb-3">Subfolders</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {subfolders.map(folder => (
+                    <div
+                      key={folder.id}
+                      className="group bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-pointer"
+                    >
+                      <div
+                        className="flex items-center justify-between p-4 cursor-pointer"
+                        onClick={() => !editingFolderId && onSelectFolder(folder.id)}
+                      >
+                        <div className="flex items-center flex-1 min-w-0">
+                          <FolderPlus className="h-5 w-5 mr-2 text-blue-500 shrink-0" />
+                          {editingFolderId === folder.id ? (
+                            <input
+                              type="text"
+                              value={editingFolderName}
+                              onChange={e => setEditingFolderName(e.target.value)}
+                              onKeyDown={handleKeyDown}
+                              className="flex-1 px-2 py-1 bg-white dark:bg-gray-700 border border-blue-500 rounded-sm focus:outline-hidden focus:ring-2 focus:ring-blue-500"
+                              autoFocus
+                              onClick={e => e.stopPropagation()}
+                            />
+                          ) : (
+                            <h4 className="font-medium truncate">{folder.name}</h4>
+                          )}
+                        </div>
+                        <div className="flex items-center ml-2">
+                          {editingFolderId === folder.id ? (
+                            <>
+                              <button
+                                onClick={saveEditing}
+                                className="p-1 hover:bg-blue-200 dark:hover:bg-blue-800 rounded-full cursor-pointer"
+                              >
+                                <Check className="h-4 w-4 text-green-600 dark:text-green-400" />
+                              </button>
+                              <button
+                                onClick={cancelEditing}
+                                className="p-1 hover:bg-red-200 dark:hover:bg-red-800 rounded-full ml-1 cursor-pointer"
+                              >
+                                <X className="h-4 w-4 text-red-600 dark:text-red-400" />
+                              </button>
+                            </>
+                          ) : (
+                            isAuthenticated && (
+                              <button
+                                onClick={e => startEditing(folder, e)}
+                                className="p-1 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"
+                              >
+                                <Edit2 className="h-4 w-4 text-gray-500" />
+                              </button>
+                            )
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {filteredBookmarks.length === 0 && subfolders.length === 0 ? (
+              <div className="flex flex-col items-center justify-center h-64 text-gray-500 dark:text-gray-400">
+                <BookmarkIcon className="h-12 w-12 mb-2" />
+                <p className="text-lg">No bookmarks found</p>
+              </div>
+            ) : (
+              <>
+                {filteredBookmarks.length > 0 && (
+                  <div
+                    className={
+                      !config.flattenSubfolders && subfolders.length > 0 && !selectedTag
+                        ? 'mt-6'
+                        : ''
+                    }
+                  >
+                    {!config.flattenSubfolders && subfolders.length > 0 && !selectedTag && (
+                      <h3 className="text-lg font-medium mb-3">Bookmarks</h3>
+                    )}
+                    {config.viewMode === 'grid' ? (
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        {filteredBookmarks.map(bookmark => (
+                          <BookmarkCard
+                            key={bookmark.id}
+                            bookmark={bookmark}
+                            onClick={() => onBookmarkClick(bookmark)}
+                            onToggleFavorite={() => onToggleFavorite(bookmark.id)}
+                            isAuthenticated={isAuthenticated}
+                          />
+                        ))}
+                      </div>
+                    ) : (
+                      <BookmarkList
+                        bookmarks={filteredBookmarks}
+                        onBookmarkClick={onBookmarkClick}
+                        onToggleFavorite={onToggleFavorite}
                         isAuthenticated={isAuthenticated}
                       />
-                    ))}
+                    )}
                   </div>
-                ) : (
-                  <BookmarkList
-                    bookmarks={filteredBookmarks}
-                    onBookmarkClick={onBookmarkClick}
-                    onToggleFavorite={onToggleFavorite}
-                    isAuthenticated={isAuthenticated}
-                  />
                 )}
-              </div>
+              </>
             )}
           </>
         )}

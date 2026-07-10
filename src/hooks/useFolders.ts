@@ -1,24 +1,62 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Folder } from '../types';
-import { sampleFolders } from '../data/sampleData';
+import { apiClient } from '../services/apiClient';
 
-export function useFolders(isAuthenticated: boolean) {
-  const [folders, setFolders] = useState<Folder[]>(sampleFolders);
+export function useFolders(isAuthenticated: boolean, apiKey: string) {
+  const [folders, setFolders] = useState<Folder[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const createFolder = (name: string, parentId: string | null) => {
+  useEffect(() => {
+    if (!isAuthenticated) {
+      setFolders([]);
+      setError(null);
+      return;
+    }
+
+    let cancelled = false;
+    setIsLoading(true);
+    setError(null);
+
+    apiClient
+      .getFolders(apiKey)
+      .then(data => {
+        if (!cancelled) setFolders(data);
+      })
+      .catch((err: unknown) => {
+        if (!cancelled) {
+          setError(err instanceof Error ? err.message : 'Failed to load folders');
+        }
+      })
+      .finally(() => {
+        if (!cancelled) setIsLoading(false);
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [isAuthenticated, apiKey]);
+
+  const createFolder = async (name: string, parentId: string | null) => {
     if (!isAuthenticated) return;
 
-    const newFolder: Folder = {
-      id: `folder-${Date.now()}`,
-      name,
-      parentId,
-    };
-    setFolders([...folders, newFolder]);
+    try {
+      const newFolder = await apiClient.createFolder(apiKey, name, parentId);
+      setFolders(prev => [...prev, newFolder]);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to create folder');
+    }
   };
 
-  const updateFolder = (folderId: string, newName: string) => {
+  const updateFolder = async (folderId: string, newName: string) => {
     if (!isAuthenticated) return;
-    setFolders(folders.map(f => (f.id === folderId ? { ...f, name: newName } : f)));
+
+    try {
+      const updated = await apiClient.updateFolder(apiKey, folderId, newName);
+      setFolders(prev => prev.map(f => (f.id === folderId ? updated : f)));
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to update folder');
+    }
   };
 
   const getFolderPathName = (folderId: string | null): string => {
@@ -50,6 +88,8 @@ export function useFolders(isAuthenticated: boolean) {
 
   return {
     folders,
+    isLoading,
+    error,
     createFolder,
     updateFolder,
     getFolderPathName,

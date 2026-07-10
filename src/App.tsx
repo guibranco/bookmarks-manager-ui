@@ -16,11 +16,24 @@ import { useSelectedTag } from './hooks/useSelectedTag';
 function App() {
   const { config, setConfig } = useConfig();
   const authState = useAuth(config.apiKey);
-  const { bookmarks, addBookmark, updateBookmark, deleteBookmark, toggleFavorite } = useBookmarks(
-    authState.isAuthenticated
-  );
-  const { folders, createFolder, updateFolder, getFolderPathName, getAllChildFolderIds } =
-    useFolders(authState.isAuthenticated);
+  const {
+    bookmarks,
+    isLoading: bookmarksLoading,
+    error: bookmarksError,
+    addBookmark,
+    updateBookmark,
+    deleteBookmark,
+    toggleFavorite,
+  } = useBookmarks(authState.isAuthenticated, authState.apiKey);
+  const {
+    folders,
+    isLoading: foldersLoading,
+    error: foldersError,
+    createFolder,
+    updateFolder,
+    getFolderPathName,
+    getAllChildFolderIds,
+  } = useFolders(authState.isAuthenticated, authState.apiKey);
   const { selectedFolder, setSelectedFolder } = useSelectedFolder(folders);
   const { selectedTag, setSelectedTag } = useSelectedTag();
 
@@ -63,13 +76,13 @@ function App() {
     }
   };
 
-  const handleAddBookmark = () => {
+  const handleAddBookmark = async () => {
     if (!authState.isAuthenticated) {
       setShowConfigModal(true);
       return;
     }
 
-    const newBookmark = addBookmark(selectedFolder);
+    const newBookmark = await addBookmark(selectedFolder);
     if (newBookmark) {
       handleBookmarkClick(newBookmark);
     }
@@ -150,6 +163,8 @@ function App() {
         <MainContent
           config={config}
           isAuthenticated={authState.isAuthenticated}
+          isLoading={bookmarksLoading || foldersLoading}
+          error={bookmarksError || foldersError}
           selectedFolder={selectedFolder}
           selectedTag={selectedTag}
           folders={folders}
