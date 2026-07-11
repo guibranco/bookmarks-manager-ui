@@ -13,6 +13,7 @@ import { Bookmark, AppConfig, Folder } from '../types.d.ts';
 import BookmarkCard from './BookmarkCard';
 import BookmarkList from './BookmarkList';
 import AuthWarning from './AuthWarning';
+import { useFolderEditing } from '../hooks/useFolderEditing';
 
 interface MainContentProps {
   config: AppConfig;
@@ -51,47 +52,18 @@ const MainContent: React.FC<MainContentProps> = ({
   onSelectFolder,
   onUpdateFolder,
 }) => {
-  const [editingFolderId, setEditingFolderId] = useState<string | null>(null);
-  const [editingFolderName, setEditingFolderName] = useState('');
+  const {
+    editingFolderId,
+    editingFolderName,
+    setEditingFolderName,
+    startEditing,
+    saveEditing,
+    cancelEditing,
+    handleKeyDown,
+  } = useFolderEditing(isAuthenticated, onUpdateFolder);
   const [showShareTooltip, setShowShareTooltip] = useState(false);
 
   const subfolders = folders.filter(folder => folder.parentId === selectedFolder);
-
-  const startEditing = (folder: Folder, e: React.MouseEvent) => {
-    e.stopPropagation();
-    if (!isAuthenticated) return;
-    setEditingFolderId(folder.id);
-    setEditingFolderName(folder.name);
-  };
-
-  const saveEditing = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    if (editingFolderId && editingFolderName.trim()) {
-      onUpdateFolder(editingFolderId, editingFolderName.trim());
-      setEditingFolderId(null);
-      setEditingFolderName('');
-    }
-  };
-
-  const cancelEditing = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    setEditingFolderId(null);
-    setEditingFolderName('');
-  };
-
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter') {
-      e.preventDefault();
-      if (editingFolderId && editingFolderName.trim()) {
-        onUpdateFolder(editingFolderId, editingFolderName.trim());
-        setEditingFolderId(null);
-        setEditingFolderName('');
-      }
-    } else if (e.key === 'Escape') {
-      setEditingFolderId(null);
-      setEditingFolderName('');
-    }
-  };
 
   const handleShare = async () => {
     const url = new URL(window.location.href);

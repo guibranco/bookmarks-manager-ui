@@ -13,6 +13,7 @@ import {
   X,
 } from 'lucide-react';
 import { Folder as FolderType, Bookmark as BookmarkType } from '../types';
+import { useFolderEditing } from '../hooks/useFolderEditing';
 
 interface SidebarProps {
   folders: FolderType[];
@@ -63,8 +64,15 @@ const Sidebar: React.FC<SidebarProps> = ({
     return {};
   });
 
-  const [editingFolderId, setEditingFolderId] = useState<string | null>(null);
-  const [editingFolderName, setEditingFolderName] = useState('');
+  const {
+    editingFolderId,
+    editingFolderName,
+    setEditingFolderName,
+    startEditing,
+    saveEditing,
+    cancelEditing,
+    handleKeyDown,
+  } = useFolderEditing(isAuthenticated, onUpdateFolder);
 
   useEffect(() => {
     localStorage.setItem('bookmarkManagerExpandedSections', JSON.stringify(expandedSections));
@@ -86,42 +94,6 @@ const Sidebar: React.FC<SidebarProps> = ({
       ...prev,
       [folderId]: !prev[folderId],
     }));
-  };
-
-  const startEditing = (folder: FolderType, e: React.MouseEvent) => {
-    e.stopPropagation();
-    if (!isAuthenticated) return;
-    setEditingFolderId(folder.id);
-    setEditingFolderName(folder.name);
-  };
-
-  const saveEditing = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    if (editingFolderId && editingFolderName.trim()) {
-      onUpdateFolder(editingFolderId, editingFolderName.trim());
-      setEditingFolderId(null);
-      setEditingFolderName('');
-    }
-  };
-
-  const cancelEditing = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    setEditingFolderId(null);
-    setEditingFolderName('');
-  };
-
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter') {
-      e.preventDefault();
-      if (editingFolderId && editingFolderName.trim()) {
-        onUpdateFolder(editingFolderId, editingFolderName.trim());
-        setEditingFolderId(null);
-        setEditingFolderName('');
-      }
-    } else if (e.key === 'Escape') {
-      setEditingFolderId(null);
-      setEditingFolderName('');
-    }
   };
 
   // Create a Set of unique tags and convert back to array
