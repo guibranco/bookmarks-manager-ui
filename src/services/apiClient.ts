@@ -8,7 +8,7 @@ async function request<T>(path: string, apiKey: string, options: RequestInit = {
     ...options,
     headers: {
       'Content-Type': 'application/json',
-      'X-API-Key': apiKey,
+      ...(apiKey ? { 'X-API-Key': apiKey } : {}),
       ...options.headers,
     },
   });

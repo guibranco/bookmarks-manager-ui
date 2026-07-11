@@ -8,12 +8,6 @@ export function useBookmarks(isAuthenticated: boolean, apiKey: string) {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    if (!isAuthenticated) {
-      setBookmarks([]);
-      setError(null);
-      return;
-    }
-
     let cancelled = false;
     setIsLoading(true);
     setError(null);
